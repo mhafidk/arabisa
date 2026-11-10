@@ -8,6 +8,19 @@
 		<meta name="theme-color" content="#161b26" media="(prefers-color-scheme: dark)" />
 		<link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/icon-192.png" />
+		<script>
+			try {
+				const raw = localStorage.getItem('learn-arabic:progress-v1');
+				const saved = raw && JSON.parse(raw).theme;
+				const theme =
+					saved === 'light' || saved === 'dark'
+						? saved
+						: window.matchMedia('(prefers-color-scheme: dark)').matches
+							? 'dark'
+							: 'light';
+				document.documentElement.dataset.theme = theme;
+			} catch {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

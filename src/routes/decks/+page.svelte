@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<title>Kartu Hafalan · Belajar Bahasa Arab</title>
+	<title>Kartu Hafalan · Arabisa</title>
 	<meta
 		name="description"
 		content="Latih kosakata bahasa Arab Anda dengan kartu hafalan. Bisa digunakan secara offline."
@@ -58,7 +58,7 @@
 	</ul>
 {/snippet}
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-12">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"

@@ -40,11 +40,11 @@
 </script>
 
 <svelte:head>
-	<title>{lesson.label}: {lesson.title} · Belajar Bahasa Arab</title>
+	<title>{lesson.label}: {lesson.title} · Arabisa</title>
 	<meta name="description" content={lesson.summary} />
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-5 pt-5 pb-14">
+<div class="mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-5 pt-5 pb-24">
 	<!-- Top Navigation Header -->
 	<header class="flex items-center gap-3">
 		<a

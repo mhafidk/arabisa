@@ -7,6 +7,9 @@
 	import ClipboardCheck from '@lucide/svelte/icons/clipboard-check';
 	import Flame from '@lucide/svelte/icons/flame';
 	import Layers from '@lucide/svelte/icons/layers';
+	import Moon from '@lucide/svelte/icons/moon';
+	import Search from '@lucide/svelte/icons/search';
+	import Sun from '@lucide/svelte/icons/sun';
 	import StarMark from '#lib/components/StarMark.svelte';
 	import { decks } from '#lib/data/decks.ts';
 	import { exercises } from '#lib/data/exercises.ts';
@@ -26,33 +29,50 @@
 </script>
 
 <svelte:head>
-	<title>Belajar Bahasa Arab · Materi, Flashcard & Latihan</title>
+	<title>Arabisa · Materi, Flashcard & Latihan Bahasa Arab</title>
 	<meta
 		name="description"
-		content="Pelajari kaidah dasar, percakapan, kosakata, flashcard, dan latihan bahasa Arab secara offline."
+		content="Arabisa — Pelajari kaidah dasar, percakapan, kosakata, flashcard, dan latihan bahasa Arab secara offline."
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-10 sm:px-5">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<!-- App Header -->
 	<header class="flex items-center justify-between">
 		<div class="flex items-center gap-2.5 text-ink">
 			<StarMark class="text-accent" />
-			<span class="text-lg font-semibold tracking-tight">Belajar Bahasa Arab</span>
+			<span class="text-lg font-semibold tracking-tight">Arabisa</span>
 		</div>
 
-		<div
-			class={[
-				'flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium tabular-nums',
-				progress.studiedToday ? 'bg-accent-wash text-accent-ink' : 'bg-paper-sunk text-ink-soft'
-			]}
-			title={progress.studiedToday
-				? 'Kamu sudah belajar hari ini'
-				: 'Belajar hari ini untuk menjaga runtutan harimu'}
-		>
-			<Flame size={16} strokeWidth={2.25} />
-			{progress.streak}
-			<span class="sr-only">hari beruntun</span>
+		<div class="flex items-center gap-2">
+			<div
+				class={[
+					'flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium tabular-nums',
+					progress.studiedToday ? 'bg-accent-wash text-accent-ink' : 'bg-paper-sunk text-ink-soft'
+				]}
+				title={progress.studiedToday
+					? 'Kamu sudah belajar hari ini'
+					: 'Belajar hari ini untuk menjaga runtutan harimu'}
+			>
+				<Flame size={16} strokeWidth={2.25} />
+				{progress.streak}
+				<span class="sr-only">hari beruntun</span>
+			</div>
+
+			<button
+				id="theme-switcher"
+				type="button"
+				onclick={() => progress.toggleTheme()}
+				class="grid size-8 place-items-center rounded-lg bg-paper-sunk text-ink-soft transition-colors hover:text-ink active:scale-[0.96]"
+				aria-label={progress.theme === 'dark' ? 'Ganti ke tema terang' : 'Ganti ke tema gelap'}
+				title={progress.theme === 'dark' ? 'Tema terang' : 'Tema gelap'}
+			>
+				{#if progress.theme === 'dark'}
+					<Sun size={16} />
+				{:else}
+					<Moon size={16} />
+				{/if}
+			</button>
 		</div>
 	</header>
 
@@ -77,12 +97,6 @@
 					<h1 class="mt-0.5 text-xl font-semibold tracking-tight text-ink">
 						{nextLesson.title}
 					</h1>
-				</div>
-
-				<div class="shrink-0 rounded-xl bg-paper-sunk px-3.5 py-4 text-center">
-					<p lang="ar" dir="rtl" class="text-2xl font-bold text-accent-ink">
-						{nextLesson.titleAr}
-					</p>
 				</div>
 			</div>
 
@@ -189,6 +203,30 @@
 					<p class="mt-0.5 text-xs text-ink-faint">{exercises.length} soal kuis interaktif</p>
 				</div>
 			</a>
+
+			<a
+				id="nav-kosakata"
+				href={resolve('/kosakata')}
+				class="group col-span-2 flex items-center justify-between gap-3.5 rounded-2xl bg-paper-raised p-4 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.99]"
+			>
+				<div class="flex items-center gap-3.5">
+					<div
+						class="grid size-10 shrink-0 place-items-center rounded-xl bg-paper-sunk text-ink-soft"
+					>
+						<Search size={19} />
+					</div>
+					<div>
+						<h3 class="font-semibold text-ink">Daftar & Cari Kosakata</h3>
+						<p class="mt-0.5 text-xs text-ink-faint">
+							Lihat semua kata bahasa Arab dan cari artinya dalam bahasa Indonesia
+						</p>
+					</div>
+				</div>
+				<ChevronRight
+					size={18}
+					class="shrink-0 text-ink-faint transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5"
+				/>
+			</a>
 		</div>
 	</section>
 
@@ -230,9 +268,6 @@
 									</p>
 									<h3 class="mt-0.5 font-semibold text-ink">{lesson.title}</h3>
 								</div>
-								<span lang="ar" dir="rtl" class="shrink-0 text-xl font-bold text-ink-soft">
-									{lesson.titleAr}
-								</span>
 							</div>
 
 							<p class="mt-1.5 text-sm leading-relaxed text-ink-soft">
@@ -240,14 +275,14 @@
 							</p>
 
 							<div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
-								<span class="rounded-md bg-paper-sunk px-2.5 py-0.5 font-medium">
+								<span class="rounded-md bg-paper-sunk px-2.5 py-1 font-medium">
 									{lesson.grammarNotes.length} kaidah
 								</span>
-								<span class="rounded-md bg-paper-sunk px-2.5 py-0.5 font-medium">
+								<span class="rounded-md bg-paper-sunk px-2.5 py-1 font-medium">
 									{lesson.vocabulary.length} kosakata
 								</span>
 								{#if done}
-									<span class="rounded-md bg-good-wash px-2.5 py-0.5 font-semibold text-good">
+									<span class="rounded-md bg-good-wash px-2.5 py-1 font-semibold text-good">
 										Selesai
 									</span>
 								{/if}

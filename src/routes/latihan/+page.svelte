@@ -73,14 +73,14 @@
 </script>
 
 <svelte:head>
-	<title>Latihan Soal · Belajar Bahasa Arab</title>
+	<title>Latihan Soal · Arabisa</title>
 	<meta
 		name="description"
 		content="Uji pemahaman kaidah dan kosakata bahasa Arab dari Pelajaran 1 dan Pelajaran 2."
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-8">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"

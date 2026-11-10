@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Belajar Bahasa Arab</string>
-    <string name="title_activity_main">Belajar Bahasa Arab</string>
+    <string name="app_name">Arabisa</string>
+    <string name="title_activity_main">Arabisa</string>
     <string name="package_name">com.mhk.learnarabic</string>
     <string name="custom_url_scheme">com.mhk.learnarabic</string>
 </resources>

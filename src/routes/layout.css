@@ -5,7 +5,8 @@
  * Warm manuscript paper, deep ink, a saffron accent. Raw values live in
  * :root so dark mode can swap them; @theme inline exposes them to Tailwind.
  */
-:root {
+:root,
+:root[data-theme='light'] {
 	--paper: oklch(97.5% 0.012 85);
 	--paper-raised: oklch(99.3% 0.006 85);
 	--paper-sunk: oklch(94% 0.018 82);
@@ -25,8 +26,28 @@
 	color-scheme: light;
 }
 
+:root[data-theme='dark'] {
+	--paper: oklch(19% 0.02 260);
+	--paper-raised: oklch(24% 0.024 260);
+	--paper-sunk: oklch(16% 0.018 260);
+	--line: oklch(32% 0.025 260);
+	--ink: oklch(94% 0.015 85);
+	--ink-soft: oklch(80% 0.02 85);
+	--ink-faint: oklch(66% 0.02 85);
+	--accent: oklch(74% 0.14 60);
+	--accent-ink: oklch(80% 0.12 65);
+	--accent-wash: oklch(30% 0.05 60);
+	--good: oklch(76% 0.11 170);
+	--good-wash: oklch(28% 0.04 170);
+	--again: oklch(74% 0.13 30);
+	--again-wash: oklch(29% 0.05 30);
+	--shadow-ink: oklch(5% 0.02 260 / 0.5);
+
+	color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme='light']) {
 		--paper: oklch(19% 0.02 260);
 		--paper-raised: oklch(24% 0.024 260);
 		--paper-sunk: oklch(16% 0.018 260);

@@ -1,7 +1,7 @@
 {
-	"name": "Belajar Bahasa Arab",
-	"short_name": "Bahasa Arab",
-	"description": "Perkaya kosakata bahasa Arab Anda dengan kartu hafalan. Bisa digunakan secara offline, tanpa perlu akun.",
+	"name": "Arabisa",
+	"short_name": "Arabisa",
+	"description": "Pelajari kaidah dasar, kosakata, flashcard, dan latihan bahasa Arab secara offline.",
 	"start_url": "/",
 	"scope": "/",
 	"display": "standalone",

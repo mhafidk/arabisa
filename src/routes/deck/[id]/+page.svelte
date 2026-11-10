@@ -78,7 +78,7 @@
 <svelte:window {onkeydown} />
 
 <svelte:head>
-	<title>{deck.title} · Belajar Bahasa Arab</title>
+	<title>{deck.title} · Arabisa</title>
 	<meta name="description" content="Latih kosakata {deck.title.toLowerCase()} dalam bahasa Arab." />
 </svelte:head>
 

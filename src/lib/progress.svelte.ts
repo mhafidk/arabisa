@@ -10,6 +10,7 @@ export const MAX_BOX = 5;
 export const MASTERED_BOX = 3;
 
 export type FrontSide = 'ar' | 'id';
+export type Theme = 'light' | 'dark';
 
 interface CardProgress {
 	box: number;
@@ -23,6 +24,7 @@ interface ProgressData {
 	lastStudyDay: string | null;
 	front: FrontSide;
 	completedLessons: string[];
+	theme?: Theme;
 }
 
 const KEY = 'progress-v1';
@@ -46,6 +48,31 @@ class Progress {
 	set front(value: FrontSide) {
 		this.#data.front = value;
 		this.#persist();
+	}
+
+	get theme(): Theme {
+		if (this.#data.theme === 'light' || this.#data.theme === 'dark') {
+			return this.#data.theme;
+		}
+		if (
+			typeof window !== 'undefined' &&
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+		) {
+			return 'dark';
+		}
+		return 'light';
+	}
+
+	set theme(value: Theme) {
+		this.#data.theme = value;
+		if (typeof document !== 'undefined') {
+			document.documentElement.dataset.theme = value;
+		}
+		this.#persist();
+	}
+
+	toggleTheme() {
+		this.theme = this.theme === 'dark' ? 'light' : 'dark';
 	}
 
 	/** Current streak, or 0 if the last study day was before yesterday. */
