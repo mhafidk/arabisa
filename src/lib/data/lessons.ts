@@ -205,6 +205,10 @@ export const lessons: Lesson[] = [
 			}
 		],
 		vocabulary: [
+			{ ar: 'هَذَا', tr: 'hādhā', id: 'ini (tunggal mudzakkar)', category: 'Kata Ganti' },
+			{ ar: 'مَا', tr: 'mā', id: 'apa (untuk benda/hewan)', category: 'Partikel' },
+			{ ar: 'مَنْ', tr: 'man', id: 'siapa (untuk orang)', category: 'Partikel' },
+			{ ar: 'أَ', tr: 'a', id: 'apakah (kata tanya ya/tidak)', category: 'Partikel' },
 			{ ar: 'بَيْتٌ', tr: 'baitu-n', id: 'rumah', category: 'Benda' },
 			{ ar: 'مَسْجِدٌ', tr: 'masjidu-n', id: 'masjid', category: 'Benda' },
 			{ ar: 'بَابٌ', tr: 'bābu-n', id: 'pintu', category: 'Benda' },
@@ -499,6 +503,18 @@ export const lessons: Lesson[] = [
 			}
 		],
 		vocabulary: [
+			{
+				ar: 'قَمَرٌ / الْقَمَرُ',
+				tr: 'qamaru-n / al-qamaru',
+				id: 'bulan / bulan itu',
+				category: 'Benda'
+			},
+			{
+				ar: 'شَمْسٌ / الشَّمْسُ',
+				tr: 'syamsu-n / asy-syamsu',
+				id: 'matahari / matahari itu',
+				category: 'Benda'
+			},
 			{ ar: 'مَاءٌ / الْمَاءُ', tr: 'māʾu-n / al-māʾu', id: 'air / air itu', category: 'Makanan' },
 			{
 				ar: 'وَرَقٌ / الْوَرَقُ',
