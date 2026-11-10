@@ -64,7 +64,7 @@
 	--color-again-wash: var(--again-wash);
 
 	--font-sans: 'Figtree Variable', ui-sans-serif, system-ui, sans-serif;
-	--font-arabic: 'Amiri', 'Noto Naskh Arabic', serif;
+	--font-arabic: 'Noto Sans Arabic Variable', 'Noto Sans Arabic', sans-serif;
 
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
