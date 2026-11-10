@@ -2,25 +2,38 @@
 	import { resolve } from '$app/paths';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Check from '@lucide/svelte/icons/check';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 	import X from '@lucide/svelte/icons/x';
 	import { exercises, type QuizQuestion } from '#lib/data/exercises.ts';
+	import { lessons } from '#lib/data/lessons.ts';
 	import { progress } from '#lib/progress.svelte.ts';
 
-	type FilterTopic = 'all' | 'lesson-1' | 'lesson-2' | 'lesson-3';
+	type FilterTopic = 'all' | QuizQuestion['lessonId'];
 
-	const filters: { value: FilterTopic; label: string }[] = [
-		{ value: 'all', label: 'Semua Topik' },
-		{ value: 'lesson-1', label: 'Pelajaran 1' },
-		{ value: 'lesson-2', label: 'Pelajaran 2' },
-		{ value: 'lesson-3', label: 'Pelajaran 3' }
+	const filters: { value: FilterTopic; label: string; subtitle?: string; count: number }[] = [
+		{
+			value: 'all',
+			label: 'Semua Topik',
+			subtitle: 'Gabungan seluruh pelajaran',
+			count: exercises.length
+		},
+		...lessons.map((l) => ({
+			value: l.id as FilterTopic,
+			label: l.label,
+			subtitle: l.title,
+			count: exercises.filter((q) => q.lessonId === l.id).length
+		}))
 	];
 
 	let topicFilter = $state<FilterTopic>('all');
+	let dropdownOpen = $state(false);
 	let currentIndex = $state(0);
 	let selectedOption = $state<number | null>(null);
 	let score = $state(0);
 	let finished = $state(false);
+
+	const activeFilter = $derived(filters.find((f) => f.value === topicFilter) ?? filters[0]);
 
 	const filteredQuestions = $derived<QuizQuestion[]>(
 		topicFilter === 'all' ? exercises : exercises.filter((q) => q.lessonId === topicFilter)
@@ -33,6 +46,7 @@
 
 	function resetQuiz(newFilter: FilterTopic = topicFilter) {
 		topicFilter = newFilter;
+		dropdownOpen = false;
 		currentIndex = 0;
 		selectedOption = null;
 		score = 0;
@@ -84,28 +98,87 @@
 		</div>
 	</header>
 
-	<!-- Topic Filter Pills -->
-	<div
-		class="mt-4 flex gap-1.5 overflow-x-auto pb-1"
-		role="tablist"
-		aria-label="Pilih topik latihan"
-	>
-		{#each filters as f (f.value)}
+	<!-- Topic Dropdown Selector -->
+	<div class="relative mt-4">
+		<button
+			id="topic-dropdown-button"
+			type="button"
+			aria-haspopup="listbox"
+			aria-expanded={dropdownOpen}
+			onclick={() => (dropdownOpen = !dropdownOpen)}
+			class="flex w-full items-center justify-between gap-3 rounded-xl border border-line bg-paper-raised px-4 py-3 text-left shadow-card transition-colors hover:bg-paper-sunk/60"
+		>
+			<div class="min-w-0">
+				<p class="text-[11px] font-semibold tracking-wide text-ink-faint uppercase">
+					Pilih Materi Latihan
+				</p>
+				<p class="mt-0.5 truncate text-sm font-semibold text-ink">
+					{activeFilter.label}{activeFilter.subtitle && activeFilter.value !== 'all'
+						? ` — ${activeFilter.subtitle}`
+						: ''}
+				</p>
+			</div>
+			<div class="flex shrink-0 items-center gap-2">
+				<span
+					class="rounded-md bg-paper-sunk px-2 py-0.5 text-xs font-medium text-ink-soft tabular-nums"
+				>
+					{activeFilter.count} soal
+				</span>
+				<ChevronDown
+					size={18}
+					class={['text-ink-soft transition-transform duration-200', dropdownOpen && 'rotate-180']}
+				/>
+			</div>
+		</button>
+
+		{#if dropdownOpen}
 			<button
 				type="button"
-				role="tab"
-				aria-selected={topicFilter === f.value}
-				onclick={() => resetQuiz(f.value)}
-				class={[
-					'shrink-0 rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors',
-					topicFilter === f.value
-						? 'bg-ink text-paper'
-						: 'bg-paper-sunk text-ink-soft hover:text-ink'
-				]}
+				tabindex="-1"
+				aria-label="Tutup menu"
+				onclick={() => (dropdownOpen = false)}
+				class="fixed inset-0 z-10 cursor-default"
+			></button>
+
+			<ul
+				role="listbox"
+				aria-label="Pilih topik latihan"
+				class="absolute right-0 left-0 z-20 mt-1.5 divide-y divide-line overflow-hidden rounded-xl border border-line bg-paper-raised shadow-lift"
 			>
-				{f.label}
-			</button>
-		{/each}
+				{#each filters as f (f.value)}
+					{@const selected = topicFilter === f.value}
+					<li>
+						<button
+							type="button"
+							role="option"
+							aria-selected={selected}
+							onclick={() => resetQuiz(f.value)}
+							class={[
+								'flex w-full items-center justify-between gap-3 px-4 py-3 text-left transition-colors',
+								selected ? 'bg-accent-wash/60' : 'hover:bg-paper-sunk/60'
+							]}
+						>
+							<div class="min-w-0">
+								<p class={['text-sm font-semibold', selected ? 'text-accent-ink' : 'text-ink']}>
+									{f.label}
+								</p>
+								{#if f.subtitle}
+									<p class="truncate text-xs text-ink-faint">{f.subtitle}</p>
+								{/if}
+							</div>
+							<div class="flex shrink-0 items-center gap-2">
+								<span class="text-xs font-medium text-ink-faint tabular-nums">
+									{f.count} soal
+								</span>
+								{#if selected}
+									<Check size={16} strokeWidth={2.5} class="text-accent-ink" />
+								{/if}
+							</div>
+						</button>
+					</li>
+				{/each}
+			</ul>
+		{/if}
 	</div>
 
 	<!-- Progress Bar -->

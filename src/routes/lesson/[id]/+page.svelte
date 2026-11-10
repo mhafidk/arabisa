@@ -59,13 +59,16 @@
 			<p class="text-xs font-semibold tracking-wide text-accent-ink uppercase">{lesson.label}</p>
 			<h1 class="truncate text-lg leading-tight font-semibold text-ink">{lesson.title}</h1>
 		</div>
-		<span lang="ar" dir="rtl" class="shrink-0 text-xl font-medium text-ink-soft">
-			{lesson.titleAr}
-		</span>
 	</header>
 
+	<div class="py-7 text-center">
+		<p lang="ar" dir="rtl" class="text-3xl font-medium text-ink">
+			{lesson.titleAr}
+		</p>
+	</div>
+
 	<!-- Core Concept Hero Card -->
-	<section class="mt-6 rounded-2xl bg-paper-raised p-6 shadow-card">
+	<section class="rounded-2xl bg-paper-raised p-6 shadow-card">
 		<div class="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-5">
 			<div>
 				<span
