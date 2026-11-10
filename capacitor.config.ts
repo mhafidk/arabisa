@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
 	appId: 'com.mhk.learnarabic',
-	appName: 'Learn Arabic',
+	appName: 'Belajar Bahasa Arab',
 	webDir: 'build'
 };
 

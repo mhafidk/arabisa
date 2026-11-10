@@ -1,1 +1,112 @@
 @import 'tailwindcss';
+
+/*
+ * Design tokens — "paper & ink".
+ * Warm manuscript paper, deep ink, a saffron accent. Raw values live in
+ * :root so dark mode can swap them; @theme inline exposes them to Tailwind.
+ */
+:root {
+	--paper: oklch(97.5% 0.012 85);
+	--paper-raised: oklch(99.3% 0.006 85);
+	--paper-sunk: oklch(94% 0.018 82);
+	--line: oklch(88% 0.02 80);
+	--ink: oklch(24% 0.035 260);
+	--ink-soft: oklch(44% 0.03 260);
+	--ink-faint: oklch(58% 0.022 260);
+	--accent: oklch(64% 0.15 50);
+	--accent-ink: oklch(48% 0.13 45);
+	--accent-wash: oklch(93% 0.045 70);
+	--good: oklch(52% 0.1 170);
+	--good-wash: oklch(93% 0.04 170);
+	--again: oklch(52% 0.14 25);
+	--again-wash: oklch(94% 0.035 30);
+	--shadow-ink: oklch(30% 0.04 60 / 0.14);
+
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--paper: oklch(19% 0.02 260);
+		--paper-raised: oklch(24% 0.024 260);
+		--paper-sunk: oklch(16% 0.018 260);
+		--line: oklch(32% 0.025 260);
+		--ink: oklch(94% 0.015 85);
+		--ink-soft: oklch(80% 0.02 85);
+		--ink-faint: oklch(66% 0.02 85);
+		--accent: oklch(74% 0.14 60);
+		--accent-ink: oklch(80% 0.12 65);
+		--accent-wash: oklch(30% 0.05 60);
+		--good: oklch(76% 0.11 170);
+		--good-wash: oklch(28% 0.04 170);
+		--again: oklch(74% 0.13 30);
+		--again-wash: oklch(29% 0.05 30);
+		--shadow-ink: oklch(5% 0.02 260 / 0.5);
+
+		color-scheme: dark;
+	}
+}
+
+@theme inline {
+	--color-paper: var(--paper);
+	--color-paper-raised: var(--paper-raised);
+	--color-paper-sunk: var(--paper-sunk);
+	--color-line: var(--line);
+	--color-ink: var(--ink);
+	--color-ink-soft: var(--ink-soft);
+	--color-ink-faint: var(--ink-faint);
+	--color-accent: var(--accent);
+	--color-accent-ink: var(--accent-ink);
+	--color-accent-wash: var(--accent-wash);
+	--color-good: var(--good);
+	--color-good-wash: var(--good-wash);
+	--color-again: var(--again);
+	--color-again-wash: var(--again-wash);
+
+	--font-sans: 'Figtree Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-arabic: 'Amiri', 'Noto Naskh Arabic', serif;
+
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+	--shadow-card: 0 1px 2px var(--shadow-ink), 0 12px 32px -12px var(--shadow-ink);
+	--shadow-lift: 0 2px 4px var(--shadow-ink), 0 24px 48px -16px var(--shadow-ink);
+}
+
+@layer base {
+	html {
+		background: var(--paper);
+		color: var(--ink);
+		font-family: var(--font-sans);
+		-webkit-tap-highlight-color: transparent;
+		text-rendering: optimizeLegibility;
+	}
+
+	body {
+		min-height: 100dvh;
+		padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+			env(safe-area-inset-left);
+	}
+
+	::selection {
+		background: var(--accent-wash);
+		color: var(--ink);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: 6px;
+	}
+
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
+
+	/* Arabic text: generous line height so harakat (vowel marks) never clip */
+	[lang='ar'] {
+		font-family: var(--font-arabic);
+		line-height: 1.7;
+	}
+}
