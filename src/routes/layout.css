@@ -63,8 +63,16 @@
 	--color-again: var(--again);
 	--color-again-wash: var(--again-wash);
 
-	--font-sans: 'Figtree Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-sans:
+		'Figtree Variable', 'Noto Sans Arabic Variable', 'Noto Sans Arabic', ui-sans-serif, system-ui,
+		sans-serif;
 	--font-arabic: 'Noto Sans Arabic Variable', 'Noto Sans Arabic', sans-serif;
+
+	--radius-md: 0.25rem;
+	--radius-lg: 0.375rem;
+	--radius-xl: 0.5rem;
+	--radius-2xl: 0.625rem;
+	--radius-3xl: 0.75rem;
 
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 

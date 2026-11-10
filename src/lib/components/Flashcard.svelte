@@ -46,7 +46,7 @@
 		>
 			{#if isNew}
 				<span
-					class="absolute top-5 left-5 rounded-full bg-accent-wash px-2.5 py-0.5 text-xs font-semibold text-accent-ink"
+					class="absolute top-5 left-5 rounded-md bg-accent-wash px-2.5 py-0.5 text-xs font-semibold text-accent-ink"
 				>
 					Baru
 				</span>

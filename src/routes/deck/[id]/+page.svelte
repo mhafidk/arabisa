@@ -86,8 +86,8 @@
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-decks"
-			href={resolve('/')}
-			class="-ml-2 grid size-10 place-items-center rounded-full text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
+			href={resolve('/decks')}
+			class="-ml-2 grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
 			aria-label="Kembali ke daftar dek"
 		>
 			<ArrowLeft size={22} />
@@ -132,14 +132,14 @@
 					id="study-again"
 					type="button"
 					onclick={() => start(deck)}
-					class="flex h-12 items-center justify-center gap-2 rounded-full bg-ink font-semibold text-paper transition-transform hover:scale-[1.02] active:scale-[0.98]"
+					class="flex h-12 items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform hover:scale-[1.02] active:scale-[0.98]"
 				>
 					<RotateCcw size={18} /> Belajar lagi
 				</button>
 				<a
 					id="finish-back"
-					href={resolve('/')}
-					class="flex h-12 items-center justify-center rounded-full font-semibold text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
+					href={resolve('/decks')}
+					class="flex h-12 items-center justify-center rounded-xl font-semibold text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
 				>
 					Kembali ke daftar dek
 				</a>
@@ -180,7 +180,7 @@
 					id="grade-again"
 					type="button"
 					onclick={() => grade(false)}
-					class="flex items-center justify-center gap-2 rounded-full bg-again-wash font-semibold text-again transition-transform active:scale-[0.97]"
+					class="flex items-center justify-center gap-2 rounded-xl bg-again-wash font-semibold text-again transition-transform active:scale-[0.97]"
 				>
 					<X size={20} strokeWidth={2.5} /> Ulangi
 					<kbd class="hidden text-xs opacity-60 pointer-fine:inline">←</kbd>
@@ -189,7 +189,7 @@
 					id="grade-good"
 					type="button"
 					onclick={() => grade(true)}
-					class="flex items-center justify-center gap-2 rounded-full bg-good-wash font-semibold text-good transition-transform active:scale-[0.97]"
+					class="flex items-center justify-center gap-2 rounded-xl bg-good-wash font-semibold text-good transition-transform active:scale-[0.97]"
 				>
 					<Check size={20} strokeWidth={2.5} /> Sudah hafal
 					<kbd class="hidden text-xs opacity-60 pointer-fine:inline">→</kbd>
@@ -199,10 +199,9 @@
 					id="reveal"
 					type="button"
 					onclick={() => (flipped = true)}
-					class="col-span-2 flex items-center justify-center gap-2 rounded-full bg-ink font-semibold text-paper transition-transform active:scale-[0.98]"
+					class="col-span-2 flex items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform active:scale-[0.98]"
 				>
 					Lihat jawaban
-					<kbd class="hidden text-xs opacity-60 pointer-fine:inline">Spasi</kbd>
 				</button>
 			{/if}
 		</div>

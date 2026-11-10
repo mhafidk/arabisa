@@ -22,10 +22,17 @@ interface ProgressData {
 	streak: number;
 	lastStudyDay: string | null;
 	front: FrontSide;
+	completedLessons: string[];
 }
 
 const KEY = 'progress-v1';
-const EMPTY: ProgressData = { cards: {}, streak: 0, lastStudyDay: null, front: 'ar' };
+const EMPTY: ProgressData = {
+	cards: {},
+	streak: 0,
+	lastStudyDay: null,
+	front: 'ar',
+	completedLessons: []
+};
 
 const dayKey = (d = new Date()) =>
 	`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -75,6 +82,24 @@ class Progress {
 		return { total, mastered, learning, fresh: total - mastered - learning };
 	}
 
+	allDecksStats(decks: Deck[]) {
+		let total = 0;
+		let mastered = 0;
+		let learning = 0;
+		for (const d of decks) {
+			const s = this.deckStats(d);
+			total += s.total;
+			mastered += s.mastered;
+			learning += s.learning;
+		}
+		return { total, mastered, learning, studied: mastered + learning };
+	}
+
+	recordStudy() {
+		this.#touchStreak();
+		this.#persist();
+	}
+
 	grade(card: Card, knewIt: boolean) {
 		const prev = this.#data.cards[card.id];
 		const box = knewIt ? Math.min((prev?.box ?? 0) + 1, MAX_BOX) : 0;
@@ -85,6 +110,21 @@ class Progress {
 
 	resetDeck(deck: Deck) {
 		for (const card of deck.cards) delete this.#data.cards[card.id];
+		this.#persist();
+	}
+
+	isLessonDone(lessonId: string) {
+		return (this.#data.completedLessons ?? []).includes(lessonId);
+	}
+
+	toggleLesson(lessonId: string) {
+		const list = this.#data.completedLessons ?? [];
+		if (list.includes(lessonId)) {
+			this.#data.completedLessons = list.filter((id) => id !== lessonId);
+		} else {
+			this.#data.completedLessons = [...list, lessonId];
+			this.#touchStreak();
+		}
 		this.#persist();
 	}
 
