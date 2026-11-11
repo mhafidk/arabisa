@@ -125,6 +125,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="mt-4 border-t border-line pt-3.5">
+			<a
+				href={resolve('/privasi')}
+				class="inline-flex items-center gap-1.5 text-xs font-semibold text-accent-ink hover:underline"
+			>
+				<ShieldCheck size={15} />
+				<span>Baca Kebijakan Privasi (Privacy Policy)</span>
+			</a>
+		</div>
 	</section>
 
 	<!-- FAQ Section -->

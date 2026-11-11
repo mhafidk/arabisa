@@ -44,7 +44,7 @@
 			label: 'Tentang',
 			href: resolve('/tentang'),
 			icon: HelpCircle,
-			match: (p: string) => p.startsWith('/tentang')
+			match: (p: string) => p.startsWith('/tentang') || p.startsWith('/privasi')
 		}
 	];
 </script>
@@ -55,7 +55,7 @@
 		class="fixed right-0 bottom-0 left-0 z-30 border-t border-line bg-paper-raised/95 backdrop-blur-md"
 	>
 		<div
-			class="mx-auto grid max-w-xl grid-cols-5 px-1.5 pt-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom))]"
+			class="mx-auto grid max-w-xl grid-cols-5 px-1.5 pt-1.5 pb-[calc(0.375rem+var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)))]"
 		>
 			{#each items as item (item.id)}
 				{@const active = item.match(pathname)}

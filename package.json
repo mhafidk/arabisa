@@ -1,6 +1,6 @@
 {
 	"name": "learn-arabic-app",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"private": true,
 	"type": "module",
 	"imports": {
@@ -18,7 +18,9 @@
 		"format": "prettier --write .",
 		"cap:sync": "vite build && cap sync",
 		"android:open": "vite build && cap sync android && cap open android",
-		"android:run": "vite build && cap sync android && cap run android"
+		"android:run": "vite build && cap sync android && cap run android",
+		"android:bundle": "vite build && cap sync android && cd android && ./gradlew bundleRelease",
+		"android:apk": "vite build && cap sync android && cd android && ./gradlew assembleRelease"
 	},
 	"devDependencies": {
 		"@capacitor/cli": "^8.6.0",
