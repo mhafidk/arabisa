@@ -41,7 +41,7 @@ _(77 karakter)_
 ### Deskripsi Lengkap / Full Description (Maks. 4.000 karakter)
 
 ```text
-Arabisa adalah aplikasi belajar bahasa Arab dasar yang dirancang secara bertahap, ringkas, dan mudah dipahami dalam bahasa Indonesia—langsung dari ponsel Anda tanpa gangguan iklan, tanpa perlu membuat akun, dan 100% dapat digunakan secara offline.
+Arabisa adalah aplikasi belajar bahasa Arab dasar yang dirancang secara bertahap, ringkas, dan mudah dipahami dalam bahasa Indonesia, langsung dari ponsel Anda tanpa gangguan iklan, tanpa perlu membuat akun, dan 100% dapat digunakan secara offline.
 
 Seluruh kurikulum dan materi pembelajaran di dalam Arabisa disusun serta diadaptasi dari buku pembelajaran bahasa Arab klasik yang telah teruji di seluruh dunia: "Madinah Arabic Book" (Durūs al-Lughah al-ʿArabiyyah li-Ghayr an-Nāṭiqīna bihā) karya Dr. V. Abdur Rahim.
 
