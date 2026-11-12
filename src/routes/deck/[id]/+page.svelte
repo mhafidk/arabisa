@@ -82,137 +82,141 @@
 	<meta name="description" content="Latih kosakata {deck.title.toLowerCase()} dalam bahasa Arab." />
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-8 sm:px-5">
-	<header class="flex items-center gap-3">
-		<a
-			id="back-to-decks"
-			href={resolve('/decks')}
-			class="-ml-2 grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
-			aria-label="Kembali ke daftar dek"
-		>
-			<ArrowLeft size={22} />
-		</a>
-		<div class="min-w-0 flex-1">
-			<h1 class="truncate leading-tight font-semibold text-ink">{deck.title}</h1>
-			<p class="text-sm text-ink-faint tabular-nums">
-				{#if finished}Selesai{:else}{Math.min(cleared + 1, total)} dari {total}{/if}
-			</p>
-		</div>
-		<span lang="ar" dir="rtl" class="text-2xl text-ink-soft">{deck.titleAr}</span>
-	</header>
-
+<div class="fixed inset-0 z-10 flex justify-center overflow-hidden bg-paper">
 	<div
-		class="mt-4 h-1.5 overflow-hidden rounded-full bg-paper-sunk"
-		role="progressbar"
-		aria-label="Progres kartu hafalan"
-		aria-valuemin={0}
-		aria-valuemax={total}
-		aria-valuenow={cleared}
+		class="flex h-full w-full max-w-xl flex-col justify-between px-4 pt-[max(0.75rem,var(--safe-area-inset-top,env(safe-area-inset-top,0px)))] pb-[max(1rem,var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)))] sm:px-5 sm:pt-5 sm:pb-8"
 	>
-		<div
-			class="h-full rounded-full bg-accent transition-[width] duration-500 ease-out-expo"
-			style:width="{(cleared / total) * 100}%"
-		></div>
-	</div>
-
-	{#if finished}
-		<section
-			class="flex flex-1 flex-col items-center justify-center text-center"
-			aria-live="polite"
-		>
-			<p lang="ar" dir="rtl" class="text-6xl font-bold text-accent-ink">أَحْسَنْتَ</p>
-			<h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">Bagus sekali.</h2>
-			<p class="mt-2 text-ink-soft">
-				Kamu telah menyelesaikan {total} kata dan menjawab benar
-				<strong class="font-semibold text-ink">{accuracy}%</strong> pada percobaan pertama.
-			</p>
-
-			<div class="mt-8 w-full max-w-xs">
-				<DeckProgress {...stats} />
-				<p class="mt-2 text-sm text-ink-faint tabular-nums">
-					{stats.mastered} dari {stats.total} dikuasai di dek ini
+		<header class="flex shrink-0 items-center gap-3">
+			<a
+				id="back-to-decks"
+				href={resolve('/decks')}
+				class="-ml-2 grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
+				aria-label="Kembali ke daftar dek"
+			>
+				<ArrowLeft size={22} />
+			</a>
+			<div class="min-w-0 flex-1">
+				<h1 class="truncate leading-tight font-semibold text-ink">{deck.title}</h1>
+				<p class="text-sm text-ink-faint tabular-nums">
+					{#if finished}Selesai{:else}{Math.min(cleared + 1, total)} dari {total}{/if}
 				</p>
 			</div>
+			<span lang="ar" dir="rtl" class="text-2xl text-ink-soft">{deck.titleAr}</span>
+		</header>
 
-			<div class="mt-10 flex w-full max-w-xs flex-col gap-3">
-				<button
-					id="study-again"
-					type="button"
-					onclick={() => start(deck)}
-					class="flex h-12 items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform hover:scale-[1.02] active:scale-[0.98]"
-				>
-					<RotateCcw size={18} /> Belajar lagi
-				</button>
-				<a
-					id="finish-back"
-					href={resolve('/decks')}
-					class="flex h-12 items-center justify-center rounded-xl font-semibold text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
-				>
-					Kembali ke daftar dek
-				</a>
-			</div>
-
-			<button
-				id="reset-deck"
-				type="button"
-				class="mt-8 text-sm text-ink-faint underline underline-offset-4 hover:text-again"
-				onclick={() => {
-					if (confirm(`Atur ulang semua progres untuk ${deck.title}?`)) {
-						progress.resetDeck(deck);
-						start(deck);
-					}
-				}}
-			>
-				Atur ulang progres dek
-			</button>
-		</section>
-	{:else if current}
-		<section class="flex flex-1 flex-col justify-center py-6">
-			{#key current.id + cleared}
-				<div class="card-enter">
-					<Flashcard
-						card={current}
-						front={progress.front}
-						{flipped}
-						isNew={progress.isNew(current)}
-						onflip={() => (flipped = !flipped)}
-					/>
-				</div>
-			{/key}
-		</section>
-
-		<div class="grid h-14 grid-cols-2 gap-3">
-			{#if flipped}
-				<button
-					id="grade-again"
-					type="button"
-					onclick={() => grade(false)}
-					class="flex items-center justify-center gap-2 rounded-xl bg-again-wash font-semibold text-again transition-transform active:scale-[0.97]"
-				>
-					<X size={20} strokeWidth={2.5} /> Ulangi
-					<kbd class="hidden text-xs opacity-60 pointer-fine:inline">←</kbd>
-				</button>
-				<button
-					id="grade-good"
-					type="button"
-					onclick={() => grade(true)}
-					class="flex items-center justify-center gap-2 rounded-xl bg-good-wash font-semibold text-good transition-transform active:scale-[0.97]"
-				>
-					<Check size={20} strokeWidth={2.5} /> Sudah hafal
-					<kbd class="hidden text-xs opacity-60 pointer-fine:inline">→</kbd>
-				</button>
-			{:else}
-				<button
-					id="reveal"
-					type="button"
-					onclick={() => (flipped = true)}
-					class="col-span-2 flex items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform active:scale-[0.98]"
-				>
-					Lihat jawaban
-				</button>
-			{/if}
+		<div
+			class="mt-3 h-1.5 shrink-0 overflow-hidden rounded-full bg-paper-sunk sm:mt-4"
+			role="progressbar"
+			aria-label="Progres kartu hafalan"
+			aria-valuemin={0}
+			aria-valuemax={total}
+			aria-valuenow={cleared}
+		>
+			<div
+				class="h-full rounded-full bg-accent transition-[width] duration-500 ease-out-expo"
+				style:width="{(cleared / total) * 100}%"
+			></div>
 		</div>
-	{/if}
+
+		{#if finished}
+			<section
+				class="flex flex-1 min-h-0 flex-col items-center justify-center overflow-y-auto py-4 text-center"
+				aria-live="polite"
+			>
+				<p lang="ar" dir="rtl" class="text-5xl font-bold text-accent-ink sm:text-6xl">أَحْسَنْتَ</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Bagus sekali.</h2>
+				<p class="mt-2 text-ink-soft">
+					Kamu telah menyelesaikan {total} kata dan menjawab benar
+					<strong class="font-semibold text-ink">{accuracy}%</strong> pada percobaan pertama.
+				</p>
+
+				<div class="mt-6 w-full max-w-xs sm:mt-8">
+					<DeckProgress {...stats} />
+					<p class="mt-2 text-sm text-ink-faint tabular-nums">
+						{stats.mastered} dari {stats.total} dikuasai di dek ini
+					</p>
+				</div>
+
+				<div class="mt-8 flex w-full max-w-xs flex-col gap-3 sm:mt-10">
+					<button
+						id="study-again"
+						type="button"
+						onclick={() => start(deck)}
+						class="flex h-12 items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform hover:scale-[1.02] active:scale-[0.98]"
+					>
+						<RotateCcw size={18} /> Belajar lagi
+					</button>
+					<a
+						id="finish-back"
+						href={resolve('/decks')}
+						class="flex h-12 items-center justify-center rounded-xl font-semibold text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
+					>
+						Kembali ke daftar dek
+					</a>
+				</div>
+
+				<button
+					id="reset-deck"
+					type="button"
+					class="mt-6 text-sm text-ink-faint underline underline-offset-4 hover:text-again sm:mt-8"
+					onclick={() => {
+						if (confirm(`Atur ulang semua progres untuk ${deck.title}?`)) {
+							progress.resetDeck(deck);
+							start(deck);
+						}
+					}}
+				>
+					Atur ulang progres dek
+				</button>
+			</section>
+		{:else if current}
+			<section class="flex flex-1 min-h-0 flex-col items-center justify-center py-2 sm:py-4">
+				{#key current.id + cleared}
+					<div class="card-enter flex h-full w-full max-h-[26rem] flex-col items-center justify-center">
+						<Flashcard
+							card={current}
+							front={progress.front}
+							{flipped}
+							isNew={progress.isNew(current)}
+							onflip={() => (flipped = !flipped)}
+						/>
+					</div>
+				{/key}
+			</section>
+
+			<div class="grid h-12 shrink-0 grid-cols-2 gap-3 sm:h-14">
+				{#if flipped}
+					<button
+						id="grade-again"
+						type="button"
+						onclick={() => grade(false)}
+						class="flex items-center justify-center gap-2 rounded-xl bg-again-wash font-semibold text-again transition-transform active:scale-[0.97]"
+					>
+						<X size={20} strokeWidth={2.5} /> Ulangi
+						<kbd class="hidden text-xs opacity-60 pointer-fine:inline">←</kbd>
+					</button>
+					<button
+						id="grade-good"
+						type="button"
+						onclick={() => grade(true)}
+						class="flex items-center justify-center gap-2 rounded-xl bg-good-wash font-semibold text-good transition-transform active:scale-[0.97]"
+					>
+						<Check size={20} strokeWidth={2.5} /> Sudah hafal
+						<kbd class="hidden text-xs opacity-60 pointer-fine:inline">→</kbd>
+					</button>
+				{:else}
+					<button
+						id="reveal"
+						type="button"
+						onclick={() => (flipped = true)}
+						class="col-span-2 flex items-center justify-center gap-2 rounded-xl bg-ink font-semibold text-paper transition-transform active:scale-[0.98]"
+					>
+						Lihat jawaban
+					</button>
+				{/if}
+			</div>
+		{/if}
+	</div>
 </div>
 
 <style>
