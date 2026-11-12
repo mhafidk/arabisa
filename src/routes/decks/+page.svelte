@@ -58,7 +58,7 @@
 	</ul>
 {/snippet}
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"
@@ -99,7 +99,7 @@
 						aria-checked={progress.front === side.value}
 						onclick={() => (progress.front = side.value)}
 						class={[
-							'rounded-md px-2.5 py-1 font-medium transition-colors',
+							'rounded-md px-2.5 py-1 font-medium transition-all active:scale-[0.96]',
 							progress.front === side.value
 								? 'bg-paper-raised text-ink shadow-sm'
 								: 'text-ink-faint hover:text-ink-soft'

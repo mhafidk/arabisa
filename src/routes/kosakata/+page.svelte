@@ -87,7 +87,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"
@@ -116,14 +116,14 @@
 			oninput={(e) => onSearchInput(e.currentTarget.value)}
 			placeholder="Cari kata dalam bahasa Indonesia..."
 			aria-label="Cari kata dalam bahasa Indonesia"
-			class="h-11 w-full rounded-xl border border-line bg-paper-raised pr-10 pl-10 text-sm text-ink placeholder:text-ink-faint focus:border-accent focus:outline-none"
+			class="h-11 w-full rounded-xl border border-line bg-paper-raised pr-10 pl-10 text-sm text-ink placeholder:text-ink-faint transition-colors focus:border-accent focus:outline-none"
 		/>
 		{#if query}
 			<button
 				type="button"
 				onclick={() => onSearchInput('')}
 				aria-label="Hapus pencarian"
-				class="absolute top-1/2 right-2.5 grid size-7 -translate-y-1/2 place-items-center rounded-md text-ink-faint hover:bg-paper-sunk hover:text-ink"
+				class="absolute top-1/2 right-2.5 grid size-7 -translate-y-1/2 place-items-center rounded-md text-ink-faint transition-colors hover:bg-paper-sunk hover:text-ink active:scale-[0.92]"
 			>
 				<X size={15} />
 			</button>
@@ -203,7 +203,7 @@
 				disabled={safePage <= 1}
 				onclick={() => goToPage(safePage - 1)}
 				aria-label="Halaman sebelumnya"
-				class="flex h-9 items-center justify-center gap-1 rounded-lg bg-paper-raised px-2.5 text-xs font-semibold text-ink shadow-card transition-colors hover:bg-paper-sunk disabled:pointer-events-none disabled:opacity-40"
+				class="flex h-9 items-center justify-center gap-1 rounded-lg bg-paper-raised px-2.5 text-xs font-semibold text-ink shadow-card transition-all hover:bg-paper-sunk active:scale-[0.96] disabled:pointer-events-none disabled:opacity-40"
 			>
 				<ChevronLeft size={16} />
 				<span class="hidden sm:inline">Sebelumnya</span>
@@ -216,7 +216,7 @@
 						onclick={() => goToPage(page)}
 						aria-current={page === safePage ? 'page' : undefined}
 						class={[
-							'grid size-9 place-items-center rounded-lg text-xs font-semibold tabular-nums transition-colors',
+							'grid size-9 place-items-center rounded-lg text-xs font-semibold tabular-nums transition-all active:scale-[0.94]',
 							page === safePage
 								? 'bg-ink text-paper'
 								: 'bg-paper-raised text-ink-soft shadow-card hover:bg-paper-sunk hover:text-ink'
@@ -232,7 +232,7 @@
 				disabled={safePage >= totalPages}
 				onclick={() => goToPage(safePage + 1)}
 				aria-label="Halaman selanjutnya"
-				class="flex h-9 items-center justify-center gap-1 rounded-lg bg-paper-raised px-2.5 text-xs font-semibold text-ink shadow-card transition-colors hover:bg-paper-sunk disabled:pointer-events-none disabled:opacity-40"
+				class="flex h-9 items-center justify-center gap-1 rounded-lg bg-paper-raised px-2.5 text-xs font-semibold text-ink shadow-card transition-all hover:bg-paper-sunk active:scale-[0.96] disabled:pointer-events-none disabled:opacity-40"
 			>
 				<span class="hidden sm:inline">Selanjutnya</span>
 				<ChevronRight size={16} />

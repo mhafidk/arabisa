@@ -12,7 +12,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-tentang"

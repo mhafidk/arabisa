@@ -51,7 +51,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"
@@ -153,7 +153,7 @@
 						type="button"
 						aria-expanded={isOpen}
 						onclick={() => toggleFaq(idx)}
-						class="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-paper-sunk/50"
+						class="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-paper-sunk/50 active:scale-[0.99]"
 					>
 						<span class="text-sm font-semibold text-ink">{item.q}</span>
 						<ChevronDown

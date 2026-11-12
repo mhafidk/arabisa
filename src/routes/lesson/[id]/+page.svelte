@@ -44,7 +44,7 @@
 	<meta name="description" content={lesson.summary} />
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<!-- Top Navigation Header -->
 	<header class="flex items-center gap-3">
 		<a
@@ -68,17 +68,18 @@
 	</div>
 
 	<!-- Core Concept Hero Card -->
-	<section class="rounded-2xl bg-paper-raised p-6 shadow-card">
-		<div class="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-5">
+	<section class="rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
+		<div class="border-b border-line pb-5">
 			<div>
 				<span
-					class="inline-flex items-center gap-1.5 rounded-md bg-accent-wash px-3 py-1 text-xs font-semibold text-accent-ink"
+					class="inline-flex items-center gap-1.5 rounded-md bg-accent-wash px-2.5 py-0.5 text-xs font-semibold text-accent-ink"
 				>
 					<Sparkles size={13} /> Konsep Utama
 				</span>
-				<h2 class="mt-2.5 text-xl font-semibold text-ink">{lesson.coreConcept.heading}</h2>
+				<h2 class="mt-2 text-xl font-semibold text-ink">{lesson.coreConcept.heading}</h2>
 			</div>
-			<div class="rounded-xl bg-paper-sunk px-5 py-3 text-center">
+
+			<div class="mt-4 w-full rounded-xl bg-paper-sunk px-5 py-3.5 text-center">
 				<p lang="ar" dir="rtl" class="text-4xl font-medium text-accent-ink">
 					{lesson.coreConcept.highlightAr}
 				</p>
@@ -94,10 +95,10 @@
 	</section>
 
 	<!-- Section 1: Grammar Notes -->
-	<section class="mt-10" aria-labelledby="grammar-heading">
-		<div class="mb-4 flex items-center gap-2">
+	<section class="mt-8 sm:mt-10" aria-labelledby="grammar-heading">
+		<div class="mb-3.5 flex items-center gap-2">
 			<BookOpen size={18} class="text-accent-ink" />
-			<h2 id="grammar-heading" class="text-base font-semibold text-ink">
+			<h2 id="grammar-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
 				Kaidah & Catatan Tata Bahasa
 			</h2>
 		</div>
@@ -140,11 +141,11 @@
 	</section>
 
 	<!-- Section 2: Example Sentences & Dialogues -->
-	<section class="mt-10" aria-labelledby="examples-heading">
-		<div class="mb-4 flex flex-wrap items-center justify-between gap-2">
+	<section class="mt-8 sm:mt-10" aria-labelledby="examples-heading">
+		<div class="mb-3.5 flex flex-wrap items-center justify-between gap-2">
 			<div class="flex items-center gap-2">
 				<MessageSquareText size={18} class="text-accent-ink" />
-				<h2 id="examples-heading" class="text-base font-semibold text-ink">
+				<h2 id="examples-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
 					Contoh Kalimat & Percakapan
 				</h2>
 			</div>
@@ -154,7 +155,7 @@
 				onclick={() => (showTransliteration = !showTransliteration)}
 				aria-pressed={showTransliteration}
 				class={[
-					'rounded-lg px-3 py-1 text-xs font-medium transition-colors',
+					'rounded-lg px-2.5 py-1 text-xs font-medium transition-colors active:scale-[0.97]',
 					showTransliteration
 						? 'bg-accent-wash text-accent-ink'
 						: 'bg-paper-sunk text-ink-faint hover:text-ink-soft'
@@ -181,7 +182,7 @@
 					<ul class="divide-y divide-line">
 						{#each group.items as item, idx (idx)}
 							<li
-								class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+								class="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
 							>
 								<div class="order-2 sm:order-1">
 									<div class="flex items-center gap-2">
@@ -221,10 +222,10 @@
 	</section>
 
 	<!-- Section 3: Vocabulary List -->
-	<section class="mt-10" aria-labelledby="vocab-heading">
+	<section class="mt-8 sm:mt-10" aria-labelledby="vocab-heading">
 		<div class="mb-3 flex flex-wrap items-end justify-between gap-3">
 			<div>
-				<h2 id="vocab-heading" class="text-base font-semibold text-ink">
+				<h2 id="vocab-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
 					Daftar Kosakata ({lesson.vocabulary.length})
 				</h2>
 				{#if lesson.vocabNote}
@@ -241,7 +242,7 @@
 							aria-selected={selectedCategory === cat}
 							onclick={() => (selectedCategory = cat)}
 							class={[
-								'rounded-lg px-3 py-1 text-xs font-medium transition-colors',
+								'rounded-lg px-2.5 py-1 text-xs font-medium transition-colors active:scale-[0.97]',
 								selectedCategory === cat
 									? 'bg-ink text-paper'
 									: 'bg-paper-sunk text-ink-soft hover:text-ink'
@@ -313,8 +314,10 @@
 			type="button"
 			onclick={() => progress.toggleLesson(lesson.id)}
 			class={[
-				'flex h-12 w-full items-center justify-center gap-2 rounded-xl font-semibold transition-transform active:scale-[0.98]',
-				isDone ? 'bg-good-wash text-good' : 'bg-ink text-paper hover:scale-[1.01]'
+				'flex h-12 w-full items-center justify-center gap-2 rounded-xl font-semibold transition-all active:scale-[0.98]',
+				isDone
+					? 'bg-good-wash font-semibold text-good ring-1 ring-good/40'
+					: 'bg-ink text-paper hover:bg-ink/90'
 			]}
 		>
 			<Check size={18} strokeWidth={2.5} />

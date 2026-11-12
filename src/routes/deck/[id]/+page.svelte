@@ -82,7 +82,7 @@
 	<meta name="description" content="Latih kosakata {deck.title.toLowerCase()} dalam bahasa Arab." />
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-8">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-8 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-decks"
@@ -101,7 +101,14 @@
 		<span lang="ar" dir="rtl" class="text-2xl text-ink-soft">{deck.titleAr}</span>
 	</header>
 
-	<div class="mt-4 h-1 overflow-hidden rounded-full bg-paper-sunk" aria-hidden="true">
+	<div
+		class="mt-4 h-1.5 overflow-hidden rounded-full bg-paper-sunk"
+		role="progressbar"
+		aria-label="Progres kartu hafalan"
+		aria-valuemin={0}
+		aria-valuemax={total}
+		aria-valuenow={cleared}
+	>
 		<div
 			class="h-full rounded-full bg-accent transition-[width] duration-500 ease-out-expo"
 			style:width="{(cleared / total) * 100}%"
