@@ -26,21 +26,42 @@
 		}))
 	];
 
+	function shuffleArray<T>(arr: T[]): T[] {
+		const copy = [...arr];
+		for (let i = copy.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[copy[i], copy[j]] = [copy[j], copy[i]];
+		}
+		return copy;
+	}
+
+	function randomizeQuestionOptions(q: QuizQuestion): QuizQuestion {
+		const correctOption = q.options[q.correctIndex];
+		const shuffledOptions = shuffleArray(q.options);
+		const newCorrectIndex = shuffledOptions.indexOf(correctOption);
+		return {
+			...q,
+			options: shuffledOptions,
+			correctIndex: newCorrectIndex
+		};
+	}
+
+	function prepareQuestions(topic: FilterTopic): QuizQuestion[] {
+		const base = topic === 'all' ? exercises : exercises.filter((q) => q.lessonId === topic);
+		return base.map(randomizeQuestionOptions);
+	}
+
 	let topicFilter = $state<FilterTopic>('all');
 	let dropdownOpen = $state(false);
 	let currentIndex = $state(0);
 	let selectedOption = $state<number | null>(null);
 	let score = $state(0);
 	let finished = $state(false);
+	let quizQuestions = $state<QuizQuestion[]>(prepareQuestions('all'));
 
 	const activeFilter = $derived(filters.find((f) => f.value === topicFilter) ?? filters[0]);
-
-	const filteredQuestions = $derived<QuizQuestion[]>(
-		topicFilter === 'all' ? exercises : exercises.filter((q) => q.lessonId === topicFilter)
-	);
-
-	const currentQuestion = $derived(filteredQuestions[currentIndex]);
-	const total = $derived(filteredQuestions.length);
+	const currentQuestion = $derived(quizQuestions[currentIndex]);
+	const total = $derived(quizQuestions.length);
 	const answered = $derived(selectedOption !== null);
 	const accuracy = $derived(total ? Math.round((score / total) * 100) : 0);
 
@@ -51,6 +72,7 @@
 		selectedOption = null;
 		score = 0;
 		finished = false;
+		quizQuestions = prepareQuestions(newFilter);
 	}
 
 	function chooseOption(idx: number) {
@@ -247,7 +269,7 @@
 				</div>
 
 				<div class="mt-4 space-y-2.5">
-					{#each currentQuestion.options as opt, idx (idx)}
+					{#each currentQuestion.options as opt, idx (opt.text)}
 						{@const isSelected = selectedOption === idx}
 						{@const isCorrect = idx === currentQuestion.correctIndex}
 						<button
