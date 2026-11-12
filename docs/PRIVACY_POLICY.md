@@ -1,7 +1,7 @@
 # Kebijakan Privasi (Privacy Policy) — Arabisa
 
 **Nama Aplikasi:** Arabisa  
-**ID Paket (Application ID):** `com.mhk.learnarabic`  
+**ID Paket (Application ID):** `com.mhk.arabisa`  
 **Terakhir Diperbarui:** 11 November 2026
 
 ## Ringkasan

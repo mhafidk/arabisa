@@ -1,4 +1,4 @@
-package com.mhk.learnarabic;
+package com.mhk.arabisa;
 
 import android.net.Uri;
 import android.os.Bundle;

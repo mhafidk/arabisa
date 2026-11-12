@@ -13,10 +13,10 @@ def releaseKeyPassword = keystoreProperties['keyPassword'] ?: System.getenv('AND
 def hasReleaseSigning = releaseStoreFile && releaseStorePassword && releaseKeyAlias && releaseKeyPassword
 
 android {
-    namespace = "com.mhk.learnarabic"
+    namespace = "com.mhk.arabisa"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.mhk.learnarabic"
+        applicationId "com.mhk.arabisa"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

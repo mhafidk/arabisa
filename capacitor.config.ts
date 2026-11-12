@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-	appId: 'com.mhk.learnarabic',
+	appId: 'com.mhk.arabisa',
 	appName: 'Arabisa',
 	webDir: 'build',
 	plugins: {

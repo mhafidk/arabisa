@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Arabisa</string>
     <string name="title_activity_main">Arabisa</string>
-    <string name="package_name">com.mhk.learnarabic</string>
-    <string name="custom_url_scheme">com.mhk.learnarabic</string>
+    <string name="package_name">com.mhk.arabisa</string>
+    <string name="custom_url_scheme">com.mhk.arabisa</string>
 </resources>

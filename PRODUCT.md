@@ -6,7 +6,7 @@
 
 web
 
-Ships as an Android app (Capacitor wrapper, `com.mhk.learnarabic`) and as an installable PWA. One consistent design language across both; the Android wrapper does not make it a native-Material product.
+Ships as an Android app (Capacitor wrapper, `com.mhk.arabisa`) and as an installable PWA. One consistent design language across both; the Android wrapper does not make it a native-Material product.
 
 ## Users
 

@@ -44,7 +44,7 @@
 			<h2 class="text-base font-semibold text-ink">1. Pengumpulan Data Pribadi</h2>
 			<p>
 				Aplikasi <strong class="font-semibold text-ink">Arabisa</strong> (<code
-					>com.mhk.learnarabic</code
+					>com.mhk.arabisa</code
 				>) tidak mengumpulkan informasi pribadi apa pun seperti nama, alamat email, nomor telepon,
 				lokasi geografis, maupun pengenal perangkat. Aplikasi ini dapat digunakan sepenuhnya tanpa
 				pendaftaran akun.

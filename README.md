@@ -128,7 +128,7 @@ Hasil build statis akan tersimpan di direktori `build/` dan siap diuji dengan `n
 
 ## 📱 Build Android (Capacitor)
 
-Proyek ini telah dikonfigurasi dengan Capacitor untuk menghasilkan aplikasi native Android (`com.mhk.learnarabic`).
+Proyek ini telah dikonfigurasi dengan Capacitor untuk menghasilkan aplikasi native Android (`com.mhk.arabisa`).
 
 ### Sinkronisasi Aset Web ke Native
 

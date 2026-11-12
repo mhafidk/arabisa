@@ -1,4 +1,4 @@
-# Panduan Publikasi Google Play Store — Arabisa (`com.mhk.learnarabic`)
+# Panduan Publikasi Google Play Store — Arabisa (`com.mhk.arabisa`)
 
 Dokumen ini berisi teks siap pakai untuk **Store Listing**, panduan **Data Safety**, serta perintah untuk membuat **Signed Android App Bundle (`.aab`)**.
 
@@ -71,7 +71,10 @@ Tampilan nyaman di mata menyerupai kertas manuskrip hangat di siang hari dan mod
 ## 3. Pengisian Formulir Kebijakan di Google Play Console
 
 1. **Privacy Policy URL**:
-   - Anda dapat menghosting file `static/privacy-policy.html` (misalnya melalui GitHub Pages / Cloudflare Pages / Vercel) atau menggunakan URL halaman Markdown `docs/PRIVACY_POLICY.md` di repositori GitHub publik Anda.
+   - Gunakan tautan publik GitHub berikut (siap copy-paste):
+     ```text
+     https://github.com/mhafidk/arabisa/blob/main/docs/PRIVACY_POLICY.md
+     ```
 2. **App Access**:
    - Pilih: _"All functionality in my app is available without any access restrictions"_ (tidak butuh login).
 3. **Ads**:
