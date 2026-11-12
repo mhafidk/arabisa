@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T18:03:42.532613+00:00",
+  "title": "Design System: Arabisa",
+  "extensions": {
+    "colorMeta": {
+      "saffron": {
+        "role": "primary",
+        "displayName": "Saffron",
+        "canonical": "oklch(64% 0.15 50)",
+        "tonalRamp": [
+          "oklch(15% 0.022 50)",
+          "oklch(26% 0.062 50)",
+          "oklch(38% 0.104 50)",
+          "oklch(49% 0.147 50)",
+          "oklch(61% 0.147 50)",
+          "oklch(72% 0.104 50)",
+          "oklch(84% 0.062 50)",
+          "oklch(95% 0.022 50)"
+        ]
+      },
+      "saffron-ink": {
+        "role": "primary",
+        "displayName": "Saffron Ink",
+        "canonical": "oklch(48% 0.13 45)",
+        "tonalRamp": [
+          "oklch(15% 0.019 45)",
+          "oklch(26% 0.053 45)",
+          "oklch(38% 0.091 45)",
+          "oklch(49% 0.128 45)",
+          "oklch(61% 0.128 45)",
+          "oklch(72% 0.091 45)",
+          "oklch(84% 0.053 45)",
+          "oklch(95% 0.019 45)"
+        ]
+      },
+      "saffron-wash": {
+        "role": "primary",
+        "displayName": "Saffron Wash",
+        "canonical": "oklch(93% 0.045 70)",
+        "tonalRamp": [
+          "oklch(15% 0.007 70)",
+          "oklch(26% 0.018 70)",
+          "oklch(38% 0.031 70)",
+          "oklch(49% 0.044 70)",
+          "oklch(61% 0.044 70)",
+          "oklch(72% 0.031 70)",
+          "oklch(84% 0.018 70)",
+          "oklch(95% 0.007 70)"
+        ]
+      },
+      "manuscript-paper": {
+        "role": "neutral",
+        "displayName": "Manuscript Paper",
+        "canonical": "oklch(97.5% 0.012 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(26% 0.005 85)",
+          "oklch(38% 0.008 85)",
+          "oklch(49% 0.012 85)",
+          "oklch(61% 0.012 85)",
+          "oklch(72% 0.008 85)",
+          "oklch(84% 0.005 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Paper Raised",
+        "canonical": "oklch(99.3% 0.006 85)",
+        "tonalRamp": [
+          "oklch(15% 0.001 85)",
+          "oklch(26% 0.002 85)",
+          "oklch(38% 0.004 85)",
+          "oklch(49% 0.006 85)",
+          "oklch(61% 0.006 85)",
+          "oklch(72% 0.004 85)",
+          "oklch(84% 0.002 85)",
+          "oklch(95% 0.001 85)"
+        ]
+      },
+      "paper-sunk": {
+        "role": "neutral",
+        "displayName": "Paper Sunk",
+        "canonical": "oklch(94% 0.018 82)",
+        "tonalRamp": [
+          "oklch(15% 0.003 82)",
+          "oklch(26% 0.007 82)",
+          "oklch(38% 0.013 82)",
+          "oklch(49% 0.018 82)",
+          "oklch(61% 0.018 82)",
+          "oklch(72% 0.013 82)",
+          "oklch(84% 0.007 82)",
+          "oklch(95% 0.003 82)"
+        ]
+      },
+      "paper-line": {
+        "role": "neutral",
+        "displayName": "Paper Line",
+        "canonical": "oklch(88% 0.02 80)",
+        "tonalRamp": [
+          "oklch(15% 0.003 80)",
+          "oklch(26% 0.008 80)",
+          "oklch(38% 0.014 80)",
+          "oklch(49% 0.020 80)",
+          "oklch(61% 0.020 80)",
+          "oklch(72% 0.014 80)",
+          "oklch(84% 0.008 80)",
+          "oklch(95% 0.003 80)"
+        ]
+      },
+      "deep-indigo-ink": {
+        "role": "neutral",
+        "displayName": "Deep Indigo Ink",
+        "canonical": "oklch(24% 0.035 260)",
+        "tonalRamp": [
+          "oklch(15% 0.005 260)",
+          "oklch(26% 0.014 260)",
+          "oklch(38% 0.024 260)",
+          "oklch(49% 0.034 260)",
+          "oklch(61% 0.034 260)",
+          "oklch(72% 0.024 260)",
+          "oklch(84% 0.014 260)",
+          "oklch(95% 0.005 260)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(44% 0.03 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.012 260)",
+          "oklch(38% 0.021 260)",
+          "oklch(49% 0.029 260)",
+          "oklch(61% 0.029 260)",
+          "oklch(72% 0.021 260)",
+          "oklch(84% 0.012 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "oklch(58% 0.022 260)",
+        "tonalRamp": [
+          "oklch(15% 0.003 260)",
+          "oklch(26% 0.009 260)",
+          "oklch(38% 0.015 260)",
+          "oklch(49% 0.022 260)",
+          "oklch(61% 0.022 260)",
+          "oklch(72% 0.015 260)",
+          "oklch(84% 0.009 260)",
+          "oklch(95% 0.003 260)"
+        ]
+      },
+      "mint-ink": {
+        "role": "tertiary",
+        "displayName": "Mint Ink",
+        "canonical": "oklch(52% 0.1 170)",
+        "tonalRamp": [
+          "oklch(15% 0.015 170)",
+          "oklch(26% 0.041 170)",
+          "oklch(38% 0.070 170)",
+          "oklch(49% 0.098 170)",
+          "oklch(61% 0.098 170)",
+          "oklch(72% 0.070 170)",
+          "oklch(84% 0.041 170)",
+          "oklch(95% 0.015 170)"
+        ]
+      },
+      "mint-wash": {
+        "role": "tertiary",
+        "displayName": "Mint Wash",
+        "canonical": "oklch(93% 0.04 170)",
+        "tonalRamp": [
+          "oklch(15% 0.006 170)",
+          "oklch(26% 0.016 170)",
+          "oklch(38% 0.028 170)",
+          "oklch(49% 0.039 170)",
+          "oklch(61% 0.039 170)",
+          "oklch(72% 0.028 170)",
+          "oklch(84% 0.016 170)",
+          "oklch(95% 0.006 170)"
+        ]
+      },
+      "brick-red": {
+        "role": "tertiary",
+        "displayName": "Brick Red",
+        "canonical": "oklch(52% 0.14 25)",
+        "tonalRamp": [
+          "oklch(15% 0.021 25)",
+          "oklch(26% 0.058 25)",
+          "oklch(38% 0.098 25)",
+          "oklch(49% 0.138 25)",
+          "oklch(61% 0.138 25)",
+          "oklch(72% 0.098 25)",
+          "oklch(84% 0.058 25)",
+          "oklch(95% 0.021 25)"
+        ]
+      },
+      "brick-wash": {
+        "role": "tertiary",
+        "displayName": "Brick Wash",
+        "canonical": "oklch(94% 0.035 30)",
+        "tonalRamp": [
+          "oklch(15% 0.005 30)",
+          "oklch(26% 0.014 30)",
+          "oklch(38% 0.024 30)",
+          "oklch(49% 0.034 30)",
+          "oklch(61% 0.034 30)",
+          "oklch(72% 0.024 30)",
+          "oklch(84% 0.014 30)",
+          "oklch(95% 0.005 30)"
+        ]
+      },
+      "dark-saffron": {
+        "role": "primary",
+        "displayName": "Dark Saffron",
+        "canonical": "oklch(74% 0.14 60)",
+        "tonalRamp": [
+          "oklch(15% 0.021 60)",
+          "oklch(26% 0.058 60)",
+          "oklch(38% 0.098 60)",
+          "oklch(49% 0.138 60)",
+          "oklch(61% 0.138 60)",
+          "oklch(72% 0.098 60)",
+          "oklch(84% 0.058 60)",
+          "oklch(95% 0.021 60)"
+        ]
+      },
+      "dark-saffron-ink": {
+        "role": "primary",
+        "displayName": "Dark Saffron Ink",
+        "canonical": "oklch(80% 0.12 65)",
+        "tonalRamp": [
+          "oklch(15% 0.018 65)",
+          "oklch(26% 0.049 65)",
+          "oklch(38% 0.084 65)",
+          "oklch(49% 0.118 65)",
+          "oklch(61% 0.118 65)",
+          "oklch(72% 0.084 65)",
+          "oklch(84% 0.049 65)",
+          "oklch(95% 0.018 65)"
+        ]
+      },
+      "dark-saffron-wash": {
+        "role": "primary",
+        "displayName": "Dark Saffron Wash",
+        "canonical": "oklch(30% 0.05 60)",
+        "tonalRamp": [
+          "oklch(15% 0.007 60)",
+          "oklch(26% 0.021 60)",
+          "oklch(38% 0.035 60)",
+          "oklch(49% 0.049 60)",
+          "oklch(61% 0.049 60)",
+          "oklch(72% 0.035 60)",
+          "oklch(84% 0.021 60)",
+          "oklch(95% 0.007 60)"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper",
+        "canonical": "oklch(19% 0.02 260)",
+        "tonalRamp": [
+          "oklch(15% 0.003 260)",
+          "oklch(26% 0.008 260)",
+          "oklch(38% 0.014 260)",
+          "oklch(49% 0.020 260)",
+          "oklch(61% 0.020 260)",
+          "oklch(72% 0.014 260)",
+          "oklch(84% 0.008 260)",
+          "oklch(95% 0.003 260)"
+        ]
+      },
+      "dark-paper-raised": {
+        "role": "neutral",
+        "displayName": "Dark Paper Raised",
+        "canonical": "oklch(24% 0.024 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.010 260)",
+          "oklch(38% 0.017 260)",
+          "oklch(49% 0.024 260)",
+          "oklch(61% 0.024 260)",
+          "oklch(72% 0.017 260)",
+          "oklch(84% 0.010 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "dark-paper-sunk": {
+        "role": "neutral",
+        "displayName": "Dark Paper Sunk",
+        "canonical": "oklch(16% 0.018 260)",
+        "tonalRamp": [
+          "oklch(15% 0.003 260)",
+          "oklch(26% 0.007 260)",
+          "oklch(38% 0.013 260)",
+          "oklch(49% 0.018 260)",
+          "oklch(61% 0.018 260)",
+          "oklch(72% 0.013 260)",
+          "oklch(84% 0.007 260)",
+          "oklch(95% 0.003 260)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "canonical": "oklch(32% 0.025 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.010 260)",
+          "oklch(38% 0.017 260)",
+          "oklch(49% 0.025 260)",
+          "oklch(61% 0.025 260)",
+          "oklch(72% 0.017 260)",
+          "oklch(84% 0.010 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "canonical": "oklch(94% 0.015 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(26% 0.006 85)",
+          "oklch(38% 0.010 85)",
+          "oklch(49% 0.015 85)",
+          "oklch(61% 0.015 85)",
+          "oklch(72% 0.010 85)",
+          "oklch(84% 0.006 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "dark-ink-soft": {
+        "role": "neutral",
+        "displayName": "Dark Ink Soft",
+        "canonical": "oklch(80% 0.02 85)",
+        "tonalRamp": [
+          "oklch(15% 0.003 85)",
+          "oklch(26% 0.008 85)",
+          "oklch(38% 0.014 85)",
+          "oklch(49% 0.020 85)",
+          "oklch(61% 0.020 85)",
+          "oklch(72% 0.014 85)",
+          "oklch(84% 0.008 85)",
+          "oklch(95% 0.003 85)"
+        ]
+      },
+      "dark-ink-faint": {
+        "role": "neutral",
+        "displayName": "Dark Ink Faint",
+        "canonical": "oklch(66% 0.02 85)",
+        "tonalRamp": [
+          "oklch(15% 0.003 85)",
+          "oklch(26% 0.008 85)",
+          "oklch(38% 0.014 85)",
+          "oklch(49% 0.020 85)",
+          "oklch(61% 0.020 85)",
+          "oklch(72% 0.014 85)",
+          "oklch(84% 0.008 85)",
+          "oklch(95% 0.003 85)"
+        ]
+      },
+      "dark-mint": {
+        "role": "tertiary",
+        "displayName": "Dark Mint",
+        "canonical": "oklch(76% 0.11 170)",
+        "tonalRamp": [
+          "oklch(15% 0.017 170)",
+          "oklch(26% 0.045 170)",
+          "oklch(38% 0.077 170)",
+          "oklch(49% 0.108 170)",
+          "oklch(61% 0.108 170)",
+          "oklch(72% 0.077 170)",
+          "oklch(84% 0.045 170)",
+          "oklch(95% 0.017 170)"
+        ]
+      },
+      "dark-mint-wash": {
+        "role": "tertiary",
+        "displayName": "Dark Mint Wash",
+        "canonical": "oklch(28% 0.04 170)",
+        "tonalRamp": [
+          "oklch(15% 0.006 170)",
+          "oklch(26% 0.016 170)",
+          "oklch(38% 0.028 170)",
+          "oklch(49% 0.039 170)",
+          "oklch(61% 0.039 170)",
+          "oklch(72% 0.028 170)",
+          "oklch(84% 0.016 170)",
+          "oklch(95% 0.006 170)"
+        ]
+      },
+      "dark-brick": {
+        "role": "tertiary",
+        "displayName": "Dark Brick",
+        "canonical": "oklch(74% 0.13 30)",
+        "tonalRamp": [
+          "oklch(15% 0.019 30)",
+          "oklch(26% 0.053 30)",
+          "oklch(38% 0.091 30)",
+          "oklch(49% 0.128 30)",
+          "oklch(61% 0.128 30)",
+          "oklch(72% 0.091 30)",
+          "oklch(84% 0.053 30)",
+          "oklch(95% 0.019 30)"
+        ]
+      },
+      "dark-brick-wash": {
+        "role": "tertiary",
+        "displayName": "Dark Brick Wash",
+        "canonical": "oklch(29% 0.05 30)",
+        "tonalRamp": [
+          "oklch(15% 0.007 30)",
+          "oklch(26% 0.021 30)",
+          "oklch(38% 0.035 30)",
+          "oklch(49% 0.049 30)",
+          "oklch(61% 0.049 30)",
+          "oklch(72% 0.035 30)",
+          "oklch(84% 0.021 30)",
+          "oklch(95% 0.007 30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-arabic": {
+        "displayName": "Display Arabic",
+        "purpose": "The Arabic word on a flashcard face; largest type in the app."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles and the continue-learning lesson title."
+      },
+      "arabic-body": {
+        "displayName": "Arabic Body",
+        "purpose": "Example sentences, vocabulary entries, concept highlights (1.5–2.25rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and deck titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Summaries, explanations, button labels."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase section headings, badges, stat captions."
+      },
+      "nav-label": {
+        "displayName": "Nav Label",
+        "purpose": "Bottom navigation captions only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 1px 2px var(--shadow-ink), 0 12px 32px -12px var(--shadow-ink)",
+        "purpose": "Resting state of every card, tile, quiz option and flashcard."
+      },
+      {
+        "name": "lift",
+        "value": "0 2px 4px var(--shadow-ink), 0 24px 48px -16px var(--shadow-ink)",
+        "purpose": "Dropdowns and flashcard hover; anything floating above the column."
+      },
+      {
+        "name": "shadow-ink-light",
+        "value": "oklch(30% 0.04 60 / 0.14)",
+        "purpose": "Shadow tint, light theme."
+      },
+      {
+        "name": "shadow-ink-dark",
+        "value": "oklch(5% 0.02 260 / 0.5)",
+        "purpose": "Shadow tint, dark theme."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Single easing for every movement."
+      },
+      {
+        "name": "duration-ui",
+        "value": "200–300ms",
+        "purpose": "Colour, press and chevron transitions."
+      },
+      {
+        "name": "duration-flip",
+        "value": "650ms",
+        "purpose": "Flashcard 3D flip (reduced motion: 220ms cross-fade)."
+      },
+      {
+        "name": "duration-progress",
+        "value": "700ms",
+        "purpose": "Progress bar width changes."
+      },
+      {
+        "name": "press-scale",
+        "value": "scale(0.96–0.99)",
+        "purpose": "Active state on every tappable element; smaller elements press deeper."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid ink action, full width inside its card. The one strongest action per screen.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Lanjutkan Pelajaran 2 <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;width:100%;border-radius:0.5rem;background:var(--ink);color:var(--paper);font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;font-size:0.875rem;font-weight:600;text-decoration:none;transition:transform 200ms cubic-bezier(0.16, 1, 0.3, 1);} .ds-btn-primary:hover{background:color-mix(in oklch, var(--ink) 88%, var(--accent));} .ds-btn-primary:active{transform:scale(0.98);} .ds-btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Small sunk-paper square for theme switch and back actions.",
+      "html": "<button class=\"ds-btn-icon\" type=\"button\" aria-label=\"Ganti ke tema gelap\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg></button>",
+      "css": ".ds-btn-icon{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:0.375rem;background:var(--paper-sunk);color:var(--ink-soft);cursor:pointer;transition:color 200ms ease-out, transform 200ms cubic-bezier(0.16, 1, 0.3, 1);} .ds-btn-icon:hover{color:var(--ink);} .ds-btn-icon:active{transform:scale(0.96);} .ds-btn-icon:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px;}"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Saffron-wash status word: Baru, Lanjutkan Belajar.",
+      "html": "<span class=\"ds-badge\">Lanjutkan Belajar</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:0.25rem;background:var(--accent-wash);color:var(--accent-ink);font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;font-size:0.75rem;font-weight:600;line-height:1.33;}"
+    },
+    {
+      "name": "Continue Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Hero card on Beranda: badge, lesson label, title, summary, ink CTA.",
+      "html": "<section class=\"ds-card\"><span class=\"ds-card-badge\">Lanjutkan Belajar</span><p class=\"ds-card-eyebrow\">Pelajaran 2</p><h3 class=\"ds-card-title\">Isim Isyarah: ذَلِكَ</h3><p class=\"ds-card-body\">Kata tunjuk untuk benda yang jauh, beserta pertanyaan dan jawabannya.</p><a class=\"ds-card-cta\" href=\"#\">Lanjutkan Pelajaran 2 <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></section>",
+      "css": ".ds-card{max-width:22rem;padding:20px;border-radius:0.625rem;background:var(--paper-raised);color:var(--ink);box-shadow:0 1px 2px var(--shadow-ink), 0 12px 32px -12px var(--shadow-ink);font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;} .ds-card-badge{display:inline-block;padding:2px 10px;border-radius:0.25rem;background:var(--accent-wash);color:var(--accent-ink);font-size:0.75rem;font-weight:600;} .ds-card-eyebrow{margin:8px 0 0;font-size:0.75rem;font-weight:600;letter-spacing:0.025em;text-transform:uppercase;color:var(--ink-faint);} .ds-card-title{margin:2px 0 0;font-size:1.25rem;font-weight:600;letter-spacing:-0.025em;} .ds-card-body{margin:8px 0 0;font-size:0.875rem;line-height:1.625;color:var(--ink-soft);} .ds-card-cta{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:0.5rem;background:var(--ink);color:var(--paper);font-size:0.875rem;font-weight:600;text-decoration:none;transition:transform 200ms cubic-bezier(0.16, 1, 0.3, 1);} .ds-card-cta:active{transform:scale(0.98);} .ds-card-cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Vocabulary search field with leading icon; border turns saffron on focus.",
+      "html": "<label class=\"ds-search\"><span class=\"ds-search-icon\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg></span><input type=\"search\" placeholder=\"Cari kata dalam bahasa Indonesia...\" aria-label=\"Cari kata\"></label>",
+      "css": ".ds-search{position:relative;display:block;max-width:22rem;} .ds-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink-faint);display:flex;} .ds-search input{width:100%;height:44px;padding:0 40px;border:1px solid var(--line);border-radius:0.5rem;background:var(--paper-raised);color:var(--ink);font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;font-size:0.875rem;transition:border-color 200ms ease-out;} .ds-search input::placeholder{color:var(--ink-faint);} .ds-search input:focus{outline:none;border-color:var(--accent);}"
+    },
+    {
+      "name": "Bottom Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Fixed five-tab bar; active tab gets a saffron-wash icon backdrop.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navigasi utama\"><a class=\"ds-nav-item is-active\" aria-current=\"page\" href=\"#\"><span class=\"ds-nav-icon\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/></svg></span><span>Beranda</span></a><a class=\"ds-nav-item\" href=\"#\"><span class=\"ds-nav-icon\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 10 5-10 5L2 7z\"/><path d=\"m2 17 10 5 10-5\"/><path d=\"m2 12 10 5 10-5\"/></svg></span><span>Flashcard</span></a><a class=\"ds-nav-item\" href=\"#\"><span class=\"ds-nav-icon\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg></span><span>Kosakata</span></a></nav>",
+      "css": ".ds-nav{display:grid;grid-template-columns:repeat(3,1fr);max-width:22rem;padding:6px;border-top:1px solid var(--line);background:color-mix(in oklch, var(--paper-raised) 95%, transparent);backdrop-filter:blur(12px);font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;} .ds-nav-item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:0.375rem;color:var(--ink-faint);font-size:11px;font-weight:600;text-decoration:none;transition:color 200ms ease-out;} .ds-nav-item:hover{color:var(--ink-soft);} .ds-nav-icon{display:grid;place-items:center;width:44px;height:28px;border-radius:0.25rem;transition:background 200ms ease-out;} .ds-nav-item.is-active{color:var(--accent-ink);} .ds-nav-item.is-active .ds-nav-icon{background:var(--accent-wash);} .ds-nav-item:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Quiz Options",
+      "kind": "custom",
+      "refersTo": "quiz-option",
+      "description": "Multiple-choice rows: default, correct (mint ring), wrong (brick ring), dimmed.",
+      "html": "<div class=\"ds-quiz\"><button class=\"ds-opt\">Ini sebuah buku</button><button class=\"ds-opt is-correct\">Itu sebuah masjid <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><button class=\"ds-opt is-wrong\">Ini sebuah masjid <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></button><button class=\"ds-opt is-dim\">Itu sebuah rumah</button></div>",
+      "css": ".ds-quiz{display:flex;flex-direction:column;gap:10px;max-width:22rem;font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;} .ds-opt{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;width:100%;padding:12px 16px;border:0;border-radius:0.5rem;background:var(--paper-raised);color:var(--ink);box-shadow:0 1px 2px var(--shadow-ink), 0 12px 32px -12px var(--shadow-ink);font-size:0.875rem;text-align:left;cursor:pointer;transition:all 200ms cubic-bezier(0.16, 1, 0.3, 1);} .ds-opt:hover{background:color-mix(in oklch, var(--paper-sunk) 70%, var(--paper-raised));} .ds-opt:active{transform:scale(0.99);} .ds-opt:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-opt.is-correct{background:var(--good-wash);color:var(--good);font-weight:600;box-shadow:0 0 0 2px var(--good);} .ds-opt.is-wrong{background:var(--again-wash);color:var(--again);font-weight:600;box-shadow:0 0 0 2px var(--again);} .ds-opt.is-dim{opacity:0.7;color:var(--ink-faint);box-shadow:none;}"
+    },
+    {
+      "name": "Flashcard",
+      "kind": "custom",
+      "refersTo": "flashcard",
+      "description": "Signature raised sheet with one display-size Arabic word; lifts on hover.",
+      "html": "<button class=\"ds-flash\" type=\"button\" aria-label=\"Tampilkan jawaban\"><span class=\"ds-flash-new\">Baru</span><span class=\"ds-flash-ar\" lang=\"ar\" dir=\"rtl\">كِتَابٌ</span><span class=\"ds-flash-hint\">Ketuk untuk membuka</span></button>",
+      "css": ".ds-flash{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:22rem;height:18rem;padding:32px;border:0;border-radius:0.75rem;background:var(--paper-raised);color:var(--ink);box-shadow:0 1px 2px var(--shadow-ink), 0 12px 32px -12px var(--shadow-ink);cursor:pointer;transition:box-shadow 300ms ease-out;font-family:'Figtree Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;} .ds-flash:hover{box-shadow:0 2px 4px var(--shadow-ink), 0 24px 48px -16px var(--shadow-ink);} .ds-flash:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-flash-new{position:absolute;top:20px;left:20px;padding:2px 10px;border-radius:0.25rem;background:var(--accent-wash);color:var(--accent-ink);font-size:0.75rem;font-weight:600;} .ds-flash-ar{font-family:'Noto Sans Arabic Variable', 'Noto Sans Arabic', sans-serif;font-size:3.75rem;font-weight:700;line-height:1.7;} .ds-flash-hint{position:absolute;bottom:24px;font-size:0.875rem;color:var(--ink-faint);transition:color 200ms ease-out;} .ds-flash:hover .ds-flash-hint{color:var(--ink-soft);}"
+    },
+    {
+      "name": "Deck Progress Bar",
+      "kind": "custom",
+      "description": "Two-segment pill: mint mastered, saffron learning, on a sunk track.",
+      "html": "<div class=\"ds-progress\" role=\"progressbar\" aria-valuemin=\"0\" aria-valuemax=\"20\" aria-valuenow=\"8\" aria-valuetext=\"8 dari 20 dikuasai, 5 sedang dipelajari\"><span class=\"ds-progress-good\" style=\"width:40%\"></span><span class=\"ds-progress-learn\" style=\"width:25%\"></span></div>",
+      "css": ".ds-progress{display:flex;width:100%;max-width:22rem;height:6px;overflow:hidden;border-radius:9999px;background:var(--paper-sunk);} .ds-progress-good{height:100%;background:var(--good);transition:width 700ms cubic-bezier(0.16, 1, 0.3, 1);} .ds-progress-learn{height:100%;background:var(--accent);transition:width 700ms cubic-bezier(0.16, 1, 0.3, 1);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Study Manuscript",
+    "overview": "Arabisa should feel like a well-kept study notebook lying open next to the Madinah book. It uses warm manuscript paper, deep indigo ink, and a single saffron mark where the learner's attention belongs. The mood is calm, warm, and unhurried. Arabic script is the hero of every screen. The interface around it (headers, labels, navigation, stats) stays quiet and compact, so a five-minute session on the phone feels focused rather than busy.\n\nThe system is a single portrait column, at most 36rem wide, made of softly lifted paper cards on a paper ground. Hierarchy comes from tone rather than chrome. The page is the paper, cards are a sheet raised above it, and wells such as icon tiles, progress tracks, and inactive pills are pressed slightly into it. Saffron is used sparingly: the brand mark, the active tab, \"new\" and \"continue\" badges, focus rings, and in-progress state. The strongest action on a screen is always solid ink on paper, never a saffron fill.\n\nDark mode (\"Dark Ink\") is not an inverted light theme. The paper becomes deep indigo night, the ink becomes warm parchment, and saffron brightens into lamplight. It is built for learners studying after Isya.",
+    "keyCharacteristics": [
+      "Warm paper and indigo ink, in OKLCH, with a full light and dark pair for every role.",
+      "One accent (saffron), plus two semantic inks for learning state: mint for correct or mastered, brick for wrong or \"again\".",
+      "Figtree for the interface and Noto Sans Arabic for Arabic, with Arabic always set larger and with more line height.",
+      "Softly lifted cards with an ambient shadow tinted by the ink colour. Never hard drop shadows.",
+      "Modest radii (4–12px), a gentle press-scale on tap, and one expo-out ease for everything that moves."
+    ],
+    "rules": [
+      {
+        "name": "The One Mark Rule",
+        "body": "Saffron is a mark, not a surface. It appears as small fills, washes, text, and outlines. No saffron-filled buttons, banners, or full cards.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Leads Rule",
+        "body": "The single most important action on a screen is a solid ink button with paper text (`button-primary`). Saffron draws attention to state. Ink drives action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Learning-State Rule",
+        "body": "Mint and brick mean exactly two things: right/mastered and wrong/again. Never use them for decoration, categories, or branding.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Theme Rule",
+        "body": "Every new colour token ships with both a light and a dark value, defined in all three blocks of `layout.css`: `:root`, `[data-theme='dark']`, and the `prefers-color-scheme` fallback.",
+        "section": "colors"
+      },
+      {
+        "name": "The Harakat Room Rule",
+        "body": "Every Arabic run carries `lang=\"ar\"` and `dir=\"rtl\"`, which applies the Arabic font and line-height 1.7. Never set Arabic below 1.125rem, and never tighten its line height. Diacritics must never clip.",
+        "section": "typography"
+      },
+      {
+        "name": "The Arabic Is Bigger Rule",
+        "body": "Whenever Arabic and Indonesian appear together, the Arabic is larger. Transliteration sits between them in italic Saffron Ink.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Count Rule",
+        "body": "Streaks, scores, and counts use `tabular-nums` so they don't jitter as they change.",
+        "section": "typography"
+      },
+      {
+        "name": "The Warm Shadow Rule",
+        "body": "Shadows are always tinted by `--shadow-ink`, never neutral black or grey, and always soft and wide. No hard offsets and no coloured glows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two Heights Rule",
+        "body": "There are only two elevations: Card at rest and Lift for floating or hovered elements. Don't invent a third.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the semantic tokens (`paper`, `paper-raised`, `paper-sunk`, `line`, `ink`, `ink-soft`, `ink-faint`, `accent`, `accent-ink`, `accent-wash`, `good`, `again`) through their Tailwind utilities. Never hard-code colours.",
+      "Do wrap every Arabic run in `lang=\"ar\" dir=\"rtl\"`, and keep it larger than the Indonesian beside it.",
+      "Do make the main action a full-width, 48px ink button, and give every tappable element a press-scale between 0.96 and 0.99.",
+      "Do use `cubic-bezier(0.16, 1, 0.3, 1)` (`ease-out-expo`) for movement, with durations of 200–300ms for UI and up to 700ms for progress and flips.",
+      "Do give every animation a `prefers-reduced-motion` fallback (a cross-fade or nothing at all).",
+      "Do keep content inside the centred 36rem column and clear the bottom nav with 96px of bottom padding."
+    ],
+    "donts": [
+      "Don't fill buttons, banners, or cards with saffron. It is a mark, not a surface.",
+      "Don't use mint or brick for anything except right/mastered and wrong/again.",
+      "Don't use neutral grey or black shadows, hard offsets, or a third elevation level.",
+      "Don't use radii above 12px on containers, or pill-shaped buttons.",
+      "Don't shrink Arabic below 1.125rem or tighten its line height below 1.7.",
+      "Don't add a colour token without its dark-mode pair."
+    ]
+  }
+}

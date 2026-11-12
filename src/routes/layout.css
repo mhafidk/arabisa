@@ -108,6 +108,8 @@
 		font-family: var(--font-sans);
 		-webkit-tap-highlight-color: transparent;
 		text-rendering: optimizeLegibility;
+		accent-color: var(--accent);
+		caret-color: var(--accent);
 	}
 
 	body {
@@ -140,6 +142,22 @@
 	h2,
 	h3 {
 		text-wrap: balance;
+	}
+
+	/* Custom smooth scrollbar themed to warm paper & ink */
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--line);
+		border-radius: 9999px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--ink-faint);
 	}
 
 	/* Arabic text: generous line height so harakat (vowel marks) never clip */

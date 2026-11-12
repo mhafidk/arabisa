@@ -1,6 +1,6 @@
 export interface QuizQuestion {
 	id: string;
-	lessonId: 'lesson-1' | 'lesson-2' | 'lesson-3';
+	lessonId: 'lesson-1' | 'lesson-2' | 'lesson-3' | 'lesson-4' | 'lesson-5' | 'lesson-6';
 	lessonLabel: string;
 	prompt: string;
 	arabicPrompt?: string;
@@ -154,6 +154,22 @@ export const exercises: QuizQuestion[] = [
 			'كَلْبٌ adalah anjing, sedangkan قِطٌّ (qiṭṭun) adalah kucing. Karena pertanyaannya menggunakan ذَلِكَ (itu), jawabannya juga menggunakan ذَلِكَ.'
 	},
 	{
+		id: 'q-l2-5',
+		lessonId: 'lesson-2',
+		lessonLabel: 'Pelajaran 2',
+		prompt: 'Apa arti dari pertanyaan dan jawaban berikut?',
+		arabicPrompt: 'مَا ذَلِكَ؟ — ذَلِكَ حَجَرٌ.',
+		options: [
+			{ text: 'Apa itu? — Itu adalah sebuah batu.' },
+			{ text: 'Siapa itu? — Itu adalah seorang imam.' },
+			{ text: 'Apa ini? — Ini adalah sebuah batu.' },
+			{ text: 'Apakah itu bintang? — Bukan, itu batu.' }
+		],
+		correctIndex: 0,
+		explanation:
+			'مَا (apa) digunakan untuk menanyakan benda yang tidak berakal, ذَلِكَ (dhālika) berarti "itu", dan حَجَرٌ (ḥajarun) berarti "sebuah batu".'
+	},
+	{
 		id: 'q-l3-1',
 		lessonId: 'lesson-3',
 		lessonLabel: 'Pelajaran 3',
@@ -232,5 +248,238 @@ export const exercises: QuizQuestion[] = [
 		correctIndex: 0,
 		explanation:
 			'الْوَلَدُ (anak laki-laki itu) جَالِسٌ (duduk), وَالْمُدَرِّسُ (dan guru itu) وَاقِفٌ (berdiri).'
+	},
+	// --- Pelajaran 4 ---
+	{
+		id: 'q-l4-1',
+		lessonId: 'lesson-4',
+		lessonLabel: 'Pelajaran 4',
+		prompt: 'Bagaimana harakat akhir kata yang didahului huruf jar (seperti فِي الْبَيْتِ)?',
+		options: [
+			{ text: 'Kasrah / berbunyi -i (keadaan Majrūr)' },
+			{ text: 'Dhammah / berbunyi -u (keadaan Marfūʿ)' },
+			{ text: 'Fathah / berbunyi -a (keadaan Manshūb)' },
+			{ text: 'Sukun (mati)' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Huruf jar (seperti فِي, عَلَى, مِنْ, إِلَى) mengubah harakat akhir kata benda menjadi kasrah (-i/-in), yang dinamakan keadaan majrūr.'
+	},
+	{
+		id: 'q-l4-2',
+		lessonId: 'lesson-4',
+		lessonLabel: 'Pelajaran 4',
+		prompt: 'Apa arti kalimat tanya dan jawaban berikut?',
+		arabicPrompt: 'أَيْنَ الْكِتَابُ؟ — هُوَ عَلَى الْمَكْتَبِ.',
+		options: [
+			{ text: 'Di mana buku itu? — Buku itu di atas meja.' },
+			{ text: 'Di mana pena itu? — Pena itu di dalam tas.' },
+			{ text: 'Siapa di atas meja? — Hamid di atas ranjang.' },
+			{ text: 'Apakah itu buku? — Ya, buku di kamar.' }
+		],
+		correctIndex: 0,
+		explanation:
+			'أَيْنَ (di mana) + الْكِتَابُ (buku itu). هُوَ (dia mudzakkar / kata ganti buku) + عَلَى الْمَكْتَبِ (di atas meja).'
+	},
+	{
+		id: 'q-l4-3',
+		lessonId: 'lesson-4',
+		lessonLabel: 'Pelajaran 4',
+		prompt: 'Lengkapi kalimat berikut dengan kata ganti orang yang tepat:',
+		arabicPrompt: 'أَيْنَ السَّاعَةُ؟ — ... عَلَى السَّرِيرِ.',
+		options: [
+			{ text: 'هِيَ', isArabic: true },
+			{ text: 'هُوَ', isArabic: true },
+			{ text: 'أَنْتَ', isArabic: true },
+			{ text: 'هَذَا', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'السَّاعَةُ (jam) berakhiran ta marbuthah (ة) sehingga berjenis muannats, maka kata ganti yang tepat adalah هِيَ (dia muannats).'
+	},
+	{
+		id: 'q-l4-4',
+		lessonId: 'lesson-4',
+		lessonLabel: 'Pelajaran 4',
+		prompt: 'Manakah bentuk harakat yang benar ketika kata مِنْ bertemu dengan kata ber-alif lam?',
+		options: [
+			{ text: 'مِنَ الْفَصْلِ', isArabic: true },
+			{ text: 'مِنْ الْفَصْلِ', isArabic: true },
+			{ text: 'مِنُ الْفَصْلِ', isArabic: true },
+			{ text: 'مِنِ الْفَصْلُ', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'Huruf nun pada مِنْ diubah berharakat fathah (مِنَ / mina) saat bertemu kata berawalan alif lam untuk menghindari bertemunya dua huruf sukun (mati).'
+	},
+	{
+		id: 'q-l4-5',
+		lessonId: 'lesson-4',
+		lessonLabel: 'Pelajaran 4',
+		prompt: 'Terjemahkan: "Hamid keluar dari kelas dan pergi ke kantor kepala sekolah."',
+		options: [
+			{ text: 'خَرَجَ حَامِدٌ مِنَ الْفَصْلِ وَذَهَبَ إِلَى الْمُدِيرِ.', isArabic: true },
+			{ text: 'ذَهَبَ حَامِدٌ مِنَ الْمُدِيرِ وَخَرَجَ إِلَى الْفَصْلِ.', isArabic: true },
+			{ text: 'خَرَجَ حَامِدٌ فِي الْفَصْلِ وَذَهَبَ عَلَى الْمُدِيرِ.', isArabic: true },
+			{ text: 'جَلَسَ حَامِدٌ فِي الْفَصْلِ مَعَ الْمُدِيرِ.', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'خَرَجَ (dia keluar) + حَامِدٌ + مِنَ الْفَصْلِ (dari kelas) + وَذَهَبَ (dan pergi) + إِلَى الْمُدِيرِ (ke kepala sekolah).'
+	},
+	// --- Pelajaran 5 ---
+	{
+		id: 'q-l5-1',
+		lessonId: 'lesson-5',
+		lessonLabel: 'Pelajaran 5',
+		prompt: 'Manakah kaidah yang BENAR untuk kata pertama (Mudhāf) dalam susunan Idhafah (kepemilikan)?',
+		options: [
+			{ text: 'Tidak boleh berawalan ال dan tidak boleh bertanwīn' },
+			{ text: 'Harus berawalan ال dan berharakat kasrah' },
+			{ text: 'Harus selalu bertanwīn kasrah (-in)' },
+			{ text: 'Boleh berawalan ال asalkan bertanwīn' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Mudhāf (kata yang dimiliki) tidak boleh bertanwīn dan tidak boleh memakai awalan ال (contoh: كِتَابُ مُحَمَّدٍ).'
+	},
+	{
+		id: 'q-l5-2',
+		lessonId: 'lesson-5',
+		lessonLabel: 'Pelajaran 5',
+		prompt: 'Apa harakat akhir dari kata kedua (Mudhāf Ilaih / pemilik) pada frasa berikut?',
+		arabicPrompt: 'قَلَمُ الْمُدَرِّسِ',
+		options: [
+			{ text: 'Selalu kasrah / majrūr (-i atau -in)' },
+			{ text: 'Selalu dhammah (-u atau -un)' },
+			{ text: 'Selalu fathah (-a)' },
+			{ text: 'Bebas sesuai keinginan pembicara' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Mudhāf Ilaih (pemilik) selalu dalam keadaan majrūr (berharakat kasrah -i atau -in, seperti الْمُدَرِّسِ atau مُحَمَّدٍ).'
+	},
+	{
+		id: 'q-l5-3',
+		lessonId: 'lesson-5',
+		lessonLabel: 'Pelajaran 5',
+		prompt: 'Bagaimana menanyakan "Buku siapa ini?" dalam bahasa Arab?',
+		options: [
+			{ text: 'كِتَابُ مَنْ هَذَا؟', isArabic: true },
+			{ text: 'مَا كِتَابُ هَذَا؟', isArabic: true },
+			{ text: 'مَنْ هَذَا الْكِتَابُ؟', isArabic: true },
+			{ text: 'أَيْنَ كِتَابٌ هَذَا؟', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'Pertanyaan kepemilikan menggunakan kata benda sebagai mudhāf diikuti kata tanya مَنْ (man): كِتَابُ مَنْ هَذَا؟ (Buku milik siapa ini?).'
+	},
+	{
+		id: 'q-l5-4',
+		lessonId: 'lesson-5',
+		lessonLabel: 'Pelajaran 5',
+		prompt: 'Ketika nama diawali partikel seruan يَا (wahai), apakah yang terjadi pada tanwīn nama tersebut?',
+		arabicPrompt: 'يَا عَلِيُّ (dari عَلِيٌّ)',
+		options: [
+			{ text: 'Tanwīn gugur dan digantikan dengan dhammah tunggal (-u)' },
+			{ text: 'Tanwīn berubah menjadi kasrah (-i)' },
+			{ text: 'Tanwīn tetap ada tanpa perubahan' },
+			{ text: 'Ditambahkan huruf alif di belakang nama' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Setelah partikel panggilan يَا, kata nama tidak boleh bertanwīn (berharakat dhammah tunggal: يَا عَلِيُّ, bukan يَا عَلِيٌّ).'
+	},
+	{
+		id: 'q-l5-5',
+		lessonId: 'lesson-5',
+		lessonLabel: 'Pelajaran 5',
+		prompt: 'Apa arti kalimat berikut?',
+		arabicPrompt: 'سَيَّارَةُ الْمُدِيرِ فِي الشَّارِعِ، وَحَقِيبَتُهُ تَحْتَ الْمَكْتَبِ.',
+		options: [
+			{ text: 'Mobil kepala sekolah di jalan raya, dan tasnya di bawah meja.' },
+			{ text: 'Mobil guru di garasi, dan bukunya di atas meja.' },
+			{ text: 'Paman kepala sekolah di jalan, dan anaknya di dalam kelas.' },
+			{ text: 'Rumah kepala sekolah di kota, dan mobilnya di depan pintu.' }
+		],
+		correctIndex: 0,
+		explanation:
+			'سَيَّارَةُ الْمُدِيرِ (mobil kepala sekolah), فِي الشَّارِعِ (di jalan raya), dan تَحْتَ الْمَكْتَبِ (di bawah meja).'
+	},
+	// --- Pelajaran 6 ---
+	{
+		id: 'q-l6-1',
+		lessonId: 'lesson-6',
+		lessonLabel: 'Pelajaran 6',
+		prompt: 'Kata tunjuk apa yang digunakan untuk benda atau orang dekat yang berjenis muannats (perempuan)?',
+		options: [
+			{ text: 'هَذِهِ', isArabic: true },
+			{ text: 'هَذَا', isArabic: true },
+			{ text: 'ذَلِكَ', isArabic: true },
+			{ text: 'هُوَ', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'هَذِهِ (hādhihi) adalah kata tunjuk tunggal untuk muannats (perempuan) jarak dekat, sedangkan هَذَا untuk mudzakkar (laki-laki).'
+	},
+	{
+		id: 'q-l6-2',
+		lessonId: 'lesson-6',
+		lessonLabel: 'Pelajaran 6',
+		prompt: 'Manakah anggota tubuh yang diperlakukan sebagai MUANNATS dalam bahasa Arab?',
+		options: [
+			{ text: 'Anggota tubuh yang berpasangan (seperti عَيْنٌ / mata dan يَدٌ / tangan)' },
+			{ text: 'Anggota tubuh tunggal (seperti أَنْفٌ / hidung dan فَمٌ / mulut)' },
+			{ text: 'Semua anggota tubuh manusia tanpa terkecuali' },
+			{ text: 'Hanya rambut dan gigi' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Dalam kaidah bahasa Arab, anggota tubuh yang berpasangan (mata, telinga, tangan, kaki) dihukumi muannats (هَذِهِ عَيْنٌ, هَذِهِ يَدٌ), sedangkan yang tunggal adalah mudzakkar (هَذَا أَنْفٌ).'
+	},
+	{
+		id: 'q-l6-3',
+		lessonId: 'lesson-6',
+		lessonLabel: 'Pelajaran 6',
+		prompt: 'Manakah tanda muannats yang paling umum pada akhir sebuah kata benda?',
+		options: [
+			{ text: 'Ta marbuthah (ـة / ة)' },
+			{ text: 'Alif maqsūrah saja' },
+			{ text: 'Tanwīn kasrah' },
+			{ text: 'Huruf nun mati' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Tanda muannats yang paling umum dan mudah dikenali adalah ta marbuthah (ـة / ة), seperti pada سَيَّارَةٌ (mobil), سَاعَةٌ (jam), dan مِلْعَقَةٌ (sendok).'
+	},
+	{
+		id: 'q-l6-4',
+		lessonId: 'lesson-6',
+		lessonLabel: 'Pelajaran 6',
+		prompt: 'Bagaimana penyesuaian kata sifat untuk subjek muannats pada kalimat: "Kopi itu dingin dan teh itu panas"?',
+		options: [
+			{ text: 'الْقَهْوَةُ بَارِدَةٌ وَالشَّايُ حَارٌّ.', isArabic: true },
+			{ text: 'الْقَهْوَةُ بَارِدٌ وَالشَّايُ حَارَّةٌ.', isArabic: true },
+			{ text: 'الْقَهْوَةُ بَارِدٌ وَالشَّايُ حَارٌّ.', isArabic: true },
+			{ text: 'الْقَهْوَةُ بَارِدَةٌ وَالشَّايُ حَارَّةٌ.', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'الْقَهْوَةُ muannats sehingga sifatnya berakhiran ta marbuthah (بَارِدَةٌ), sedangkan الشَّايُ mudzakkar sehingga sifatnya (حَارٌّ) tanpa ta marbuthah.'
+	},
+	{
+		id: 'q-l6-5',
+		lessonId: 'lesson-6',
+		lessonLabel: 'Pelajaran 6',
+		prompt: 'Apa fungsi partikel jar لِـ pada kalimat "هَذِهِ لِخَالِدٍ"?',
+		options: [
+			{ text: 'Menyatakan kepemilikan ("Ini milik Khalid")' },
+			{ text: 'Menyatakan tempat ("Ini di rumah Khalid")' },
+			{ text: 'Menyatakan asal ("Ini dari Khalid")' },
+			{ text: 'Menyatakan perbandingan ("Ini seperti Khalid")' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Huruf jar لِـ (li-) bermakna kepemilikan ("milik / kepunyaan"), dan kata benda setelahnya menjadi kasrah/majrūr (لِخَالِدٍ).'
 	}
 ];

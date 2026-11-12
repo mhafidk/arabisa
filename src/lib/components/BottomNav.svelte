@@ -65,14 +65,14 @@
 					href={item.href}
 					aria-current={active ? 'page' : undefined}
 					class={[
-						'flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold transition-colors',
+						'group flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold transition-colors active:scale-[0.94]',
 						active ? 'text-accent-ink' : 'text-ink-faint hover:text-ink-soft'
 					]}
 				>
 					<div
 						class={[
-							'grid h-7 w-11 place-items-center rounded-md transition-colors',
-							active && 'bg-accent-wash'
+							'grid h-7 w-11 place-items-center rounded-md transition-all duration-200',
+							active ? 'bg-accent-wash scale-100' : 'group-hover:bg-paper-sunk/60'
 						]}
 					>
 						<Icon size={18} strokeWidth={active ? 2.4 : 2} />

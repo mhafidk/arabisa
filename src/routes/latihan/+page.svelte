@@ -80,7 +80,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5 pb-24">
+<div class="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-4 pt-5 pb-24 sm:px-5">
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"
@@ -182,7 +182,14 @@
 	</div>
 
 	<!-- Progress Bar -->
-	<div class="mt-4 h-1.5 overflow-hidden rounded-full bg-paper-sunk" aria-hidden="true">
+	<div
+		class="mt-4 h-1.5 overflow-hidden rounded-full bg-paper-sunk"
+		role="progressbar"
+		aria-label="Progres latihan soal"
+		aria-valuemin={0}
+		aria-valuemax={total}
+		aria-valuenow={finished ? total : currentIndex + (answered ? 1 : 0)}
+	>
 		<div
 			class="h-full rounded-full bg-accent transition-[width] duration-500 ease-out-expo"
 			style:width="{((finished ? total : currentIndex + (answered ? 1 : 0)) / total) * 100}%"
