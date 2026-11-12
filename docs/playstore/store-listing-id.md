@@ -1,22 +1,25 @@
 # Panduan Publikasi Google Play Store — Arabisa (`com.mhk.arabisa`)
 
-Dokumen ini berisi teks siap pakai untuk **Store Listing**, panduan **Data Safety**, serta perintah untuk membuat **Signed Android App Bundle (`.aab`)**.
+Dokumen ini berisi teks siap pakai untuk **Store Listing**, daftar **Aset Grafis**, panduan **Data Safety & Kebijakan**, serta perintah untuk membuat **Signed Android App Bundle (`.aab`)**.
 
 ---
 
 ## 1. Aset Grafis yang Sudah Disiapkan
 
-| Aset                                | Lokasi File                                   | Spesifikasi                                                     |
-| :---------------------------------- | :-------------------------------------------- | :-------------------------------------------------------------- |
-| **App Icon (Play Store)**           | `docs/playstore/icon-512-playstore.png`       | 512 × 512 px PNG (Full-bleed square, sesuai syarat Google Play) |
-| **Feature Graphic**                 | `docs/playstore/feature-graphic-1024x500.png` | 1024 × 500 px PNG                                               |
-| **Android Adaptive & Legacy Icons** | `android/app/src/main/res/mipmap-*`           | `mdpi` s/d `xxxhdpi` + XML vector                               |
-| **Android Splash Screens**          | `android/app/src/main/res/drawable*`          | Portrait & Landscape `mdpi` s/d `xxxhdpi`                       |
+Seluruh aset grafis di bawah ini sudah tersedia dan memenuhi syarat rasio serta resolusi Google Play Store:
 
-> **Yang masih perlu Anda ambil manual:**
->
-> - **2–8 Screenshot Ponsel** (rasio 9:16, min. 1080×1920 px disarankan): ambil tangkapan layar halaman Beranda, Materi Pelajaran, Flashcard, Latihan Soal, dan Kamus Kosakata.
-> - **Screenshot Tablet 7-inci & 10-inci** (opsional namun disarankan agar lolos tinjauan tata letak tablet).
+| Aset                                 | Lokasi File                                   | Spesifikasi                                                       |
+| :----------------------------------- | :-------------------------------------------- | :---------------------------------------------------------------- |
+| **App Icon (Play Store)**            | `docs/playstore/icon-512-playstore.png`       | 512 × 512 px PNG (Full-bleed square, sesuai syarat Google Play)   |
+| **Feature Graphic**                  | `docs/playstore/feature-graphic-1024x500.png` | 1024 × 500 px PNG                                                 |
+| **Screenshot Ponsel (6 gambar)**     | `docs/playstore/screenshots/phone/*.png`      | 1080 × 1920 px PNG (Beranda, Materi, Flashcard, Kuis, Kamus, FAQ) |
+| **Screenshot Tablet 7" (6 gambar)**  | `docs/playstore/screenshots/tablet-7/*.png`   | 1200 × 1920 px PNG (Rasio 10:16 untuk tablet kecil)               |
+| **Screenshot Tablet 10" (6 gambar)** | `docs/playstore/screenshots/tablet-10/*.png`  | 1600 × 2560 px PNG (Rasio 10:16 untuk tablet besar)               |
+| **Android Adaptive & Legacy Icons**  | `android/app/src/main/res/mipmap-*`           | `mdpi` s/d `xxxhdpi` + XML vector                                 |
+| **Android Splash Screens**           | `android/app/src/main/res/drawable*`          | Portrait & Landscape `mdpi` s/d `xxxhdpi`                         |
+
+> **Catatan Pembaruan Screenshot:**  
+> Seluruh 18 tangkapan layar di atas telah digenerate otomatis berdasarkan versi aplikasi terkini menggunakan skrip `scripts/generate-screenshots.js` (dapat dijalankan ulang kapan saja dengan perintah `node scripts/generate-screenshots.js`).
 
 ---
 
@@ -47,17 +50,17 @@ Seluruh kurikulum dan materi pembelajaran di dalam Arabisa disusun serta diadapt
 
 FITUR UTAMA ARABISA:
 
-• Materi Kaidah & Percakapan Bertahap
-Pelajari struktur kalimat bahasa Arab dari dasar (Isim Isyarah, Ma'rifah & Nakirah, Huruf Jar, Idhafah, Mubtada' & Khabar, Na'at & Man'ut, hingga angka dan percakapan sehari-hari) dengan penjelasan bahasa Indonesia yang jernih dan contoh berharakat lengkap.
+• Materi Kaidah & Percakapan Bertahap (Pelajaran 1–10)
+Pelajari struktur kalimat bahasa Arab dari dasar (Isim Isyarah, Ma'rifah & Nakirah, Huruf Jar, Idhafah, Mubtada' & Khabar, Na'at & Man'ut, Badal, hingga Dhamir Muttashil dan percakapan sehari-hari) dengan penjelasan bahasa Indonesia yang jernih dan teks Arab berharakat lengkap.
 
 • Flashcard Pintar dengan Metode Leitner
-Hafalkan ratusan kosakata bahasa Arab secara efektif menggunakan sistem pengulangan berjarak (Leitner Box). Kartu yang belum dikuasai akan muncul lebih sering hingga Anda benar-benar menguasainya.
+Hafalkan ratusan kosakata bahasa Arab secara efektif menggunakan sistem pengulangan berjarak (Leitner Box). Kartu yang belum dikuasai akan muncul lebih sering hingga Anda benar-benar menguasainya. Dilengkapi pilihan tampilan sisi depan (Arab atau Indonesia).
 
-• Latihan Soal Interaktif
-Uji pemahaman kaidah dan kosakata Anda pada setiap pelajaran melalui ratusan soal latihan pilihan ganda disertai umpan balik langsung.
+• Latihan Soal Interaktif dengan Pilihan Jawaban Acak
+Uji pemahaman kaidah dan kosakata Anda pada setiap pelajaran melalui puluhan soal latihan pilihan ganda disertai umpan balik langsung. Opsi pilihan jawaban diacak otomatis agar Anda benar-benar memahami materi tanpa menghafal posisi tombol.
 
 • Kamus Kosakata Cepat
-Cari kosakata bahasa Arab, arti bahasa Indonesia, bentuk jamak, maupun filter per pelajaran dengan cepat dan instan.
+Cari kosakata bahasa Arab, transliterasi Latin, arti bahasa Indonesia, bentuk jamak, maupun filter per pelajaran dengan cepat dan instan.
 
 • 100% Offline & Privasi Terjaga
 Seluruh materi, kosakata, latihan, dan font bahasa Arab tersimpan di dalam aplikasi. Tidak memerlukan koneksi internet, bebas iklan, dan tidak mengumpulkan data pribadi apa pun.
@@ -76,7 +79,7 @@ Tampilan nyaman di mata menyerupai kertas manuskrip hangat di siang hari dan mod
      https://github.com/mhafidk/arabisa/blob/main/docs/PRIVACY_POLICY.md
      ```
 2. **App Access**:
-   - Pilih: _"All functionality in my app is available without any access restrictions"_ (tidak butuh login).
+   - Pilih: _"All functionality in my app is available without any access restrictions"_ (tidak butuh login/kredensial).
 3. **Ads**:
    - Pilih: _"No, my app does not contain ads"_.
 4. **Content Rating (IARC)**:
@@ -89,38 +92,18 @@ Tampilan nyaman di mata menyerupai kertas manuskrip hangat di siang hari dan mod
 
 ---
 
-## 4. Cara Membuat Upload Keystore & Signed AAB Release
+## 4. Cara Membuat Signed Android App Bundle (`.aab`)
 
-### Langkah 1: Buat Upload Keystore (Hanya 1x untuk selamanya)
+Keystore penandatanganan rilis telah dibuat di `android/upload-keystore.jks` dan dikonfigurasikan pada `android/keystore.properties`.
 
-Jalankan perintah berikut dari direktori root proyek:
-
-```bash
-keytool -genkey -v \
-  -keystore android/upload-keystore.jks \
-  -keyalg RSA -keysize 2048 -validity 10000 \
-  -alias upload
-```
-
-> **Penting:** Simpan file `android/upload-keystore.jks` beserta sandinya di tempat cadangan yang aman (password manager / cloud drive pribadi). File ini sudah diabaikan oleh Git (`.gitignore`).
-
-### Langkah 2: Buat File `android/keystore.properties`
-
-Salin contoh konfigurasi:
+Untuk membuat file `.aab` rilis terbaru:
 
 ```bash
-cp android/keystore.properties.example android/keystore.properties
-```
-
-Lalu isi `storePassword` dan `keyPassword` sesuai sandi yang Anda buat pada Langkah 1.
-
-### Langkah 3: Build Signed Android App Bundle (`.aab`)
-
-Jalankan perintah berikut dari root proyek:
-
-```bash
-bun run android:bundle
+npm run android:bundle
 ```
 
 File `.aab` yang siap diunggah ke Google Play Console akan tersedia di:
-`android/app/build/outputs/bundle/release/app-release.aab`
+
+```text
+android/app/build/outputs/bundle/release/app-release.aab
+```
