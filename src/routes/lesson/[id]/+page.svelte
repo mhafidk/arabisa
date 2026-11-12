@@ -61,20 +61,14 @@
 		</div>
 	</header>
 
-	<div class="py-7 text-center">
-		<p lang="ar" dir="rtl" class="text-3xl font-medium text-ink">
-			{lesson.titleAr}
-		</p>
-	</div>
-
 	<!-- Core Concept Hero Card -->
-	<section class="rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
+	<section class="mt-5 rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
 		<div class="border-b border-line pb-5">
 			<div>
 				<span
 					class="inline-flex items-center gap-1.5 rounded-md bg-accent-wash px-2.5 py-0.5 text-xs font-semibold text-accent-ink"
 				>
-					<Sparkles size={13} /> Konsep Utama
+					Konsep Utama
 				</span>
 				<h2 class="mt-2 text-xl font-semibold text-ink">{lesson.coreConcept.heading}</h2>
 			</div>

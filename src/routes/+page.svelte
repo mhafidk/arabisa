@@ -8,11 +8,10 @@
 	import Flame from '@lucide/svelte/icons/flame';
 	import Layers from '@lucide/svelte/icons/layers';
 	import Moon from '@lucide/svelte/icons/moon';
-	import Search from '@lucide/svelte/icons/search';
+	import Sparkles from '@lucide/svelte/icons/sparkles';
 	import Sun from '@lucide/svelte/icons/sun';
 	import StarMark from '#lib/components/StarMark.svelte';
 	import { decks } from '#lib/data/decks.ts';
-	import { exercises } from '#lib/data/exercises.ts';
 	import { lessons } from '#lib/data/lessons.ts';
 	import { progress } from '#lib/progress.svelte.ts';
 
@@ -23,6 +22,8 @@
 	const nextLesson = $derived(
 		lessons.find((lesson) => !progress.isLessonDone(lesson.id)) ?? lessons[0]
 	);
+
+	const activeDeck = $derived(decks.find((d) => d.id === nextLesson.id));
 
 	const allCompleted = $derived(completedCount === lessons.length);
 	const vocabStats = $derived(progress.allDecksStats(decks));
@@ -50,6 +51,10 @@
 					'flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium tabular-nums',
 					progress.studiedToday ? 'bg-accent-wash text-accent-ink' : 'bg-paper-sunk text-ink-soft'
 				]}
+				role="status"
+				aria-label="{progress.streak} hari belajar beruntun. {progress.studiedToday
+					? 'Kamu sudah belajar hari ini'
+					: 'Belajar hari ini untuk menjaga runtutan harimu'}"
 				title={progress.studiedToday
 					? 'Kamu sudah belajar hari ini'
 					: 'Belajar hari ini untuk menjaga runtutan harimu'}
@@ -76,161 +81,180 @@
 		</div>
 	</header>
 
-	<!-- 1. Lanjutkan Belajar (Hero CTA) -->
+	<!-- 1. Lanjutkan Belajar (Hero Study Desk) -->
 	<section class="mt-5" aria-labelledby="cta-heading">
-		<div class="rounded-2xl bg-paper-raised p-5 shadow-card">
+		<div class="rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
 			<div class="flex items-start justify-between gap-3">
-				<div class="min-w-0">
-					<span
-						id="cta-heading"
-						class="inline-flex items-center gap-1.5 rounded-md bg-accent-wash px-2.5 py-0.5 text-xs font-semibold text-accent-ink"
-					>
-						{allCompleted
-							? 'Semua Topik Selesai'
-							: completedCount === 0
-								? 'Mulai Belajar'
-								: 'Lanjutkan Belajar'}
-					</span>
-					<p class="mt-2 text-xs font-semibold tracking-wide text-ink-faint uppercase">
-						{nextLesson.label}
-					</p>
-					<h1 class="mt-0.5 text-xl font-semibold tracking-tight text-ink">
-						{nextLesson.title}
-					</h1>
-				</div>
+				<span
+					class="inline-flex items-center gap-1.5 rounded-md bg-accent-wash px-2.5 py-1 text-xs font-semibold text-accent-ink"
+				>
+					{allCompleted
+						? 'Semua Topik Selesai'
+						: completedCount === 0
+							? 'Mulai Belajar'
+							: 'Lanjutkan Belajar'}
+				</span>
+				<span class="text-xs font-semibold tracking-wide text-ink-faint uppercase">
+					{nextLesson.label}
+				</span>
 			</div>
 
-			<p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">
+			<!-- Arabic as Hero Display -->
+			<div class="mt-3.5 rounded-xl bg-paper-sunk px-4 py-5 text-center">
+				<p lang="ar" dir="rtl" class="font-arabic text-3xl font-medium text-accent-ink sm:text-4xl">
+					{nextLesson.titleAr}
+				</p>
+			</div>
+
+			<h1 id="cta-heading" class="mt-3.5 text-lg font-semibold tracking-tight text-ink sm:text-xl">
+				{nextLesson.title}
+			</h1>
+
+			<p class="mt-1.5 text-sm leading-relaxed text-ink-soft">
 				{nextLesson.summary}
 			</p>
 
-			<a
-				id="continue-learning-cta"
-				href={resolve('/lesson/[id]', { id: nextLesson.id })}
-				class="mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-ink text-sm font-semibold text-paper transition-transform active:scale-[0.98]"
-			>
-				{allCompleted
-					? `Ulangi ${nextLesson.label}`
-					: completedCount === 0
-						? `Mulai ${nextLesson.label}`
-						: `Lanjutkan ${nextLesson.label}`}
-				<ArrowRight size={17} />
-			</a>
-		</div>
-	</section>
+			<!-- Study Desk Quick Actions -->
+			<div class="mt-4 flex flex-col gap-2.5">
+				<a
+					id="continue-learning-cta"
+					href={resolve('/lesson/[id]', { id: nextLesson.id })}
+					class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-ink px-4 text-sm font-semibold text-paper transition-all hover:bg-ink/90 active:scale-[0.98]"
+				>
+					<BookOpen size={16} />
+					<span>
+						{allCompleted
+							? `Ulangi ${nextLesson.label}`
+							: completedCount === 0
+								? `Mulai ${nextLesson.label}`
+								: `Lanjutkan ${nextLesson.label}`}
+					</span>
+					<ArrowRight size={16} />
+				</a>
 
-	<!-- 2. Ringkasan Progres Belajar -->
-	<section class="mt-5" aria-labelledby="progress-summary-heading">
-		<h2
-			id="progress-summary-heading"
-			class="mb-2.5 text-xs font-semibold tracking-wide text-ink-soft uppercase"
-		>
-			Ringkasan Progres Belajar
-		</h2>
-
-		<div class="grid grid-cols-3 gap-2.5">
-			<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
-				<p class="text-2xl font-bold text-ink tabular-nums">
-					{completedCount}<span class="text-sm font-medium text-ink-faint">/{lessons.length}</span>
-				</p>
-				<p class="mt-1 text-xs font-medium text-ink-soft">Topik Selesai</p>
-			</div>
-
-			<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
-				<p class="text-2xl font-bold text-good tabular-nums">
-					{vocabStats.mastered}<span class="text-sm font-medium text-ink-faint"
-						>/{vocabStats.total}</span
+				{#if activeDeck}
+					<a
+						id="study-desk-deck"
+						href={resolve('/deck/[id]', { id: activeDeck.id })}
+						class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-line bg-paper px-4 text-sm font-medium text-ink transition-all hover:bg-paper-sunk active:scale-[0.98]"
 					>
-				</p>
-				<p class="mt-1 text-xs font-medium text-ink-soft">Kata Dikuasai</p>
-			</div>
+						<Layers size={16} class="text-accent-ink" />
+						<span>Hafal Kosakata ({activeDeck.cards.length})</span>
+					</a>
+				{/if}
 
-			<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
-				<p class="text-2xl font-bold text-accent-ink tabular-nums">
-					{vocabStats.studied}
-				</p>
-				<p class="mt-1 text-xs font-medium text-ink-soft">Kata Dipelajari</p>
+				<a
+					id="study-desk-quiz"
+					href={resolve('/latihan')}
+					class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-line bg-paper px-4 text-sm font-medium text-ink transition-all hover:bg-paper-sunk active:scale-[0.98]"
+				>
+					<ClipboardCheck size={16} class="text-good" />
+					<span>Latihan Kuis</span>
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- 3. Flashcard & Latihan Links -->
-	<section class="mt-5" aria-labelledby="practice-heading">
-		<h2
-			id="practice-heading"
-			class="mb-2.5 text-xs font-semibold tracking-wide text-ink-soft uppercase"
-		>
-			Asah Kemampuan
-		</h2>
-
-		<div class="grid grid-cols-2 gap-2.5">
-			<a
-				id="nav-flashcards"
-				href={resolve('/decks')}
-				class="group flex flex-col justify-between rounded-2xl bg-paper-raised p-4 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.98]"
-			>
-				<div class="flex items-center justify-between">
-					<div class="grid size-10 place-items-center rounded-xl bg-accent-wash text-accent-ink">
-						<Layers size={20} />
-					</div>
-					<ChevronRight
-						size={18}
-						class="text-ink-faint transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5"
-					/>
-				</div>
-				<div class="mt-3">
-					<h3 class="font-semibold text-ink">Flashcard</h3>
-					<p class="mt-0.5 text-xs text-ink-faint">{decks.length} dek kartu hafalan</p>
-				</div>
-			</a>
-
-			<a
-				id="nav-latihan"
-				href={resolve('/latihan')}
-				class="group flex flex-col justify-between rounded-2xl bg-paper-raised p-4 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.98]"
-			>
-				<div class="flex items-center justify-between">
-					<div class="grid size-10 place-items-center rounded-xl bg-good-wash text-good">
-						<ClipboardCheck size={20} />
-					</div>
-					<ChevronRight
-						size={18}
-						class="text-ink-faint transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5"
-					/>
-				</div>
-				<div class="mt-3">
-					<h3 class="font-semibold text-ink">Latihan Soal</h3>
-					<p class="mt-0.5 text-xs text-ink-faint">{exercises.length} soal kuis interaktif</p>
-				</div>
-			</a>
-
-			<a
-				id="nav-kosakata"
-				href={resolve('/kosakata')}
-				class="group col-span-2 flex items-center justify-between gap-3.5 rounded-2xl bg-paper-raised p-4 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.99]"
-			>
-				<div class="flex items-center gap-3.5">
-					<div
-						class="grid size-10 shrink-0 place-items-center rounded-xl bg-paper-sunk text-ink-soft"
+	<!-- 2. Alur Belajar / Ringkasan Progres -->
+	<section class="mt-5" aria-labelledby="guide-heading">
+		{#if completedCount === 0 && vocabStats.studied === 0}
+			<div class="rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
+				<div class="flex items-start justify-between gap-3">
+					<h2 id="guide-heading" class="text-sm font-semibold tracking-wide text-ink uppercase">
+						Alur Belajar Madinah Book 1
+					</h2>
+					<span
+						class="inline-flex items-center gap-1 rounded-md bg-accent-wash px-2 py-0.5 text-xs font-semibold text-accent-ink"
 					>
-						<Search size={19} />
-					</div>
-					<div>
-						<h3 class="font-semibold text-ink">Daftar & Cari Kosakata</h3>
-						<p class="mt-0.5 text-xs text-ink-faint">
-							Lihat semua kata bahasa Arab dan cari artinya dalam bahasa Indonesia
-						</p>
-					</div>
+						Mandiri
+					</span>
 				</div>
-				<ChevronRight
-					size={18}
-					class="shrink-0 text-ink-faint transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5"
-				/>
-			</a>
-		</div>
+				<p class="mt-1 text-xs leading-relaxed text-ink-soft">
+					Metode belajar mandiri yang terstruktur untuk pemula tanpa perlu guru pendamping:
+				</p>
+
+				<ol class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+					<li class="flex items-start gap-3 rounded-xl bg-paper-sunk/60 p-3">
+						<div
+							class="grid size-7 shrink-0 place-items-center rounded-lg bg-accent-wash text-xs font-bold text-accent-ink"
+						>
+							1
+						</div>
+						<div class="min-w-0">
+							<p class="text-xs font-semibold text-ink">Baca Kaidah</p>
+							<p class="mt-0.5 text-[11px] leading-snug text-ink-soft">
+								Pahami penjelasan tata bahasa & contoh kalimat.
+							</p>
+						</div>
+					</li>
+
+					<li class="flex items-start gap-3 rounded-xl bg-paper-sunk/60 p-3">
+						<div
+							class="grid size-7 shrink-0 place-items-center rounded-lg bg-accent-wash text-xs font-bold text-accent-ink"
+						>
+							2
+						</div>
+						<div class="min-w-0">
+							<p class="text-xs font-semibold text-ink">Hafal Kosakata</p>
+							<p class="mt-0.5 text-[11px] leading-snug text-ink-soft">
+								Latih daya ingat kata baru lewat kartu flashcard.
+							</p>
+						</div>
+					</li>
+
+					<li class="flex items-start gap-3 rounded-xl bg-paper-sunk/60 p-3">
+						<div
+							class="grid size-7 shrink-0 place-items-center rounded-lg bg-accent-wash text-xs font-bold text-accent-ink"
+						>
+							3
+						</div>
+						<div class="min-w-0">
+							<p class="text-xs font-semibold text-ink">Uji Soal</p>
+							<p class="mt-0.5 text-[11px] leading-snug text-ink-soft">
+								Jawab kuis interaktif untuk memastikan pemahaman.
+							</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		{:else}
+			<div class="mb-2.5 flex items-center justify-between gap-4">
+				<h2
+					id="guide-heading"
+					class="text-xs font-semibold tracking-wide text-ink-soft uppercase"
+				>
+					Ringkasan Progres Belajar
+				</h2>
+			</div>
+
+			<div class="grid grid-cols-3 gap-2.5">
+				<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
+					<p class="text-2xl font-bold text-ink tabular-nums">
+						{completedCount}<span class="text-sm font-medium text-ink-faint">/{lessons.length}</span>
+					</p>
+					<p class="mt-1 text-xs font-medium text-ink-soft">Topik Selesai</p>
+				</div>
+
+				<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
+					<p class="text-2xl font-bold text-good tabular-nums">
+						{vocabStats.mastered}<span class="text-sm font-medium text-ink-faint"
+							>/{vocabStats.total}</span
+						>
+					</p>
+					<p class="mt-1 text-xs font-medium text-ink-soft">Kata Dikuasai</p>
+				</div>
+
+				<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
+					<p class="text-2xl font-bold text-accent-ink tabular-nums">
+						{vocabStats.studied}
+					</p>
+					<p class="mt-1 text-xs font-medium text-ink-soft">Kata Dipelajari</p>
+				</div>
+			</div>
+		{/if}
 	</section>
 
-	<!-- 4. Materi Pembelajaran -->
+	<!-- 3. Materi Pembelajaran -->
 	<section class="mt-6" aria-labelledby="topics-heading">
 		<div class="mb-2.5 flex items-center justify-between gap-4">
 			<h2 id="topics-heading" class="text-xs font-semibold tracking-wide text-ink-soft uppercase">
@@ -241,33 +265,37 @@
 		<ol class="space-y-3">
 			{#each lessons as lesson (lesson.id)}
 				{@const done = progress.isLessonDone(lesson.id)}
+				{@const lessonDeck = decks.find((d) => d.id === lesson.id)}
+				{@const deckStats = lessonDeck ? progress.deckStats(lessonDeck) : null}
 				<li>
 					<a
 						id="topic-{lesson.id}"
 						href={resolve('/lesson/[id]', { id: lesson.id })}
-						class="group flex items-start gap-3.5 rounded-2xl bg-paper-raised p-4 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.99]"
+						class="group flex items-start gap-3.5 rounded-2xl bg-paper-raised p-4 shadow-card transition-all hover:bg-paper-sunk/60 active:scale-[0.99]"
 					>
 						<div
 							class={[
-								'mt-0.5 grid size-9 shrink-0 place-items-center rounded-lg text-sm font-bold tabular-nums transition-colors',
+								'relative mt-0.5 grid size-9 shrink-0 place-items-center rounded-lg text-sm font-bold tabular-nums transition-colors',
 								done ? 'bg-good-wash text-good' : 'bg-accent-wash text-accent-ink'
 							]}
 						>
+							{lesson.number}
 							{#if done}
-								<Check size={18} strokeWidth={2.5} />
-							{:else}
-								{lesson.number}
+								<span
+									class="absolute -top-1 -right-1 grid size-4 place-items-center rounded-full bg-good text-paper ring-2 ring-paper-raised"
+									aria-hidden="true"
+								>
+									<Check size={10} strokeWidth={3} />
+								</span>
 							{/if}
 						</div>
 
 						<div class="min-w-0 flex-1">
-							<div class="flex items-baseline justify-between gap-2">
-								<div>
-									<p class="text-xs font-semibold tracking-wide text-accent-ink uppercase">
-										{lesson.label}
-									</p>
-									<h3 class="mt-0.5 font-semibold text-ink">{lesson.title}</h3>
-								</div>
+							<div>
+								<p class="text-xs font-semibold tracking-wide text-ink-faint uppercase">
+									{lesson.label}
+								</p>
+								<h3 class="mt-0.5 font-semibold text-ink">{lesson.title}</h3>
 							</div>
 
 							<p class="mt-1.5 text-sm leading-relaxed text-ink-soft">
@@ -275,15 +303,37 @@
 							</p>
 
 							<div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
-								<span class="rounded-md bg-paper-sunk px-2.5 py-1 font-medium">
+								<span
+									class="inline-flex items-center gap-1.5 rounded-md bg-paper-sunk px-2.5 py-1 font-medium text-ink-soft"
+								>
+									<BookOpen size={13} />
 									{lesson.grammarNotes.length} kaidah
 								</span>
-								<span class="rounded-md bg-paper-sunk px-2.5 py-1 font-medium">
-									{lesson.vocabulary.length} kosakata
-								</span>
+								{#if deckStats}
+									<span
+										class={[
+											'inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-medium',
+											deckStats.mastered > 0
+												? 'bg-accent-wash text-accent-ink'
+												: 'bg-paper-sunk text-ink-soft'
+										]}
+									>
+										<Layers size={13} />
+										{deckStats.mastered}/{deckStats.total} kata dihafal
+									</span>
+								{:else}
+									<span
+										class="inline-flex items-center gap-1.5 rounded-md bg-paper-sunk px-2.5 py-1 font-medium text-ink-soft"
+									>
+										<Layers size={13} />
+										{lesson.vocabulary.length} kosakata
+									</span>
+								{/if}
 								{#if done}
-									<span class="rounded-md bg-good-wash px-2.5 py-1 font-semibold text-good">
-										Selesai
+									<span
+										class="inline-flex items-center gap-1 rounded-md bg-good-wash px-2.5 py-1 font-semibold text-good"
+									>
+										<Check size={12} strokeWidth={2.5} /> Selesai
 									</span>
 								{/if}
 							</div>
