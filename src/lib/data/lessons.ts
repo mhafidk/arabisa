@@ -1253,6 +1253,731 @@ export const lessons: Lesson[] = [
 		],
 		vocabNote:
 			'Anggota tubuh yang berpasangan (mata, telinga, tangan, kaki) diperlakukan sebagai muannats dan ditunjuk menggunakan هَذِهِ.'
+	},
+	{
+		id: 'lesson-7',
+		number: 7,
+		label: 'Pelajaran 7',
+		titleAr: 'الدَّرْسُ السَّابِعُ',
+		title: 'Kata Tunjuk Jauh Perempuan "Itu" (تِلْكَ)',
+		summary:
+			'Mengenal kata tunjuk tunggal perempuan jarak jauh (تِلْكَ), perbandingannya dengan ذَلِكَ (mudzakkar jauh) dan هَذِهِ (muannats dekat), serta penerapannya pada orang, hewan, dan benda.',
+		coreConcept: {
+			heading: 'Kata Tunjuk Jauh Muannats (تِلْكَ)',
+			highlightAr: 'تِلْكَ  •  هَذِهِ بَقَرَةٌ وَتِلْكَ نَاقَةٌ',
+			highlightTr: 'tilka  •  hādhihi baqaratun wa-tilka nāqatun',
+			highlightId: 'itu (tunggal muannats)  •  ini sapi dan itu unta betina',
+			description:
+				'تِلْكَ (tilka) adalah padanan muannats (feminin) dari kata tunjuk ذَلِكَ (dhālika = itu). Digunakan untuk menunjuk orang wanita, hewan betina, atau benda berakhiran ta marbuthah yang berada jauh dari kita.'
+		},
+		grammarNotes: [
+			{
+				title: 'Pasangan Isim Isyarah Jauh (ذَلِكَ & تِلْكَ)',
+				body: 'Untuk menunjuk sesuatu yang jauh, bahasa Arab membedakan antara jenis maskulin dan feminin: ذَلِكَ digunakan untuk mudzakkar (laki-laki/benda maskulin), sedangkan تِلْكَ digunakan untuk muannats (perempuan/benda feminin).',
+				examples: [
+					{ ar: 'ذَلِكَ دِيكٌ', tr: 'dhālika dīkun', id: 'Itu adalah ayam jantan.' },
+					{ ar: 'تِلْكَ دَجَاجَةٌ', tr: 'tilka dajājatun', id: 'Itu adalah ayam betina.' }
+				]
+			},
+			{
+				title: 'Matriks 4 Isim Isyarah Dasar',
+				body: 'Dalam 7 pelajaran pertama, kita telah mempelajari 4 kata tunjuk tunggal:\n1. هَذَا (hādhā): Dekat + Mudzakkar ("Ini" pria/benda maskulin)\n2. هَذِهِ (hādhihi): Dekat + Muannats ("Ini" wanita/benda feminin)\n3. ذَلِكَ (dhālika): Jauh + Mudzakkar ("Itu" pria/benda maskulin)\n4. تِلْكَ (tilka): Jauh + Muannats ("Itu" wanita/benda feminin)'
+			}
+		],
+		exampleGroups: [
+			{
+				title: 'Menunjuk Orang & Profesi Perempuan',
+				subtitleAr: 'مَنْ تِلْكَ؟',
+				items: [
+					{ speaker: 'Q', ar: 'مَنْ هَذِهِ وَمَنْ تِلْكَ؟', tr: 'Man hādhihi wa-man tilka?', id: 'Siapa ini dan siapa itu?' },
+					{
+						speaker: 'A',
+						ar: 'هَذِهِ طَبِيبَةٌ وَتِلْكَ مُمَرِّضَةٌ.',
+						tr: 'Hādhihi ṭabībatun wa-tilka mumarriḍatun.',
+						id: 'Ini adalah seorang dokter wanita dan itu adalah seorang perawat wanita.'
+					},
+					{
+						ar: 'هَذِهِ مِنَ الْهِنْدِ وَتِلْكَ مِنَ الْيَابَانِ.',
+						tr: 'Hādhihi mina l-hindi wa-tilka mina l-yābāni.',
+						id: 'Ini dari India dan itu dari Jepang.'
+					},
+					{
+						ar: 'هَذِهِ طَوِيلَةٌ وَتِلْكَ قَصِيرَةٌ.',
+						tr: 'Hādhihi ṭawīlatun wa-tilka qaṣīratun.',
+						id: 'Yang ini tinggi dan yang itu pendek.'
+					},
+					{ speaker: 'Q', ar: 'وَمَنْ تِلْكَ؟', tr: 'Wa-man tilka?', id: 'Dan siapakah itu?' },
+					{ speaker: 'A', ar: 'تِلْكَ فَاطِمَةُ.', tr: 'Tilka Fāṭimatu.', id: 'Itu adalah Fatimah.' }
+				]
+			},
+			{
+				title: 'Menunjuk Benda & Hewan Betina',
+				subtitleAr: 'مَا تِلْكَ؟',
+				items: [
+					{ speaker: 'Q', ar: 'مَا تِلْكَ؟', tr: 'Mā tilka?', id: 'Apakah itu?' },
+					{ speaker: 'A', ar: 'تِلْكَ بَيْضَةٌ.', tr: 'Tilka bayḍatun.', id: 'Itu adalah sebutir telur.' },
+					{
+						speaker: 'Q',
+						ar: 'أَتِلْكَ دَجَاجَةٌ؟',
+						tr: 'A-tilka dajājatun?',
+						id: 'Apakah itu seekor ayam betina?'
+					},
+					{
+						speaker: 'A',
+						ar: 'لَا، تِلْكَ بَطَّةٌ.',
+						tr: 'Lā, tilka baṭṭatun.',
+						id: 'Bukan, itu adalah seekor bebek.'
+					},
+					{
+						ar: 'هَذَا جَمَلٌ وَتِلْكَ نَاقَةٌ.',
+						tr: 'Hādhā jamalun wa-tilka nāqatun.',
+						id: 'Ini adalah unta jantan dan itu adalah unta betina.'
+					},
+					{
+						ar: 'هَذِهِ حَدِيقَةٌ جَمِيلَةٌ.',
+						tr: 'Hādhihi ḥadīqatun jamīlatun.',
+						id: 'Ini adalah sebuah taman yang indah.'
+					}
+				]
+			}
+		],
+		vocabulary: [
+			{ ar: 'تِلْكَ', tr: 'tilka', id: 'itu (tunggal muannats)', category: 'Kata Ganti' },
+			{
+				ar: 'مُمَرِّضَةٌ / الْمُمَرِّضَةُ',
+				tr: 'mumarriḍatu-n / al-mumarriḍatu',
+				id: 'perawat perempuan',
+				category: 'Orang'
+			},
+			{
+				ar: 'مُؤَذِّنٌ / الْمُؤَذِّنُ',
+				tr: 'muʾadhdhinu-n / al-muʾadhdhinu',
+				id: 'muazin / pengumandang azan',
+				category: 'Orang'
+			},
+			{
+				ar: 'بَطَّةٌ / الْبَطَّةُ',
+				tr: 'baṭṭatu-n / al-baṭṭatu',
+				id: 'bebek / itik',
+				category: 'Hewan'
+			},
+			{
+				ar: 'نَاقَةٌ / النَّاقَةُ',
+				tr: 'nāqatu-n / an-nāqatu',
+				id: 'unta betina',
+				category: 'Hewan'
+			},
+			{
+				ar: 'بَيْضَةٌ / الْبَيْضَةُ',
+				tr: 'bayḍatu-n / al-bayḍatu',
+				id: 'telur',
+				category: 'Benda'
+			},
+			{
+				ar: 'حَدِيقَةٌ / الْحَدِيقَةُ',
+				tr: 'ḥadīqatu-n / al-ḥadīqatu',
+				id: 'kebun / taman',
+				category: 'Benda'
+			}
+		],
+		vocabNote:
+			'Kata benda berakhiran ta marbuthah (ة) selalu menggunakan تِلْكَ jika posisinya jauh, seperti تِلْكَ بَيْضَةٌ dan تِلْكَ سَيَّارَةٌ.'
+	},
+	{
+		id: 'lesson-8',
+		number: 8,
+		label: 'Pelajaran 8',
+		titleAr: 'الدَّرْسُ الثَّامِنُ',
+		title: 'Frasa Isyarah & Keterangan Tempat (أَمَامَ / خَلْفَ)',
+		summary:
+			'Memahami perbedaan kalimat lengkap (هَذَا كِتَابٌ) dan frasa isyarah (هَذَا الْكِتَابُ), kata benda tak berubah akhiran (isim mabni seperti أَمْرِيكَا), serta kata keterangan tempat أَمَامَ (di depan) dan خَلْفَ (di belakang).',
+		coreConcept: {
+			heading: 'Frasa Isyarah (Badal) vs. Kalimat Lengkap',
+			highlightAr: 'هَذَا كِتَابٌ  vs.  هَذَا الْكِتَابُ جَدِيدٌ',
+			highlightTr: 'hādhā kitābun  vs.  hādha l-kitābu jadīdun',
+			highlightId: 'Ini buku (kalimat)  vs.  Buku ini baru (frasa + predikat)',
+			description:
+				'Jika kata setelah kata tunjuk tidak ber-alif lam (nakirah: هَذَا كِتَابٌ), ia membentuk kalimat sempurna: "Ini adalah buku". Namun jika ber-alif lam (ma\'rifah: هَذَا الْكِتَابُ), ia baru berstatus frasa penjelas ("Buku ini...") dan memerlukan predikat untuk menjadi kalimat sempurna.'
+		},
+		grammarNotes: [
+			{
+				title: 'Frasa Isyarah (Kata Benda Ber-ال Setelah Isim Isyarah)',
+				body: 'Kata benda tertentu yang terletak tepat setelah kata tunjuk disebut badal (pengganti/penjelas). Gabungan ini tidak membentuk kalimat lengkap melainkan satu kesatuan frasa: "pria ini", "buku itu".',
+				examples: [
+					{ ar: 'هَذَا رَجُلٌ', tr: 'hādhā rajulun', id: 'Ini adalah seorang pria (kalimat lengkap).' },
+					{
+						ar: 'هَذَا الرَّجُلُ تَاجِرٌ',
+						tr: 'hādha r-rajulu tājirun',
+						id: 'Pria ini adalah seorang pedagang (frasa subjek + predikat).'
+					}
+				]
+			},
+			{
+				title: 'Isim Mabni Berakhiran Vokal Panjang Alif',
+				body: 'Kata-kata yang berakhiran huruf alif atau alif maqsūrah (seperti nama negara أَمْرِيكَا, أَلْمَانِيَا, سُوِيسْرَا, serta kata الْمُسْتَشْفَى) tidak dapat menerima harakat kasrah di akhirnya. Bentuknya tetap sama meskipun didahului huruf jar.',
+				examples: [
+					{ ar: 'مِنْ أَمْرِيكَا', tr: 'min amrīkā', id: 'dari Amerika (bukan min amrīki)' },
+					{ ar: 'فِي الْمُسْتَشْفَى', tr: 'fī l-mustasyfā', id: 'di dalam rumah sakit' }
+				]
+			},
+			{
+				title: 'Keterangan Tempat (أَمَامَ dan خَلْفَ)',
+				body: 'Kata keterangan posisi أَمَامَ (amāma = di depan) dan خَلْفَ (khalfa = di belakang) berlaku seperti mudhāf. Kata benda yang mengikutinya selalu berada dalam keadaan majrūr (berharakat kasrah).',
+				examples: [
+					{ ar: 'أَمَامَ الْمَسْجِدِ', tr: 'amāma l-masjidi', id: 'di depan masjid' },
+					{ ar: 'خَلْفَ الْمَدْرَسَةِ', tr: 'khalfa l-madrasati', id: 'di belakang sekolah' }
+				]
+			}
+		],
+		exampleGroups: [
+			{
+				title: 'Frasa Isyarah dalam Kalimat',
+				subtitleAr: 'هَذَا الرَّجُلُ',
+				items: [
+					{
+						ar: 'هَذَا الرَّجُلُ تَاجِرٌ وَذَلِكَ الرَّجُلُ طَبِيبٌ.',
+						tr: 'Hādha r-rajulu tājirun wa-dhālika r-rajulu ṭabībun.',
+						id: 'Pria ini adalah seorang pedagang dan pria itu adalah seorang dokter.'
+					},
+					{
+						ar: 'اسْمُ التَّاجِرِ مَحْمُودٌ وَاسْمُ الطَّبِيبِ سَعِيدٌ.',
+						tr: 'Ismu t-tājiri Maḥmūdun was-mu ṭ-ṭabībi Saʿīdun.',
+						id: 'Nama pedagang itu Mahmud dan nama dokter itu Sa\'id.'
+					},
+					{
+						ar: 'هَذَا الْبَيْتُ لِلتَّاجِرِ وَذَلِكَ الْبَيْتُ لِلطَّبِيبِ.',
+						tr: 'Hādha l-baitu lit-tājiri wa-dhālika l-baitu liṭ-ṭabībi.',
+						id: 'Rumah ini milik pedagang dan rumah itu milik dokter.'
+					}
+				]
+			},
+			{
+				title: 'Asal Negara & Rumah Sakit (Isim Berakhiran Alif)',
+				subtitleAr: 'مِنْ أَيْنَ؟',
+				items: [
+					{
+						ar: 'هَذِهِ السَّيَّارَةُ مِنَ الْيَابَانِ، وَتِلْكَ مِنْ أَمْرِيكَا.',
+						tr: 'Hādhihi s-sayyāratu mina l-yābāni, wa-tilka min amrīkā.',
+						id: 'Mobil ini dari Jepang, dan itu dari Amerika.'
+					},
+					{
+						ar: 'ذَهَبَ عَبْدُ اللَّهِ مِنْ أَلْمَانِيَا إِلَى إِنْكَلْتَرَا.',
+						tr: 'Dhahaba ʿAbdu Llāhi min almāniyā ilā inkaltarā.',
+						id: 'Abdullah pergi dari Jerman ke Inggris.'
+					},
+					{
+						ar: 'الطَّبِيبُ فِي الْمُسْتَشْفَى.',
+						tr: 'Aṭ-ṭabību fī l-mustasyfā.',
+						id: 'Dokter itu berada di rumah sakit.'
+					}
+				]
+			},
+			{
+				title: 'Keterangan Tempat (أَمَامَ dan خَلْفَ)',
+				subtitleAr: 'أَمَامَ وَخَلْفَ',
+				items: [
+					{
+						ar: 'بَيْتُ التَّاجِرِ أَمَامَ الْمَسْجِدِ وَبَيْتُ الطَّبِيبِ خَلْفَ الْمَدْرَسَةِ.',
+						tr: 'Baitu t-tājiri amāma l-masjidi wa-baitu ṭ-ṭabībi khalfa l-madrasati.',
+						id: 'Rumah pedagang itu di depan masjid dan rumah dokter itu di belakang sekolah.'
+					},
+					{
+						ar: 'أَيْنَ سَيَّارَةُ الْمُدَرِّسِ؟ هِيَ أَمَامَ الْمَدْرَسَةِ.',
+						tr: 'Ayna sayyāratu l-mudarrisi? Hiya amāma l-madrasati.',
+						id: 'Di mana mobil guru? Mobil itu di depan sekolah.'
+					},
+					{
+						ar: 'جَلَسَ الطَّالِبُ خَلْفَ الْمُدَرِّسِ.',
+						tr: 'Jalasa ṭ-ṭālibu khalfa l-mudarrisi.',
+						id: 'Pelajar itu duduk di belakang guru.'
+					}
+				]
+			}
+		],
+		vocabulary: [
+			{ ar: 'أَمْرِيكَا', tr: 'amrīkā', id: 'Amerika', category: 'Benda' },
+			{ ar: 'أَلْمَانِيَا', tr: 'almāniyā', id: 'Jerman', category: 'Benda' },
+			{ ar: 'إِنْكَلْتَرَا', tr: 'inkaltarā', id: 'Inggris', category: 'Benda' },
+			{ ar: 'سُوِيسْرَا', tr: 'suwīsrā', id: 'Swiss', category: 'Benda' },
+			{ ar: 'الْعِرَاقُ', tr: 'al-ʿirāqu', id: 'Irak', category: 'Benda' },
+			{
+				ar: 'مُسْتَشْفَى / الْمُسْتَشْفَى',
+				tr: 'mustasyfā / al-mustasyfā',
+				id: 'rumah sakit',
+				category: 'Benda'
+			},
+			{
+				ar: 'سِكِّينٌ / السِّكِّينُ',
+				tr: 'sikkīnu-n / as-sikkīnu',
+				id: 'pisau',
+				category: 'Benda'
+			},
+			{ ar: 'أَمَامَ', tr: 'amāma', id: 'di depan', category: 'Partikel' },
+			{ ar: 'خَلْفَ', tr: 'khalfa', id: 'di belakang', category: 'Partikel' },
+			{ ar: 'جَلَسَ', tr: 'jalasa', id: 'dia telah duduk', category: 'Kata Kerja' }
+		],
+		vocabNote:
+			'Kata benda yang terletak setelah أَمَامَ dan خَلْفَ selalu berharakat kasrah (majrūr), seperti أَمَامَ الْمَسْجِدِ.'
+	},
+	{
+		id: 'lesson-9',
+		number: 9,
+		label: 'Pelajaran 9',
+		titleAr: 'الدَّرْسُ التَّاسِعُ',
+		title: 'Kata Sifat (النَّعْتُ) & Kata Sambung (الَّذِي)',
+		summary:
+			'Kaidah na\'at dan man\'ut (kata sifat yang mengikuti kata benda dalam gender, kejelasan alif-lam, dan harakat), sifat berpola af\'al/fa\'lan tanpa tanwin, kata sambung الَّذِي (yang), serta preposisi عِنْدَ.',
+		coreConcept: {
+			heading: 'Kesesuaian Sifat (النَّعْتُ وَالْمَنْعُوتُ)',
+			highlightAr: 'تَاجِرٌ غَنِيٌّ  •  الْمُدَرِّسُ الْجَدِيدُ',
+			highlightTr: 'tājirun ghaniyyun  •  al-mudarrisu l-jadīdu',
+			highlightId: 'pedagang kaya (nakirah)  •  guru baru itu (ma\'rifah)',
+			description:
+				'Dalam bahasa Arab, kata sifat (na\'at) diletakkan SETELAH kata benda yang disifati (man\'ut). Kata sifat wajib menyamai kata bendanya dalam tiga hal: jenis kelamin (mudzakkar/muannats), status ketertentuan (pakai ال atau tanwin), dan harakat akhir.'
+		},
+		grammarNotes: [
+			{
+				title: 'Kaidah Kesesuaian Na\'at (Kata Sifat)',
+				body: 'Kata sifat (نَعْتٌ) selalu diletakkan setelah kata benda yang disifati (مَنْعُوتٌ) dan harus cocok dengannya dalam:\n1. Gender: وَلَدٌ صَغِيرٌ (anak laki-laki kecil) vs بِنْتٌ صَغِيرَةٌ (anak perempuan kecil).\n2. Kejelasan (Alif-Lam): بَيْتٌ جَدِيدٌ (sebuah rumah baru) vs الْبَيْتُ الْجَدِيدُ (rumah baru itu).\n3. Harakat: فِي بَيْتٍ جَدِيدٍ (di dalam rumah baru — keduanya kasrah).',
+				examples: [
+					{ ar: 'عَبَّاسٌ تَاجِرٌ غَنِيٌّ', tr: 'ʿAbbāsun tājirun ghaniyyun', id: 'Abbas adalah pedagang yang kaya.' },
+					{
+						ar: 'الْعَرَبِيَّةُ لُغَةٌ سَهْلَةٌ',
+						tr: 'al-ʿarabiyyatu lughatun sahlatun',
+						id: 'Bahasa Arab adalah bahasa yang mudah.'
+					}
+				]
+			},
+			{
+				title: 'Kata Sifat Berakhiran -ān (Tanpa Tanwin)',
+				body: 'Kata sifat yang menyatakan kondisi fisiologis atau psikologis sementara berpola fa\'lānu (فَعْلَانُ) tidak boleh bertanwin (mamnū\' min ash-sharf): جَوْعَانُ (lapar), عَطْشَانُ (haus), غَضْبَانُ (marah), كَسْلَانُ (malas), مَلْآنُ (penuh).',
+				examples: [
+					{ ar: 'أَنَا جَوْعَانُ', tr: 'anā jawʿānu', id: 'Saya lapar (bukan jaw\'ānun).' },
+					{ ar: 'الْكُوبُ مَلْآنُ', tr: 'al-kūbu malʾānu', id: 'Gelas itu penuh.' }
+				]
+			},
+			{
+				title: 'Kata Sambung Penghubung (الَّذِي)',
+				body: 'الَّذِي (alladhī) adalah isim maushul yang berarti "yang" untuk kata benda tunggal laki-laki (mudzakkar), baik untuk manusia ("orang yang...") maupun benda ("buku yang...").',
+				examples: [
+					{
+						ar: 'الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ',
+						tr: 'al-kitābu lladhī ʿalā l-maktabi',
+						id: 'Buku yang berada di atas meja itu'
+					}
+				]
+			},
+			{
+				title: 'Preposisi Posisi عِنْدَ (Di Sisi / Pada)',
+				body: 'Kata عِنْدَ (ʿinda) bermakna "di sisi / bersama / di kediaman seseorang". Kata benda yang mengikutinya berharakat kasrah (majrūr): عِنْدَ الْمُدِيرِ (di sisi kepala sekolah).',
+				examples: [{ ar: 'هُوَ عِنْدَ الْمُدِيرِ', tr: 'huwa ʿinda l-mudīri', id: 'Dia sedang berada di sisi kepala sekolah.' }]
+			}
+		],
+		exampleGroups: [
+			{
+				title: 'Penerapan Na\'at dan Man\'ut',
+				subtitleAr: 'النَّعْتُ وَالْمَنْعُوتُ',
+				items: [
+					{
+						ar: 'عَبَّاسٌ تَاجِرٌ غَنِيٌّ.',
+						tr: 'ʿAbbāsun tājirun ghaniyyun.',
+						id: 'Abbas adalah seorang pedagang yang kaya.'
+					},
+					{
+						ar: 'حَامِدٌ مُدَرِّسٌ جَدِيدٌ.',
+						tr: 'Ḥāmidun mudarrisun jadīdun.',
+						id: 'Hamid adalah seorang guru baru.'
+					},
+					{
+						ar: 'الْعَرَبِيَّةُ لُغَةٌ سَهْلَةٌ.',
+						tr: 'Al-ʿarabiyyatu lughatun sahlatun.',
+						id: 'Bahasa Arab adalah bahasa yang mudah.'
+					},
+					{
+						ar: 'الْإِنْكِلِيزِيَّةُ لُغَةٌ صَعْبَةٌ.',
+						tr: 'Al-inkilīziyyatu lughatun ṣaʿbatun.',
+						id: 'Bahasa Inggris adalah bahasa yang sulit.'
+					},
+					{
+						ar: 'الْعُصْفُورُ طَائِرٌ صَغِيرٌ.',
+						tr: 'Al-ʿuṣfūru ṭāʾirun ṣaghīrun.',
+						id: 'Burung pipit adalah seekor burung yang kecil.'
+					},
+					{
+						ar: 'الْقَاهِرَةُ مَدِينَةٌ كَبِيرَةٌ.',
+						tr: 'Al-qāhiratu madīnatun kabīratun.',
+						id: 'Kairo adalah sebuah kota yang besar.'
+					}
+				]
+			},
+			{
+				title: 'Kondisi Berakhiran -ān (Tanpa Tanwin)',
+				subtitleAr: 'جَوْعَانُ وَعَطْشَانُ',
+				items: [
+					{
+						ar: 'عَمَّارٌ طَالِبٌ مُجْتَهِدٌ، وَمَحْمُودٌ طَالِبٌ كَسْلَانُ.',
+						tr: 'ʿAmmārun ṭālibun mujtahidun, wa-Maḥmūdun ṭālibun kaslānu.',
+						id: 'Ammar adalah pelajar yang rajin, dan Mahmud adalah pelajar yang malas.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'أَأَنْتَ جَوْعَانُ؟',
+						tr: 'A-anta jawʿānu?',
+						id: 'Apakah kamu lapar?'
+					},
+					{
+						speaker: 'A',
+						ar: 'لَا، أَنَا عَطْشَانُ.',
+						tr: 'Lā, anā ʿaṭsyānu.',
+						id: 'Bukan, saya haus.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'لِمَاذَا الْمُدَرِّسُ غَضْبَانُ الْيَوْمَ؟',
+						tr: 'Limādhā l-mudarrisu ghaḍbānu l-yawma?',
+						id: 'Mengapa guru itu marah hari ini?'
+					},
+					{
+						speaker: 'A',
+						ar: 'الْكُوبُ مَلْآنُ.',
+						tr: 'Al-kūbu malʾānu.',
+						id: 'Gelas itu penuh.'
+					}
+				]
+			},
+			{
+				title: 'Kata Sambung الَّذِي',
+				subtitleAr: 'الَّذِي',
+				items: [
+					{
+						speaker: 'Q',
+						ar: 'مَنْ ذَلِكَ الرَّجُلُ الطَّوِيلُ الَّذِي خَرَجَ الْآنَ مِنَ الْمَدْرَسَةِ؟',
+						tr: 'Man dhālika r-rajulu ṭ-ṭawīlu lladhī kharaja l-āna mina l-madrasati?',
+						id: 'Siapakah pria tinggi yang baru saja keluar dari sekolah itu?'
+					},
+					{
+						speaker: 'A',
+						ar: 'هُوَ الْمُدِيرُ الْجَدِيدُ.',
+						tr: 'Huwa l-mudīru l-jadīdu.',
+						id: 'Dia adalah kepala sekolah yang baru.'
+					},
+					{
+						ar: 'الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ لِلْمُدَرِّسِ.',
+						tr: 'Al-kitābu lladhī ʿalā l-maktabi lil-mudarrisi.',
+						id: 'Buku yang berada di atas meja itu adalah milik guru.'
+					},
+					{
+						ar: 'الْقَلَمُ الْجَمِيلُ الَّذِي عَلَى الْمَكْتَبِ مَكْسُورٌ.',
+						tr: 'Al-qalamu l-jamīlu lladhī ʿalā l-maktabi maksūrun.',
+						id: 'Pena bagus yang di atas meja itu patah.'
+					},
+					{
+						ar: 'السِّكِّينُ حَادٌّ جِدًّا.',
+						tr: 'As-sikkīnu ḥāddun jiddan.',
+						id: 'Pisau itu sangat tajam.'
+					}
+				]
+			}
+		],
+		vocabulary: [
+			{ ar: 'الَّذِي', tr: 'alladhī', id: 'yang (kata sambung mudzakkar)', category: 'Kata Ganti' },
+			{
+				ar: 'فَاكِهَةٌ / الْفَاكِهَةُ',
+				tr: 'fākihatu-n / al-fākihatu',
+				id: 'buah-buahan',
+				category: 'Makanan'
+			},
+			{
+				ar: 'عُصْفُورٌ / الْعُصْفُورُ',
+				tr: 'ʿuṣfūru-n / al-ʿuṣfūru',
+				id: 'burung pipit',
+				category: 'Hewan'
+			},
+			{
+				ar: 'طَائِرٌ / الطَّائِرُ',
+				tr: 'ṭāʾiru-n / aṭ-ṭāʾiru',
+				id: 'burung',
+				category: 'Hewan'
+			},
+			{ ar: 'لُغَةٌ / اللُّغَةُ', tr: 'lughatu-n / al-lughatu', id: 'bahasa', category: 'Benda' },
+			{ ar: 'الْعَرَبِيَّةُ', tr: 'al-ʿarabiyyatu', id: 'bahasa Arab', category: 'Benda' },
+			{
+				ar: 'الْإِنْكِلِيزِيَّةُ',
+				tr: 'al-inkilīziyyatu',
+				id: 'bahasa Inggris',
+				category: 'Benda'
+			},
+			{
+				ar: 'مَدِينَةٌ / الْمَدِينَةُ',
+				tr: 'madīnatu-n / al-madīnatu',
+				id: 'kota',
+				category: 'Benda'
+			},
+			{ ar: 'الْقَاهِرَةُ', tr: 'al-qāhiratu', id: 'Kairo', category: 'Benda' },
+			{ ar: 'كُوبٌ / الْكُوبُ', tr: 'kūbu-n / al-kūbu', id: 'cangkir / gelas', category: 'Benda' },
+			{
+				ar: 'مَكْتَبَةٌ / الْمَكْتَبَةُ',
+				tr: 'maktabatu-n / al-maktabatu',
+				id: 'perpustakaan',
+				category: 'Benda'
+			},
+			{
+				ar: 'مُسْتَوْصَفٌ / الْمُسْتَوْصَفُ',
+				tr: 'mustawṣafu-n / al-mustawṣafu',
+				id: 'poliklinik / klinik',
+				category: 'Benda'
+			},
+			{
+				ar: 'مَرْوَحَةٌ / الْمَرْوَحَةُ',
+				tr: 'marwaḥatu-n / al-marwaḥatu',
+				id: 'kipas angin',
+				category: 'Benda'
+			},
+			{ ar: 'الْيَوْمَ', tr: 'al-yawma', id: 'hari ini', category: 'Partikel' },
+			{ ar: 'لِمَاذَا', tr: 'limādhā', id: 'mengapa / kenapa', category: 'Partikel' },
+			{ ar: 'عِنْدَ', tr: 'ʿinda', id: 'di sisi / pada / di tempat', category: 'Partikel' },
+			{ ar: 'سَهْلٌ', tr: 'sahlu-n', id: 'mudah', category: 'Kata Sifat' },
+			{ ar: 'صَعْبٌ', tr: 'ṣaʿbu-n', id: 'sulit / sukar', category: 'Kata Sifat' },
+			{
+				ar: 'مُجْتَهِدٌ',
+				tr: 'mujtahidu-n',
+				id: 'rajin / bersungguh-sungguh',
+				category: 'Kata Sifat'
+			},
+			{ ar: 'شَهِيرٌ', tr: 'syahīru-n', id: 'terkenal / masyhur', category: 'Kata Sifat' },
+			{ ar: 'حَادٌّ', tr: 'ḥāddu-n', id: 'tajam', category: 'Kata Sifat' },
+			{ ar: 'كَسْلَانُ', tr: 'kaslānu', id: 'malas', category: 'Kata Sifat' },
+			{ ar: 'جَوْعَانُ', tr: 'jawʿānu', id: 'lapar', category: 'Kata Sifat' },
+			{ ar: 'عَطْشَانُ', tr: 'ʿaṭsyānu', id: 'haus', category: 'Kata Sifat' },
+			{ ar: 'غَضْبَانُ', tr: 'ghaḍbānu', id: 'marah', category: 'Kata Sifat' },
+			{ ar: 'مَلْآنُ', tr: 'malʾānu', id: 'penuh', category: 'Kata Sifat' }
+		],
+		vocabNote:
+			'Kata sifat berpola فَعْلَانُ (seperti جَوْعَانُ dan عَطْشَانُ) tidak boleh bertanwin. Dalam susunan na\'at man\'ut, kata sifat selalu diletakkan setelah kata bendanya.'
+	},
+	{
+		id: 'lesson-10',
+		number: 10,
+		label: 'Pelajaran 10',
+		titleAr: 'الدَّرْسُ الْعَاشِرُ',
+		title: 'Kata Ganti Bersambung (Dhomir Muttashil) & Kebersamaan (مَعَ)',
+		summary:
+			'Mempelajari kata ganti kepemilikan yang bersambung ke akhir kata benda (ـكَ, ـهُ, ـهَا, ـِي), kata benda istimewa أَبٌ dan أَخٌ, perbedaan kepemilikan hubungan (لِـ) vs benda fisik (عِنْدَ), preposisi kebersamaan مَعَ (bersama), dan akhiran kata kerja lampau (ذَهَبْتُ / ذَهَبْتَ).',
+		coreConcept: {
+			heading: 'Dhomir Muttashil (Kata Ganti Akhiran)',
+			highlightAr: 'كِتَابِي  •  كِتَابُكَ  •  كِتَابُهُ  •  كِتَابُهَا',
+			highlightTr: 'kitābī  •  kitābuka  •  kitābuhu  •  kitābuhā',
+			highlightId: 'bukuku  •  bukumu (lk)  •  bukunya (lk)  •  bukunya (pr)',
+			description:
+				'Pelajaran ini mengenalkan kata ganti kepemilikan yang ditempel langsung di akhir kata benda: ـِي (-ī = -ku), ـكَ (-ka = -mu pria), ـهُ (-hu = -nya pria), dan ـهَا (-hā = -nya wanita). Pelajaran ini juga mengulas kata sambung kebersamaan مَعَ (bersama) dan perubahan kata kerja lampau untuk subjek aku (ذَهَبْتُ) dan kamu (ذَهَبْتَ).'
+		},
+		grammarNotes: [
+			{
+				title: 'Akhiran Kata Ganti Kepemilikan (Dhomir Muttashil)',
+				body: 'Kata ganti kepemilikan ditempel langsung pada akhir kata benda:\n• ـِي (-ī): milikku (huruf sebelum ya sukun wajib berharakat kasrah, contoh: كِتَابِي / kitābī).\n• ـكَ (-ka): milikmu (pria tunggal, contoh: كِتَابُكَ / kitābuka).\n• ـهُ (-hu): miliknya (pria tunggal, contoh: كِتَابُهُ / kitābuhu).\n• ـهَا (-hā): miliknya (wanita tunggal, contoh: كِتَابُهَا / kitābuhā).',
+				examples: [
+					{ ar: 'مَا اسْمُكَ؟ اسْمِي مُحَمَّدٌ.', tr: 'Mas-muka? Ismī Muḥammadun.', id: 'Siapa namamu? Namaku Muhammad.' },
+					{ ar: 'كِتَابُهَا جَدِيدٌ.', tr: 'Kitābuhā jadīdun.', id: 'Bukunya (wanita itu) baru.' }
+				]
+			},
+			{
+				title: 'Bentuk Khusus أَبٌ (Ayah) dan أَخٌ (Saudara)',
+				body: 'Kata أَبٌ (ayah) dan أَخٌ (saudara laki-laki) memiliki bentuk khusus jika bersambung dengan dhomir (selain "ku"): disisipkan huruf wau (و) panjang di antaranya: أَبُوكَ (ayahmu), أَبُوهُ (ayahnya), أَخُوكَ (saudaramu), أَخُوهُ (saudaranya). Namun untuk "ku", tetap tanpa wau: أَبِي (ayahku) dan أَخِي (saudaraku).',
+				examples: [
+					{ ar: 'أَيْنَ أَبُوكَ؟ أَبِي فِي الْبَيْتِ.', tr: 'Ayna abūka? Abī fī l-baiti.', id: 'Di mana ayahmu? Ayahku ada di rumah.' },
+					{ ar: 'أَخُوهُ فِي الْفَصْلِ.', tr: 'Akhūhu fī l-faṣli.', id: 'Saudara laki-lakinya ada di dalam kelas.' }
+				]
+			},
+			{
+				title: 'Kepemilikan: Hubungan (لِـ) vs Benda Fisik (عِنْدَ)',
+				body: 'Untuk menyatakan kepemilikan hubungan kekeluargaan atau hal yang tak terpisahkan, bahasa Arab menggunakan لِـ: لِي أَخٌ (aku punya saudara). Sedangkan untuk kepemilikan benda fisik yang dapat dipindah, digunakan عِنْدَ: عِنْدِي سَيَّارَةٌ (aku punya mobil). Untuk menafikannya digunakan partikel مَا: مَا عِنْدِي سَيَّارَةٌ (aku tidak punya mobil).',
+				examples: [
+					{ ar: 'لِي أَخٌ وَاحِدٌ', tr: 'lī akhun wāḥidun', id: 'Saya punya satu saudara laki-laki.' },
+					{ ar: 'مَا عِنْدِي سَيَّارَةٌ', tr: 'mā ʿindī sayyāratun', id: 'Saya tidak punya mobil.' }
+				]
+			},
+			{
+				title: 'Preposisi Kebersamaan مَعَ (Bersama)',
+				body: 'Kata مَعَ (maʿa) berarti "bersama/disertai". Kata benda setelahnya berstatus majrūr: مَعَ خَالِدٍ (bersama Khalid). Jika disambung dhomir: مَعِي (bersamaku), مَعَكَ (bersamamu), مَعَهُ (bersamanya).',
+				examples: [{ ar: 'خَرَجَ مَعَهُ', tr: 'kharaja maʿahu', id: 'Dia keluar bersamanya.' }]
+			},
+			{
+				title: 'Subjek Kata Kerja Lampau (Aku & Kamu)',
+				body: 'Perubahan akhiran kata kerja lampau (fi\'il madhi):\n• ذَهَبَ (dhahaba): dia (laki-laki) telah pergi.\n• ذَهَبْتَ (dhahabta): kamu (laki-laki) telah pergi.\n• ذَهَبْتُ (dhahabtu): aku telah pergi.',
+				examples: [
+					{ ar: 'أَذَهَبْتَ إِلَى الْمَدْرَسَةِ؟', tr: 'A-dhahabta ila l-madrasati?', id: 'Apakah kamu telah pergi ke sekolah?' },
+					{ ar: 'نَعَمْ، ذَهَبْتُ.', tr: 'Naʿam, dhahabtu.', id: 'Ya, aku telah pergi.' }
+				]
+			},
+			{
+				title: 'Nama Laki-laki Berakhiran Ta Marbuthah',
+				body: 'Nama laki-laki yang berakhiran huruf ta marbuthah (seperti حَمْزَةُ, أُسَامَةُ, مُعَاوِيَةُ, طَلْحَةُ) tidak boleh bertanwin (mamnū\' min ash-sharf).',
+				examples: [{ ar: 'هَذَا حَمْزَةُ', tr: 'hādhā Ḥamzatu', id: 'Ini adalah Hamzah (bukan Hamzatun).' }]
+			}
+		],
+		exampleGroups: [
+			{
+				title: 'Perkenalan & Kata Ganti Milik',
+				subtitleAr: 'مَا اسْمُكَ؟',
+				items: [
+					{ speaker: 'Q', ar: 'مَا اسْمُكَ؟', tr: 'Mas-muka?', id: 'Siapa namamu?' },
+					{ speaker: 'A', ar: 'اسْمِي مُحَمَّدٌ.', tr: 'Ismī Muḥammadun.', id: 'Namaku adalah Muhammad.' },
+					{
+						speaker: 'Q',
+						ar: 'وَحَمْزَةُ، مَا لُغَتُهُ؟',
+						tr: 'Wa-Ḥamzatu, mā lughatuhu?',
+						id: 'Dan Hamzah, apa bahasanya?'
+					},
+					{
+						speaker: 'A',
+						ar: 'لُغَتُهُ الْيَابَانِيَّةُ.',
+						tr: 'Lughatuhu l-yābāniyyatu.',
+						id: 'Bahasanya adalah bahasa Jepang.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'مِنْ أَيْنَ أَنْتَ؟',
+						tr: 'Min ayna anta?',
+						id: 'Dari mana asalmu?'
+					},
+					{
+						speaker: 'A',
+						ar: 'أَنَا مِنَ الْهِنْدِ.',
+						tr: 'Anā mina l-hindi.',
+						id: 'Saya dari India.'
+					}
+				]
+			},
+			{
+				title: 'Keluarga & Bentuk أَبُوكَ / أَخُوكَ',
+				subtitleAr: 'أَبِي وَأَخِي',
+				items: [
+					{
+						speaker: 'Q',
+						ar: 'أَيْنَ أَبُوكَ يَا مُحَمَّدُ؟',
+						tr: 'Ayna abūka yā Muḥammadu?',
+						id: 'Di mana ayahmu, wahai Muhammad?'
+					},
+					{
+						speaker: 'A',
+						ar: 'أَبِي فِي الْكُوَيْتِ. هُوَ طَبِيبٌ شَهِيرٌ.',
+						tr: 'Abī fī l-kuwaiti. Huwa ṭabībun syahīrun.',
+						id: 'Ayahku berada di Kuwait. Beliau adalah dokter yang terkenal.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'وَأَيْنَ أُمُّكَ؟',
+						tr: 'Wa-ayna ummuka?',
+						id: 'Dan di mana ibumu?'
+					},
+					{
+						speaker: 'A',
+						ar: 'هِيَ أَيْضًا فِي الْكُوَيْتِ مَعَ أَبِي. هِيَ مُدَرِّسَةٌ هُنَاكَ.',
+						tr: 'Hiya ayḍan fī l-kuwaiti maʿa abī. Hiya mudarrisatun hunāka.',
+						id: 'Beliau juga di Kuwait bersama ayahku. Beliau seorang guru di sana.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'وَزَمِيلُكَ، أَيْنَ أَبُوهُ؟',
+						tr: 'Wa-zamīluka, ayna abūhu?',
+						id: 'Dan teman sekelasmu, di mana ayahnya?'
+					},
+					{
+						speaker: 'A',
+						ar: 'أَبُوهُ فِي الْيَابَانِ. هُوَ تَاجِرٌ كَبِيرٌ.',
+						tr: 'Abūhu fī l-yābāni. Huwa tājirun kabīrun.',
+						id: 'Ayahnya berada di Jepang. Beliau adalah pedagang besar.'
+					}
+				]
+			},
+			{
+				title: 'Kepemilikan (Hubungan vs. Benda) & Kebersamaan',
+				subtitleAr: 'لِي وَعِنْدِي وَمَعَ',
+				items: [
+					{
+						speaker: 'Q',
+						ar: 'أَلَكَ أَخٌ يَا مُحَمَّدُ؟',
+						tr: 'A-laka akhun yā Muḥammadu?',
+						id: 'Apakah kamu punya saudara laki-laki, wahai Muhammad?'
+					},
+					{
+						speaker: 'A',
+						ar: 'نَعَمْ، لِي أَخٌ وَاحِدٌ اسْمُهُ أُسَامَةُ، وَهُوَ مَعِي هُنَا فِي الْمَدِينَةِ الْمُنَوَّرَةِ.',
+						tr: 'Naʿam, lī akhun wāḥidun ismuhū Usāmatu, wa-huwa maʿī hunā fī l-madīnati l-munawwarati.',
+						id: 'Ya, aku punya satu saudara laki-laki namanya Usamah, dan dia bersamaku di sini di Madinah al-Munawwarah.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'أَعِنْدَكَ سَيَّارَةٌ يَا أَخِي؟',
+						tr: 'A-ʿindaka sayyāratun yā akhī?',
+						id: 'Apakah kamu punya mobil, saudaraku?'
+					},
+					{
+						speaker: 'A',
+						ar: 'لَا، مَا عِنْدِي سَيَّارَةٌ. عِنْدِي دَرَّاجَةٌ.',
+						tr: 'Lā, mā ʿindī sayyāratun. ʿIndī darrājatun.',
+						id: 'Tidak, aku tidak punya mobil. Aku punya sepeda.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'وَمَنْ هَذَا الْفَتَى الَّذِي مَعَكَ؟',
+						tr: 'Wa-man hādha l-fatā lladhī maʿaka?',
+						id: 'Dan siapakah pemuda yang bersamamu ini?'
+					},
+					{
+						speaker: 'A',
+						ar: 'هُوَ زَمِيلِي.',
+						tr: 'Huwa zamīlī.',
+						id: 'Dia adalah teman sekelasku.'
+					},
+					{
+						speaker: 'Q',
+						ar: 'أَذَهَبْتَ إِلَى السُّوقِ؟',
+						tr: 'A-dhahabta ila s-sūqi?',
+						id: 'Apakah kamu telah pergi ke pasar?'
+					},
+					{
+						speaker: 'A',
+						ar: 'نَعَمْ، ذَهَبْتُ مَعَ زَوْجِ أُخْتِي.',
+						tr: 'Naʿam, dhahabtu maʿa zawji ukhtī.',
+						id: 'Ya, aku pergi bersama suami saudara perempuanku.'
+					}
+				]
+			}
+		],
+		vocabulary: [
+			{
+				ar: 'زَمِيلٌ / الزَّمِيلُ',
+				tr: 'zamīlu-n / az-zamīlu',
+				id: 'teman sekelas / kolega',
+				category: 'Orang'
+			},
+			{
+				ar: 'زَوْجٌ / الزَّوْجُ',
+				tr: 'zawju-n / az-zawju',
+				id: 'suami / pasangan',
+				category: 'Orang'
+			},
+			{
+				ar: 'طِفْلٌ / الطِّفْلُ',
+				tr: 'ṭiflu-n / aṭ-ṭiflu',
+				id: 'anak kecil / balita',
+				category: 'Orang'
+			},
+			{
+				ar: 'فَتًى / الْفَتَى',
+				tr: 'fatan / al-fatā',
+				id: 'pemuda / anak muda',
+				category: 'Orang'
+			},
+			{ ar: 'وَاحِدٌ', tr: 'wāḥidu-n', id: 'satu (1)', category: 'Kata Sifat' },
+			{ ar: 'مَعَ', tr: 'maʿa', id: 'bersama / beserta', category: 'Partikel' },
+			{ ar: 'ذَهَبْتَ', tr: 'dhahabta', id: 'kamu (lk) telah pergi', category: 'Kata Kerja' },
+			{ ar: 'ذَهَبْتُ', tr: 'dhahabtu', id: 'aku telah pergi', category: 'Kata Kerja' },
+			{ ar: 'مَا', tr: 'mā', id: 'tidak / bukan (partikel negasi)', category: 'Partikel' }
+		],
+		vocabNote:
+			'Kata أَبٌ dan أَخٌ disisipkan huruf wau jika bersambung dengan dhomir (أَبُوكَ / أَخُوكَ). Kepemilikan hubungan menggunakan لِـ (لِي أَخٌ), sedangkan kepemilikan barang menggunakan عِنْدَ (عِنْدِي سَيَّارَةٌ).'
 	}
 ];
 

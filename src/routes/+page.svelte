@@ -27,6 +27,14 @@
 
 	const allCompleted = $derived(completedCount === lessons.length);
 	const vocabStats = $derived(progress.allDecksStats(decks));
+
+	const upcomingLessons = $derived.by(() => {
+		const uncompletedIndex = lessons.findIndex((l) => !progress.isLessonDone(l.id));
+		if (uncompletedIndex === -1) {
+			return lessons.slice(-3);
+		}
+		return lessons.slice(uncompletedIndex, uncompletedIndex + 3);
+	});
 </script>
 
 <svelte:head>
@@ -99,14 +107,7 @@
 				</span>
 			</div>
 
-			<!-- Arabic as Hero Display -->
-			<div class="mt-3.5 rounded-xl bg-paper-sunk px-4 py-5 text-center">
-				<p lang="ar" dir="rtl" class="font-arabic text-3xl font-medium text-accent-ink sm:text-4xl">
-					{nextLesson.titleAr}
-				</p>
-			</div>
-
-			<h1 id="cta-heading" class="mt-3.5 text-lg font-semibold tracking-tight text-ink sm:text-xl">
+			<h1 id="cta-heading" class="mt-3.5 text-xl font-bold tracking-tight text-ink sm:text-2xl">
 				{nextLesson.title}
 			</h1>
 
@@ -139,7 +140,7 @@
 						class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-line bg-paper px-4 text-sm font-medium text-ink transition-all hover:bg-paper-sunk active:scale-[0.98]"
 					>
 						<Layers size={16} class="text-accent-ink" />
-						<span>Hafal Kosakata ({activeDeck.cards.length})</span>
+						<span>Kosakata ({activeDeck.cards.length})</span>
 					</a>
 				{/if}
 
@@ -149,7 +150,7 @@
 					class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-line bg-paper px-4 text-sm font-medium text-ink transition-all hover:bg-paper-sunk active:scale-[0.98]"
 				>
 					<ClipboardCheck size={16} class="text-good" />
-					<span>Latihan Kuis</span>
+					<span>Latihan</span>
 				</a>
 			</div>
 		</div>
@@ -161,13 +162,8 @@
 			<div class="rounded-2xl bg-paper-raised p-5 shadow-card sm:p-6">
 				<div class="flex items-start justify-between gap-3">
 					<h2 id="guide-heading" class="text-sm font-semibold tracking-wide text-ink uppercase">
-						Alur Belajar Madinah Book 1
+						Alur Belajar
 					</h2>
-					<span
-						class="inline-flex items-center gap-1 rounded-md bg-accent-wash px-2 py-0.5 text-xs font-semibold text-accent-ink"
-					>
-						Mandiri
-					</span>
 				</div>
 				<p class="mt-1 text-xs leading-relaxed text-ink-soft">
 					Metode belajar mandiri yang terstruktur untuk pemula tanpa perlu guru pendamping:
@@ -254,16 +250,23 @@
 		{/if}
 	</section>
 
-	<!-- 3. Materi Pembelajaran -->
+	<!-- 3. Materi Pembelajaran (Materi Selanjutnya) -->
 	<section class="mt-6" aria-labelledby="topics-heading">
 		<div class="mb-2.5 flex items-center justify-between gap-4">
 			<h2 id="topics-heading" class="text-xs font-semibold tracking-wide text-ink-soft uppercase">
-				Materi Pembelajaran
+				Materi Selanjutnya
 			</h2>
+			<a
+				href={resolve('/materi')}
+				class="inline-flex items-center gap-1 text-xs font-semibold text-accent-ink hover:underline"
+			>
+				<span>Lihat Semua ({lessons.length})</span>
+				<ArrowRight size={14} />
+			</a>
 		</div>
 
 		<ol class="space-y-3">
-			{#each lessons as lesson (lesson.id)}
+			{#each upcomingLessons as lesson (lesson.id)}
 				{@const done = progress.isLessonDone(lesson.id)}
 				{@const lessonDeck = decks.find((d) => d.id === lesson.id)}
 				{@const deckStats = lessonDeck ? progress.deckStats(lessonDeck) : null}
@@ -347,5 +350,16 @@
 				</li>
 			{/each}
 		</ol>
+
+		<div class="mt-4">
+			<a
+				id="view-all-lessons"
+				href={resolve('/materi')}
+				class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-paper-raised font-semibold text-ink shadow-card transition-colors hover:bg-paper-sunk/60"
+			>
+				<span>Buka Seluruh Silabus ({lessons.length} Pelajaran)</span>
+				<ArrowRight size={16} />
+			</a>
+		</div>
 	</section>
 </div>

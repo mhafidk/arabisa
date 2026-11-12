@@ -387,3 +387,221 @@ This lesson introduces the feminine demonstrative pronoun **هَذِهِ** (*hā
 *   هَذَا أَنْفٌ وَهَذَا فَمٌ. (This is a nose and this is a mouth.)[cite: 50].
 *   هَذِهِ أُذُنٌ وَهَذِهِ عَيْنٌ. (This is an ear and this is an eye.)[cite: 50].
 *   وَهَذِهِ يَدٌ وَهَذِهِ رِجْلٌ. (And this is a hand and this is a leg.)[cite: 50].
+# Lesson 7 (الدَّرْسُ السَّابِعُ)
+
+## 1. Core Concept: "That" for Feminine Nouns (تِلْكَ)
+This lesson introduces the demonstrative pronoun **تِلْكَ** (*tilka*), which means "that" for feminine, singular nouns[cite: 56, 59]. It is the feminine equivalent of ذَلِكَ (*dhālika*).
+
+## 2. Grammar Notes & Points to Remember
+*   **Demonstrative Pronoun Summary:** 
+    *   Near Masculine: هَذَا (*hādha* / this)[cite: 59].
+    *   Near Feminine: هَذِهِ (*hādhihi* / this)[cite: 59].
+    *   Far Masculine: ذَلِكَ (*dhālika* / that)[cite: 59].
+    *   Far Feminine: تِلْكَ (*tilka* / that)[cite: 59].
+*   **Application:** Whenever pointing to a feminine noun that is far away (whether a person, animal, or object with a *tā' marbūṭah*), you must use تِلْكَ[cite: 56].
+
+## 3. Vocabulary List
+
+| Arabic (with vowels) | Transliteration | English Translation | Category |
+| :--- | :--- | :--- | :--- |
+| تِلْكَ | tilka | that (feminine singular) | Pronoun |
+| اَلْمُمَرِّضَةُ | al-mumarridhatu | the nurse | Person |
+| اَلْمُؤَذِّنُ | al-mu'adhdhinu | the mu'adhdhin (caller to prayer) | Person |
+| اَلدَّجَاجَةُ | ad-dajājatu | the hen | Animal |
+| اَلْبَطَّةُ | al-baṭṭatu | the duck | Animal |
+| اَلنَّاقَةُ | an-nāqatu | the she-camel | Animal |
+| اَلْبَيْضَةُ | al-bayḍatu | the egg | Object |
+| اَلْحَدِيقَةُ | al-ḥadīqatu | the garden | Object |
+
+## 4. Example Sentences & Dialogues
+
+**Using "That" for Feminine People and Objects:**
+*   **Q:** وَمَنْ تِلْكَ؟ (And who is that?)[cite: 56].
+*   **A:** تِلْكَ فَاطِمَةُ. (That is Fatimah.)[cite: 56].
+*   هَذِهِ طَبِيبَةٌ وَتِلْكَ مُمَرِّضَةٌ. (This is a female doctor and that is a nurse.)[cite: 56].
+*   هَذِهِ طَوِيْلَةٌ وَتِلْكَ قَصِيرَةٌ. (This one is tall and that one is short.)[cite: 56].
+*   **Q:** مَا تِلْكَ؟ (What is that?)[cite: 57].
+*   **A:** تِلْكَ بَيْضَةٌ. (That is an egg.)[cite: 57].
+
+**Contrasting Masculine and Feminine:**
+*   ذلِكَ دِيكٌ وَتِلْكَ دَجَاجَةٌ. (That is a rooster and that is a hen.)[cite: 57].
+*   هَذَا جَمَلٌ وَتِلْكَ نَاقَةٌ. (This is a camel and that is a she-camel.)[cite: 57].
+
+---
+
+# Lesson 8 (الدَّرْسُ الثَّامِنُ)
+
+## 1. Core Concepts: Demonstrative Phrases vs. Sentences
+This lesson explains the critical difference between saying "This is a book" and "This book..."[cite: 64]. It also introduces invariable nouns (words that do not change their case endings) and adverbs of location[cite: 65].
+
+## 2. Grammar Notes & Points to Remember
+*   **Demonstrative Phrases (Definite Nouns after Demonstratives):**
+    *   If a demonstrative pronoun (like هَذَا) is followed by an *indefinite* noun, it forms a complete sentence: هَذَا كِتَابٌ (*hādha kitābun* / This is a book)[cite: 64].
+    *   If followed by a *definite* noun (with ال), it forms a phrase fragment: هَذَا الْكِتَابُ (*hādha l-kitābu* / This book...)[cite: 64]. To make it a complete sentence, you must add a predicate: هَذَا الْكِتَابُ جَدِيدٌ (*hādha l-kitābu jadīdun* / This book is new)[cite: 64].
+*   **Invariable Nouns:** 
+    *   Nouns ending in a long "ā" sound (usually written with an *alif* or *alif maqṣūrah* like ى) do not show grammatical case endings[cite: 65]. 
+    *   They remain visually unchanged even after a preposition. Example: أَمْرِيكَا (America) remains أَمْرِيكَا whether it is the subject (أَمْرِيكَا) or follows a preposition (مِنْ أَمْرِيكَا / from America)[cite: 65].
+*   **Adverbs of Place:** 
+    *   Words like أَمَامَ (*amāma* / in front of) and خَلْفَ (*khalfa* / behind) act like possessed nouns (*muḍāf*)[cite: 65]. The noun that follows them takes the genitive case (*-i* ending)[cite: 65].
+
+## 3. Vocabulary List
+
+| Arabic (with vowels) | Transliteration | English Translation | Category |
+| :--- | :--- | :--- | :--- |
+| أَمْرِيكَا | amrīkā | America | Proper Noun |
+| أَلْمَانِيَا | almāniyā | Germany | Proper Noun |
+| إِنْكَلْتَرَا | inkaltarā | England | Proper Noun |
+| سُوِيسْرَا | suwīsrā | Switzerland | Proper Noun |
+| اَلْعِرَاقُ | al-'irāqu | Iraq | Proper Noun |
+| اَلْمُسْتَشْفَى | al-mustashfā | the hospital | Noun |
+| اَلسِّكِّينُ | as-sikkīnu | the knife | Noun |
+| أَمَامَ | amāma | in front of | Adverb of Place |
+| خَلْفَ | khalfa | behind | Adverb of Place |
+| جَلَسَ | jalasa | he sat | Verb |
+
+## 4. Example Sentences & Dialogues
+
+**Demonstrative Phrases:**
+*   هَذَا الرَّجُلُ تَاجِرٌ وَذَلِكَ الرَّجُلُ طَبِيبٌ. (This man is a merchant and that man is a doctor.)[cite: 60].
+*   هَذَا الْبَيْتُ لِلتَّاجِرِ. (This house belongs to the merchant.)[cite: 60].
+
+**Invariable Nouns and Prepositions:**
+*   هَذِهِ السَّيَارَةُ مِنَ الْيَابَانِ، وَتِلْكَ مِنْ أَمْرِيكَا. (This car is from Japan, and that is from America.)[cite: 60].
+*   ذَهَبَ عَبْدُ اللَّهِ مِنْ أَلْمَانِيَا إِلَى إِنْكَلْتَرَا. (Abdullah went from Germany to England.)[cite: 63].
+
+**Adverbs of Place:**
+*   بَيْتُ التَّاجِرِ أَمَامَ الْمَسْجِدِ وَبَيْتُ الطَّبِيبِ خَلْفَ الْمَدْرَسَةِ. (The merchant's house is in front of the mosque and the doctor's house is behind the school.)[cite: 60].
+*   جَلَسَ أَمَامَ الْمُدَرِّسِ. (He sat in front of the teacher.)[cite: 65].
+
+---
+
+# Lesson 9 (الدَّرْسُ التَّاسِعُ)
+
+## 1. Core Concepts: Adjectives (النَّعْتُ) and the Relative Pronoun (الَّذِي)
+This lesson is divided into two parts. Part A introduces Arabic adjectives, which always follow the noun they describe and match them in specific ways[cite: 73]. Part B introduces the relative pronoun for "who" or "which"[cite: 74].
+
+## 2. Grammar Notes & Points to Remember
+*   **The Adjective (*Na't* / نَعْت) and the Noun (*Man'ūt* / مَنْعُوت):**
+    *   In Arabic, the adjective comes *after* the noun it qualifies[cite: 73].
+    *   **Agreement:** The adjective must perfectly match the noun in three ways[cite: 73]:
+        1.  **Gender:** Masculine or Feminine (e.g., وَلَدٌ صَغِيرٌ / small boy; بِنْتٌ صَغِيرَةٌ / small girl)[cite: 73].
+        2.  **Definiteness:** If the noun has ال, the adjective must have ال. If the noun has *tanwīn*, the adjective must have *tanwīn* (e.g., بَيْتٌ جَدِيدٌ / a new house; اَلْبَيْتُ الْجَدِيدُ / the new house)[cite: 73].
+        3.  **Case Ending:** Nominative, Accusative, or Genitive (e.g., فِي بَيْتٍ جَدِيدٍ / in a new house)[cite: 73].
+*   **Adjectives Ending in -ān:** 
+    *   Adjectives that describe temporary states (like hungry, thirsty, angry) often end in *-ān* (ان). These words *never* take *tanwīn* (e.g., جَوْعَانُ / *jaw'ānu*, not *jaw'ānun*)[cite: 74].
+*   **The Relative Pronoun (الَّذِي):** 
+    *   الَّذِي (*alladhī*) means "who" (for humans) or "which/that" (for objects)[cite: 74]. It is used for masculine, singular nouns[cite: 74].
+*   **Preposition "Inda" (عِنْدَ):** 
+    *   Means "with" (in the sense of location, like "at someone's place" or "in someone's presence"). The noun following it is genitive[cite: 75].
+
+## 3. Vocabulary List
+
+| Arabic (with vowels) | Transliteration | English Translation | Category |
+| :--- | :--- | :--- | :--- |
+| اَلَّذِي | alladhī | who / which / that | Relative Pronoun |
+| اَلْفَاكِهَةُ | al-fākhihatu | the fruit | Noun |
+| اَلْعُصْفُورُ | al-'uṣfūru | the sparrow | Noun |
+| اَلطَّائِرُ | aṭ-ṭā'iru | the bird | Noun |
+| اَللُّغَةُ | al-lughatu | the language | Noun |
+| اَلْعَرَبِيَّةُ | al-'arabiyyatu | Arabic | Proper Noun |
+| اَلْإِنْكِلِيزِيَّةُ | al-inkilīziyyatu | English | Proper Noun |
+| اَلْمَدِينَةُ | al-madīnatu | the city | Noun |
+| اَلْقَاهِرَةُ | al-qāhiratu | Cairo | Proper Noun |
+| اَلْكُوبُ | al-kūbu | the cup / glass | Noun |
+| اَلْمَكْتَبَةُ | al-maktabatu | the library | Noun |
+| اَلْمُسْتَوْصَفُ | al-mustawṣafu | the clinic / small hospital | Noun |
+| اَلْمَرْوَحَةُ | al-marwaḥatu | the fan | Noun |
+| اَلْيَوْمَ | al-yawma | today | Adverb of Time |
+| لِمَاذَا | limādhā | why | Question Word |
+| عِنْدَ | 'inda | with / at | Preposition |
+| سَهْلٌ | sahlun | easy | Adjective |
+| صَعْبٌ | ṣa'bun | difficult | Adjective |
+| مُجْتَهِدٌ | mujtahidun | hardworking | Adjective |
+| شَهِيرٌ | shahīrun | famous | Adjective |
+| حَادٌّ | ḥāddun | sharp | Adjective |
+| كَسْلَانُ | kaslānu | lazy | Adjective (No tanwīn) |
+| جَوْعَانُ | jaw'ānu | hungry | Adjective (No tanwīn) |
+| عَطْشَانُ | 'aṭshānu | thirsty | Adjective (No tanwīn) |
+| غَضْبَانُ | ghaḍbānu | angry | Adjective (No tanwīn) |
+| مَلْآنُ | mal'ānu | full | Adjective (No tanwīn) |
+
+## 4. Example Sentences & Dialogues
+
+**Matching Adjectives:**
+*   عَبَّاسٌ تَاجِرٌ غَنِيٌّ. (Abbas is a rich merchant.)[cite: 66].
+*   الْعَرَبِيَّةُ لُغَةٌ سَهْلَةٌ. (Arabic is an easy language.)[cite: 66].
+*   أَيْنَ الْمُدَرِّسُ الْجَدِيدُ؟ (Where is the new teacher?)[cite: 69].
+
+**Using -ān Adjectives:**
+*   عَمَّارٌ طَالِبٌ مُجْتَهِدٌ، وَمَحْمُودٌ طَالِبٌ كَسْلَانُ. (Ammar is a hardworking student, and Mahmud is a lazy student.)[cite: 67].
+*   أَنَا جَوْعَانُ. (I am hungry.)[cite: 68].
+
+**Relative Pronouns:**
+*   مَنْ ذَلِكَ الرَّجُلُ الطَّوِيلُ الَّذِي خَرَجَ الْآنَ مِنَ الْمَدْرَسَةِ؟ (Who is that tall man who left the school just now?)[cite: 69].
+*   الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ لِلْمُدَرِّسِ. (The book which is on the desk belongs to the teacher.)[cite: 72].
+
+---
+
+# Lesson 10 (الدَّرْسُ الْعَاشِرُ)
+
+## 1. Core Concepts: Attached Possessive Pronouns and Accompaniment (مَعَ)
+This lesson shifts from showing possession between two separate nouns (Idafah) to using attached pronoun suffixes (my, your, his, her)[cite: 82]. It also explains how to say you are "with" someone and the difference between expressing ownership of relationships versus physical items[cite: 83, 84].
+
+## 2. Grammar Notes & Points to Remember
+*   **Attached Possessive Pronouns:** 
+    These suffixes are attached directly to the end of a noun[cite: 82]:
+    *   **ـكَ (-ka):** your (masculine singular). E.g., كِتَابُكَ (*kitābuka* / your book)[cite: 82].
+    *   **ـهُ (-hu):** his. E.g., كِتَابُهُ (*kitābuhu* / his book)[cite: 82].
+    *   **ـهَا (-hā):** her. E.g., كِتَابُهَا (*kitābuhā* / her book)[cite: 82].
+    *   **ـِي (-ī):** my. E.g., كِتَابِي (*kitābī* / my book)[cite: 82]. (Note: The vowel before the "yā" is forced into a *kasrah* to match the sound).
+*   **Special Nouns (أَبٌ and أَخٌ):** 
+    *   The words for "father" (*abun*) and "brother" (*akhun*) are irregular. When you attach a pronoun to them (except for "my"), an extra **و** (*waw*) is inserted[cite: 82, 83].
+    *   *Example:* أَبُوكَ (*abūka* / your father), NOT *abuka*[cite: 82].
+    *   *Example:* أَخُوهُ (*akhūhu* / his brother), NOT *akhuhu*[cite: 82].
+    *   *Exception:* أَبِي (*abī* / my father) and أَخِي (*akhī* / my brother) do not take the extra *waw*[cite: 83].
+*   **Possession: "Li" vs. "Inda":** 
+    *   **لِـ (li / to belong to):** Used for human relationships or body parts (things that are inseparable). E.g., لِي أَخٌ (*lī akhun* / I have a brother)[cite: 83].
+    *   **عِنْدَ ('inda / with):** Used for physical, separable possessions. E.g., عِنْدِي سَيَّارَةٌ (*'indī sayyāratun* / I have a car)[cite: 83].
+*   **Accompaniment "Ma'a" (مَعَ):** 
+    *   Means "with" (accompanied by)[cite: 84]. The noun following it takes the genitive case. E.g., مَعَ خَالِدٍ (*ma'a Khālidin* / with Khalid)[cite: 80]. It can also take pronoun suffixes: مَعِي (*ma'ī* / with me), مَعَكَ (*ma'aka* / with you)[cite: 81].
+*   **Past Tense Subject Pronouns:** 
+    *   ذَهَبَ (*dhahaba* / he went)[cite: 83].
+    *   ذَهَبْتَ (*dhahabta* / you went - masculine singular)[cite: 83].
+    *   ذَهَبْتُ (*dhahabtu* / I went)[cite: 83].
+*   **Masculine Names ending in ة:** 
+    *   Names for men that end in a *tā' marbūṭah* (like حَمْزَةُ / Hamzatu, أُسَامَةُ / Usāmatu) do not take *tanwīn*[cite: 84].
+
+## 3. Vocabulary List
+
+| Arabic (with vowels) | Transliteration | English Translation | Category |
+| :--- | :--- | :--- | :--- |
+| اَلزَّمِيلُ | az-zamīlu | the colleague / classmate | Person |
+| اَلزَّوْجُ | az-zawju | the husband | Person |
+| اَلطِّفْلُ | aṭ-ṭiflu | the child | Person |
+| اَلْفَتَى | al-fatā | the young man | Person |
+| وَاحِدٌ | wāḥidun | one | Number / Adjective |
+| مَعَ | ma'a | with (accompanied by) | Preposition |
+| ذَهَبْتَ | dhahabta | you went | Verb |
+| ذَهَبْتُ | dhahabtu | I went | Verb |
+| مَا | mā | not (Negative particle) | Particle |
+
+## 4. Example Sentences & Dialogues
+
+**Using Attached Pronouns:**
+*   **Q:** مَا اسْمُكَ؟ (What is your name?)[cite: 76].
+*   **A:** اسْمِي مُحَمَّدٌ. (My name is Muhammad.)[cite: 76].
+*   **Q:** وَحَمْزَةُ، مَا لُغَتُهُ؟ (And Hamzah, what is his language?)[cite: 77].
+*   **A:** لُغَتُهُ الْيَابَانِيَّةُ. (His language is Japanese.)[cite: 77].
+
+**Special Words (Father and Brother):**
+*   **Q:** أَيْنَ أَبُوكَ يَا مُحَمَّدُ؟ (Where is your father, O Muhammad?)[cite: 77].
+*   **A:** أَبِي فِي الْكُوَيْتِ. (My father is in Kuwait.)[cite: 77].
+*   وَزَمِيلُكَ، أَيْنَ أَبُوهُ؟ (And your classmate, where is his father?)[cite: 77].
+
+**Possession (Relationships vs. Objects):**
+*   أَلَكَ أَخٌ يَا مُحَمَّدُ؟ نَعَمْ لِي أَخٌ وَاحِدٌ. (Do you have a brother, O Muhammad? Yes, I have one brother.)[cite: 77].
+*   أَعِنْدَكَ سَيَّارَةٌ يَا أَخِي؟ لَا، مَا عِنْدِي سَيَّارَةٌ. (Do you have a car, my brother? No, I do not have a car.)[cite: 77].
+
+**Using "Ma'a" (With):**
+*   وَمَنْ هَذَا الْفَتَى الَّذِي مَعَكَ؟ (And who is this young man who is with you?)[cite: 76].
+*   خَرَجَ أَبِي مِنَ الْبَيْتِ. مَنْ خَرَجَ مَعَهُ؟ خَرَجَ مَعَهُ عَمِّي. (My father left the house. Who left with him? My uncle left with him.)[cite: 81].

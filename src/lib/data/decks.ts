@@ -224,6 +224,94 @@ export const decks: Deck[] = [
 			['لِـ', 'li-', 'milik / untuk']
 		]
 	),
+	deck(
+		'lesson-7',
+		'lesson',
+		'Pelajaran 7: تِلْكَ (Itu - Perempuan)',
+		'الدَّرْسُ ٧',
+		'Kata tunjuk jauh perempuan (تِلْكَ), profesi wanita, hewan, dan benda muannats',
+		[
+			['تِلْكَ', 'tilka', 'itu (tunggal muannats)'],
+			['مُمَرِّضَةٌ', 'mumarriḍatu-n', 'perawat perempuan'],
+			['مُؤَذِّنٌ', 'muʾadhdhinu-n', 'muazin / pengumandang azan'],
+			['بَطَّةٌ', 'baṭṭatu-n', 'bebek / itik'],
+			['نَاقَةٌ', 'nāqatu-n', 'unta betina'],
+			['بَيْضَةٌ', 'bayḍatu-n', 'telur'],
+			['حَدِيقَةٌ', 'ḥadīqatu-n', 'kebun / taman']
+		]
+	),
+	deck(
+		'lesson-8',
+		'lesson',
+		'Pelajaran 8: Frasa Isyarah & Letak',
+		'الدَّرْسُ ٨',
+		'Frasa badal kata tunjuk, nama negara (mabni), أَمَامَ (depan), dan خَلْفَ (belakang)',
+		[
+			['أَمْرِيكَا', 'amrīkā', 'Amerika'],
+			['أَلْمَانِيَا', 'almāniyā', 'Jerman'],
+			['إِنْكَلْتَرَا', 'inkaltarā', 'Inggris'],
+			['سُوِيسْرَا', 'suwīsrā', 'Swiss'],
+			['الْعِرَاقُ', 'al-ʿirāqu', 'Irak'],
+			['مُسْتَشْفَى', 'mustasyfā', 'rumah sakit'],
+			['سِكِّينٌ', 'sikkīnu-n', 'pisau'],
+			['أَمَامَ', 'amāma', 'di depan'],
+			['خَلْفَ', 'khalfa', 'di belakang'],
+			['جَلَسَ', 'jalasa', 'dia telah duduk']
+		]
+	),
+	deck(
+		'lesson-9',
+		'lesson',
+		'Pelajaran 9: Na\'at Sifat & الَّذِي',
+		'الدَّرْسُ ٩',
+		'Kata sifat bersesuaian (Na\'at/Man\'ut), sifat berakhiran -an, kata sambung الَّذِي, dan preposisi عِنْدَ',
+		[
+			['الَّذِي', 'alladhī', 'yang (kata sambung mudzakkar)'],
+			['فَاكِهَةٌ', 'fākihatu-n', 'buah-buahan'],
+			['عُصْفُورٌ', 'ʿuṣfūru-n', 'burung pipit'],
+			['طَائِرٌ', 'ṭāʾiru-n', 'burung'],
+			['لُغَةٌ', 'lughatu-n', 'bahasa'],
+			['الْعَرَبِيَّةُ', 'al-ʿarabiyyatu', 'bahasa Arab'],
+			['الْإِنْكِلِيزِيَّةُ', 'al-inkilīziyyatu', 'bahasa Inggris'],
+			['مَدِينَةٌ', 'madīnatu-n', 'kota'],
+			['الْقَاهِرَةُ', 'al-qāhiratu', 'Kairo'],
+			['كُوبٌ', 'kūbu-n', 'cangkir / gelas'],
+			['مَكْتَبَةٌ', 'maktabatu-n', 'perpustakaan'],
+			['مُسْتَوْصَفٌ', 'mustawṣafu-n', 'poliklinik / klinik'],
+			['مَرْوَحَةٌ', 'marwaḥatu-n', 'kipas angin'],
+			['الْيَوْمَ', 'al-yawma', 'hari ini'],
+			['لِمَاذَا', 'limādhā', 'mengapa / kenapa'],
+			['عِنْدَ', 'ʿinda', 'di sisi / pada'],
+			['سَهْلٌ', 'sahlu-n', 'mudah'],
+			['صَعْبٌ', 'ṣaʿbu-n', 'sulit / sukar'],
+			['مُجْتَهِدٌ', 'mujtahidu-n', 'rajin / bersungguh-sungguh'],
+			['شَهِيرٌ', 'syahīru-n', 'terkenal / masyhur'],
+			['حَادٌّ', 'ḥāddu-n', 'tajam'],
+			['كَسْلَانُ', 'kaslānu', 'malas'],
+			['جَوْعَانُ', 'jawʿānu', 'lapar'],
+			['عَطْشَانُ', 'ʿaṭsyānu', 'haus'],
+			['غَضْبَانُ', 'ghaḍbānu', 'marah'],
+			['مَلْآنُ', 'malʾānu', 'penuh']
+		]
+	),
+	deck(
+		'lesson-10',
+		'lesson',
+		'Pelajaran 10: Dhomir Muttashil & مَعَ',
+		'الدَّرْسُ ١٠',
+		'Kata ganti akhiran (-ku, -mu, -nya), أَبٌ dan أَخٌ, kepemilikan hubungan vs barang, dan kata bersama (مَعَ)',
+		[
+			['زَمِيلٌ', 'zamīlu-n', 'teman sekelas / kolega'],
+			['زَوْجٌ', 'zawju-n', 'suami / pasangan'],
+			['طِفْلٌ', 'ṭiflu-n', 'anak kecil / balita'],
+			['فَتًى', 'fatan', 'pemuda / anak muda'],
+			['وَاحِدٌ', 'wāḥidu-n', 'satu (1)'],
+			['مَعَ', 'maʿa', 'bersama / beserta'],
+			['ذَهَبْتَ', 'dhahabta', 'kamu (lk) telah pergi'],
+			['ذَهَبْتُ', 'dhahabtu', 'aku telah pergi'],
+			['مَا', 'mā', 'tidak / bukan (partikel negasi)']
+		]
+	),
 
 	// --- Dek Berdasarkan Topik & Kategori ---
 	deck(

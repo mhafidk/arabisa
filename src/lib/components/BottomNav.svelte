@@ -16,7 +16,7 @@
 			label: 'Beranda',
 			href: resolve('/'),
 			icon: BookOpen,
-			match: (p: string) => p === '/' || p.startsWith('/lesson/')
+			match: (p: string) => p === '/' || p.startsWith('/lesson/') || p.startsWith('/materi')
 		},
 		{
 			id: 'nav-tab-decks',
@@ -66,7 +66,7 @@
 					aria-current={active ? 'page' : undefined}
 					class={[
 						'group flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold transition-colors active:scale-[0.94]',
-						active ? 'text-accent-ink' : 'text-ink-faint hover:text-ink-soft'
+						active ? 'text-accent-ink' : 'text-ink-soft hover:text-ink'
 					]}
 				>
 					<div

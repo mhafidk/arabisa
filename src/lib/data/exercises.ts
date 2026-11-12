@@ -1,6 +1,16 @@
 export interface QuizQuestion {
 	id: string;
-	lessonId: 'lesson-1' | 'lesson-2' | 'lesson-3' | 'lesson-4' | 'lesson-5' | 'lesson-6';
+	lessonId:
+		| 'lesson-1'
+		| 'lesson-2'
+		| 'lesson-3'
+		| 'lesson-4'
+		| 'lesson-5'
+		| 'lesson-6'
+		| 'lesson-7'
+		| 'lesson-8'
+		| 'lesson-9'
+		| 'lesson-10';
 	lessonLabel: string;
 	prompt: string;
 	arabicPrompt?: string;
@@ -481,5 +491,308 @@ export const exercises: QuizQuestion[] = [
 		correctIndex: 0,
 		explanation:
 			'Huruf jar لِـ (li-) bermakna kepemilikan ("milik / kepunyaan"), dan kata benda setelahnya menjadi kasrah/majrūr (لِخَالِدٍ).'
+	},
+	{
+		id: 'q-l7-1',
+		lessonId: 'lesson-7',
+		lessonLabel: 'Pelajaran 7',
+		prompt: 'Kapan kata tunjuk "تِلْكَ" (tilka) digunakan?',
+		options: [
+			{ text: 'Menunjuk benda/orang muannats (feminin) yang letaknya jauh ("itu")' },
+			{ text: 'Menunjuk benda/orang mudzakkar (maskulin) yang letaknya jauh' },
+			{ text: 'Menunjuk benda/orang muannats yang letaknya dekat ("ini")' },
+			{ text: 'Menunjuk jamak benda yang letaknya dekat' }
+		],
+		correctIndex: 0,
+		explanation:
+			'تِلْكَ (tilka) adalah isim isyārah untuk muannats tunggal jarak jauh ("itu"), berpasangan dengan هَذِهِ (dekat) dan lawan dari ذَلِكَ (mudzakkar jauh).'
+	},
+	{
+		id: 'q-l7-2',
+		lessonId: 'lesson-7',
+		lessonLabel: 'Pelajaran 7',
+		prompt: 'Lengkapilah kalimat berikut dengan kata tunjuk jauh yang tepat: "___ طَبِيبٌ وَ___ طَبِيبَةٌ."',
+		options: [
+			{ text: 'ذَلِكَ / تِلْكَ' },
+			{ text: 'تِلْكَ / ذَلِكَ' },
+			{ text: 'هَذَا / هَذِهِ' },
+			{ text: 'تِلْكَ / تِلْكَ' }
+		],
+		correctIndex: 0,
+		explanation:
+			'طَبِيبٌ adalah mudzakkar sehingga menggunakan ذَلِكَ, sedangkan طَبِيبَةٌ adalah muannats (berakhiran ta marbuthah) sehingga menggunakan تِلْكَ.'
+	},
+	{
+		id: 'q-l7-3',
+		lessonId: 'lesson-7',
+		lessonLabel: 'Pelajaran 7',
+		prompt: 'Apa arti dari kalimat berikut?',
+		arabicPrompt: 'هَذِهِ بَطَّةٌ وَتِلْكَ دَجَاجَةٌ.',
+		options: [
+			{ text: 'Ini bebek dan itu ayam betina.' },
+			{ text: 'Ini ayam betina dan itu bebek.' },
+			{ text: 'Itu bebek dan ini telur.' },
+			{ text: 'Ini perawat dan itu dokter wanita.' }
+		],
+		correctIndex: 0,
+		explanation:
+			'بَطَّةٌ artinya bebek dan دَجَاجَةٌ artinya ayam betina. Keduanya muannats sehingga memakai هَذِهِ (ini) dan تِلْكَ (itu).'
+	},
+	{
+		id: 'q-l7-4',
+		lessonId: 'lesson-7',
+		lessonLabel: 'Pelajaran 7',
+		prompt: 'Manakah susunan idhāfah (kepemilikan) yang tepat untuk "Itu adalah telur bebek"?',
+		options: [
+			{ text: 'تِلْكَ بَيْضَةُ الْبَطَّةِ.', isArabic: true },
+			{ text: 'تِلْكَ الْبَيْضَةُ بَطَّةٌ.', isArabic: true },
+			{ text: 'ذَلِكَ بَيْضَةُ الْبَطَّةِ.', isArabic: true },
+			{ text: 'تِلْكَ بَيْضَةٌ بَطَّةٌ.', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'تِلْكَ (karena بَيْضَةٌ muannats), mudhāf بَيْضَةُ (tanpa tanwīn/al), dan mudhāf ilaih الْبَطَّةِ (kasrah): "تِلْكَ بَيْضَةُ الْبَطَّةِ".'
+	},
+	{
+		id: 'q-l7-5',
+		lessonId: 'lesson-7',
+		lessonLabel: 'Pelajaran 7',
+		prompt: 'Apa arti dari kata "نَاقَةٌ" pada kalimat "تِلْكَ نَاقَةُ الْمُؤَذِّنِ"?',
+		options: [
+			{ text: 'Unta betina' },
+			{ text: 'Unta jantan' },
+			{ text: 'Kuda betina' },
+			{ text: 'Sapi betina' }
+		],
+		correctIndex: 0,
+		explanation:
+			'نَاقَةٌ (nāqatun) khusus bermakna unta betina (muannats), sedangkan unta jantan secara umum disebut جَمَلٌ (jamalun).'
+	},
+	{
+		id: 'q-l8-1',
+		lessonId: 'lesson-8',
+		lessonLabel: 'Pelajaran 8',
+		prompt: 'Apa perbedaan struktur dan makna antara "هَذَا كِتَابٌ" dan "هَذَا الْكِتَابُ"?',
+		options: [
+			{ text: '"هَذَا كِتَابٌ" adalah kalimat lengkap ("Ini adalah sebuah buku"), sedangkan "هَذَا الْكِتَابُ" adalah frasa ("Buku ini...").' },
+			{ text: '"هَذَا كِتَابٌ" adalah frasa belum lengkap, sedangkan "هَذَا الْكِتَابُ" adalah kalimat berita lengkap.' },
+			{ text: 'Keduanya memiliki arti dan struktur tata bahasa yang persis sama.' },
+			{ text: '"هَذَا الْكِتَابُ" bermakna kepemilikan ("Buku milik ini").' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Jika isim isyārah diikuti isim ber-al (الْكِتَابُ), ia menjadi Badal (frasa kata tunjuk "Buku ini..."). Jika diikuti isim nakirah bertanwīn (كِتَابٌ), ia menjadi Mubtada + Khabar (kalimat sempurna "Ini adalah buku").'
+	},
+	{
+		id: 'q-l8-2',
+		lessonId: 'lesson-8',
+		lessonLabel: 'Pelajaran 8',
+		prompt: 'Pada kalimat "هَذَا الرَّجُلُ تَاجِرٌ", apakah kedudukan kata "تَاجِرٌ"?',
+		arabicPrompt: 'هَذَا الرَّجُلُ تَاجِرٌ.',
+		options: [
+			{ text: 'Khabar (predikat kalimat)' },
+			{ text: 'Mubtada (subjek kalimat)' },
+			{ text: 'Badal (pengganti kata tunjuk)' },
+			{ text: 'Mudhāf ilaih' }
+		],
+		correctIndex: 0,
+		explanation:
+			'هَذَا adalah mubtada, الرَّجُلُ adalah badal (pelengkap subjek "Lelaki ini"), dan تَاجِرٌ adalah khabar ("adalah seorang pedagang").'
+	},
+	{
+		id: 'q-l8-3',
+		lessonId: 'lesson-8',
+		lessonLabel: 'Pelajaran 8',
+		prompt: 'Bagaimana harakat akhir kata nama negara seperti "أَمْرِيكَا" (Amerika) saat didahului huruf jar "مِنْ"?',
+		options: [
+			{ text: 'Tetap berakhiran alif tanpa kasrah yang tampak (harakat muqaddarah)' },
+			{ text: 'Harus diubah berharakat kasrah di bawah alif' },
+			{ text: 'Diberi tanwīn kasrah di akhir' },
+			{ text: 'Huruf alif di akhir harus dihapus' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Kata yang berakhiran alif panjang/maqsūrah (seperti أَمْرِيكَا، أَلْمَانِيَا، سْوِيسْرَا، عِيسَى) harakatnya muqaddarah (tersembunyi/tidak berubah tampak) saat majrūr: "مِنْ أَمْرِيكَا".'
+	},
+	{
+		id: 'q-l8-4',
+		lessonId: 'lesson-8',
+		lessonLabel: 'Pelajaran 8',
+		prompt: 'Kata benda yang terletak langsung setelah zharaf tempat "أَمَامَ" (di depan) atau "خَلْفَ" (di belakang) berharakat apa?',
+		options: [
+			{ text: 'Kasrah / majrūr (sebagai mudhāf ilaih)' },
+			{ text: 'Dhammah / marfū\'' },
+			{ text: 'Fathah / manshūb' },
+			{ text: 'Sukun' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Zharaf makan (seperti أَمَامَ dan خَلْفَ) bertindak sebagai mudhāf, sehingga kata benda sesudahnya menjadi mudhāf ilaih yang berharakat kasrah: "أَمَامَ الْمَسْجِدِ" dan "خَلْفَ الْمَدْرَسَةِ".'
+	},
+	{
+		id: 'q-l8-5',
+		lessonId: 'lesson-8',
+		lessonLabel: 'Pelajaran 8',
+		prompt: 'Terjemahkan ke dalam bahasa Arab: "Mobil ini milik dokter itu dan mobil itu milik guru."',
+		options: [
+			{ text: 'هَذِهِ السَّيَّارَةُ لِلطَّبِيبِ وَتِلْكَ لِلْمُدَرِّسِ.', isArabic: true },
+			{ text: 'هَذَا السَّيَّارَةُ لِلطَّبِيبِ وَذَلِكَ لِلْمُدَرِّسِ.', isArabic: true },
+			{ text: 'تِلْكَ السَّيَّارَةُ لِلطَّبِيبِ وَهَذِهِ لِلْمُدَرِّسِ.', isArabic: true },
+			{ text: 'هَذِهِ سَيَّارَةُ الطَّبِيبِ وَتِلْكَ لِلْمُدَرِّسِ.', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'السَّيَّارَةُ muannats sehingga menggunakan هَذِهِ (ini) dan تِلْكَ (itu). Partikel kepemilikan لِـ bersambung menjadi لِلطَّبِيبِ dan لِلْمُدَرِّسِ.'
+	},
+	{
+		id: 'q-l9-1',
+		lessonId: 'lesson-9',
+		lessonLabel: 'Pelajaran 9',
+		prompt: 'Manakah pasangan kata yang menunjukkan hubungan Na\'at dan Man\'ut (kata sifat dan yang disifati) dengan benar?',
+		options: [
+			{ text: 'طَالِبٌ جَدِيدٌ (seorang murid yang baru)', isArabic: true },
+			{ text: 'طَالِبٌ الْجَدِيدُ', isArabic: true },
+			{ text: 'الطَّالِبُ جَدِيدٌ (kalimat mubtada-khabar)', isArabic: true },
+			{ text: 'طَالِبُ جَدِيدٍ', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'Na\'at harus mengikuti man\'ut dalam kejelasan: jika nakirah, keduanya nakirah (طَالِبٌ جَدِيدٌ); jika ma\'rifah, keduanya ma\'rifah (الطَّالِبُ الْجَدِيدُ).'
+	},
+	{
+		id: 'q-l9-2',
+		lessonId: 'lesson-9',
+		lessonLabel: 'Pelajaran 9',
+		prompt: 'Bagaimana penulisan harakat akhir yang benar untuk kata sifat bertimbangan fa\'lānu (فَعْلاَنُ) seperti "جَوْعَانُ" (lapar) dan "عَطْشَانُ" (haus)?',
+		options: [
+			{ text: 'Berharakat dhammah tunggal tanpa tanwīn (mamnū\' min ash-sharf)' },
+			{ text: 'Harus selalu memakai tanwīn dhammah (-un)' },
+			{ text: 'Harus selalu memakai tanwīn fathah (-an)' },
+			{ text: 'Diakhiri dengan huruf ya sukun' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Kata sifat dengan wazan فَعْلاَنُ (seperti جَوْعَانُ, عَطْشَانُ, غَضْبَانُ, شَبْعَانُ, كَسْلاَنُ) termasuk mamnū\' min ash-sharf, sehingga tidak boleh bertanwīn.'
+	},
+	{
+		id: 'q-l9-3',
+		lessonId: 'lesson-9',
+		lessonLabel: 'Pelajaran 9',
+		prompt: 'Apa fungsi dari kata "الَّذِي" (alladzī) dalam tata bahasa Arab?',
+		options: [
+			{ text: 'Kata sambung penghubung (isim maushūl) yang berarti "yang" untuk mudzakkar tunggal' },
+			{ text: 'Kata tunjuk jauh yang berarti "itu"' },
+			{ text: 'Kata tanya yang berarti "apakah"' },
+			{ text: 'Huruf jar yang berarti "di dalam"' }
+		],
+		correctIndex: 0,
+		explanation:
+			'الَّذِي adalah isim maushūl (kata ganti penghubung) maskulin tunggal, bermakna "yang", digunakan untuk menghubungkan kata benda sebelumnya dengan anak kalimat penjelas (shilah).'
+	},
+	{
+		id: 'q-l9-4',
+		lessonId: 'lesson-9',
+		lessonLabel: 'Pelajaran 9',
+		prompt: 'Lengkapilah kalimat berikut agar menjadi frasa na\'at-man\'ut ma\'rifah: "الْبَيْتُ ___ كَبِيرٌ."',
+		options: [
+			{ text: 'الْجَدِيدُ (dengan al- dan dhammah tunggal)', isArabic: true },
+			{ text: 'جَدِيدٌ (dengan tanwīn)', isArabic: true },
+			{ text: 'جَدِيدَةٌ (muannats)', isArabic: true },
+			{ text: 'الْجَدِيدِ (kasrah)', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'Karena man\'ut adalah الْبَيْتُ (ma\'rifah, mudzakkar, marfū\'), maka sifatnya juga harus ma\'rifah, mudzakkar, dan marfū\': الْجَدِيدُ.'
+	},
+	{
+		id: 'q-l9-5',
+		lessonId: 'lesson-9',
+		lessonLabel: 'Pelajaran 9',
+		prompt: 'Apa arti dari kalimat berikut?',
+		arabicPrompt: 'مَنِ الْفَتَى الَّذِي خَرَجَ مِنْ بَيْتِكَ الآنَ؟',
+		options: [
+			{ text: 'Siapakah pemuda yang keluar dari rumahmu barusan?' },
+			{ text: 'Siapakah laki-laki tua yang masuk ke rumahmu kemarin?' },
+			{ text: 'Di manakah anak laki-laki yang belajar di rumahmu?' },
+			{ text: 'Apakah pemuda itu keluar dari masjid barusan?' }
+		],
+		correctIndex: 0,
+		explanation:
+			'الْفَتَى artinya "pemuda", الَّذِي artinya "yang", خَرَجَ artinya "keluar", مِنْ بَيْتِكَ artinya "dari rumahmu", dan الآنَ artinya "sekarang / barusan".'
+	},
+	{
+		id: 'q-l10-1',
+		lessonId: 'lesson-10',
+		lessonLabel: 'Pelajaran 10',
+		prompt: 'Manakah kata ganti sambung (dhamīr muttashil) yang tepat untuk menyatakan kepemilikan perempuan tunggal ghaibah ("-nya perempuan")?',
+		options: [
+			{ text: 'ـهَا (-hā), contohnya: كِتَابُهَا' },
+			{ text: 'ـهُ (-hu), contohnya: كِتَابُهُ' },
+			{ text: 'ـكَ (-ka), contohnya: كِتَابُكَ' },
+			{ text: 'ـي (-ī), contohnya: كِتَابِي' },
+		],
+		correctIndex: 0,
+		explanation:
+			'Dhamīr muttashil untuk dia perempuan adalah ـهَا (contoh: اِسْمُهَا = namanya pr, كِتَابُهَا = bukunya pr). Sedangkan ـهُ untuk laki-laki, dan ـكَ untuk kamu (lk).'
+	},
+	{
+		id: 'q-l10-2',
+		lessonId: 'lesson-10',
+		lessonLabel: 'Pelajaran 10',
+		prompt: 'Ketika kata "أَبٌ" (ayah) atau "أَخٌ" (saudara) disambung dengan dhamīr selain "aku" dalam keadaan marfū\', huruf apa yang ditambahkan?',
+		options: [
+			{ text: 'Huruf wāwu (و), contoh: أَبُوكَ dan أَخُوكَ' },
+			{ text: 'Huruf alif (ا), contoh: أَبَاكَ' },
+			{ text: 'Huruf yā\' (ي), contoh: أَبِيكَ' },
+			{ text: 'Tidak ada huruf tambahan sama sekali' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Termasuk Asmā\'ul Khamsah: kata أَبٌ dan أَخٌ saat disandarkan ke dhamīr dalam marfū\' menambahkan huruf wāwu: أَبُوكَ (ayahmu), أَخُوكَ (saudaramu), أَبُوهُ (ayahnya).'
+	},
+	{
+		id: 'q-l10-3',
+		lessonId: 'lesson-10',
+		lessonLabel: 'Pelajaran 10',
+		prompt: 'Bagaimana kaidah penggunaan ungkapan "عِنْدِي" dibandingkan dengan "لِي"?',
+		options: [
+			{ text: '"عِنْدِي" untuk barang fisik yang bisa terpisah/dipindahtangankan, sedangkan "لِي" untuk hubungan kekeluargaan/bagian tubuh.' },
+			{ text: '"عِنْدِي" khusus untuk manusia, sedangkan "لِي" khusus untuk benda mati.' },
+			{ text: '"لِي" hanya dipakai untuk kalimat tanya, sedangkan "عِنْدِي" untuk kalimat berita.' },
+			{ text: 'Keduanya bebas ditukar tanpa perbedaan kaidah kebahasaan.' }
+		],
+		correctIndex: 0,
+		explanation:
+			'Untuk benda fisik yang dibawa/dimiliki dipakai عِنْدِي (عِنْدِي قَلَمٌ = saya punya pena), sedangkan untuk hubungan keluarga dipakai لِي (لِي أَخٌ = saya punya saudara laki-laki, tidak lazim mengatakan عِنْدِي أَخٌ).'
+	},
+	{
+		id: 'q-l10-4',
+		lessonId: 'lesson-10',
+		lessonLabel: 'Pelajaran 10',
+		prompt: 'Apa arti kata "مَعَ" (ma\'a) dan bagaimana harakat kata benda setelahnya?',
+		options: [
+			{ text: 'Bermakna "bersama", dan kata sesudahnya berharakat kasrah / majrūr' },
+			{ text: 'Bermakna "dari", dan kata sesudahnya berharakat dhammah' },
+			{ text: 'Bermakna "di atas", dan kata sesudahnya berharakat fathah' },
+			{ text: 'Bermakna "untuk", dan kata sesudahnya sukun' }
+		],
+		correctIndex: 0,
+		explanation:
+			'مَعَ (ma\'a) adalah zharaf bermakna "bersama/beserta", dan kata setelahnya berkedudukan sebagai mudhāf ilaih sehingga berharakat kasrah: مَعَ الطَّبِيبِ (bersama dokter).'
+	},
+	{
+		id: 'q-l10-5',
+		lessonId: 'lesson-10',
+		lessonLabel: 'Pelajaran 10',
+		prompt: 'Manakah bentuk kata kerja lampau (fi\'il mādhī) yang bermakna "Aku telah keluar dari kelas"?',
+		options: [
+			{ text: 'خَرَجْتُ مِنَ الْفَصْلِ.', isArabic: true },
+			{ text: 'خَرَجْتَ مِنَ الْفَصْلِ.', isArabic: true },
+			{ text: 'خَرَجَ مِنَ الْفَصْلِ.', isArabic: true },
+			{ text: 'خَرَجَتْ مِنَ الْفَصْلِ.', isArabic: true }
+		],
+		correctIndex: 0,
+		explanation:
+			'Untuk dhomir aku (mutakallim), fi\'il mādhī diakhiri ta fa\'il dhammah (ـتُ): خَرَجْتُ (aku telah keluar). Sedangkan خَرَجْتَ artinya kamu (lk) keluar, dan خَرَجَ artinya dia (lk) keluar.'
 	}
 ];
