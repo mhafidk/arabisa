@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Check from '@lucide/svelte/icons/check';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
@@ -26,6 +28,17 @@
 		}))
 	];
 
+	function getTopicFromUrl(): FilterTopic {
+		const param =
+			page.url.searchParams.get('topic') ??
+			page.url.searchParams.get('lesson') ??
+			page.url.searchParams.get('materi');
+		if (param && filters.some((f) => f.value === param)) {
+			return param as FilterTopic;
+		}
+		return 'all';
+	}
+
 	function shuffleArray<T>(arr: T[]): T[] {
 		const copy = [...arr];
 		for (let i = copy.length - 1; i > 0; i--) {
@@ -51,13 +64,15 @@
 		return base.map(randomizeQuestionOptions);
 	}
 
-	let topicFilter = $state<FilterTopic>('all');
+	const initialTopic = getTopicFromUrl();
+	let topicFilter = $state<FilterTopic>(initialTopic);
 	let dropdownOpen = $state(false);
 	let currentIndex = $state(0);
 	let selectedOption = $state<number | null>(null);
 	let score = $state(0);
 	let finished = $state(false);
-	let quizQuestions = $state<QuizQuestion[]>(prepareQuestions('all'));
+	let quizQuestions = $state<QuizQuestion[]>(prepareQuestions(initialTopic));
+	let lastUrlTopic: string | null = initialTopic;
 
 	const activeFilter = $derived(filters.find((f) => f.value === topicFilter) ?? filters[0]);
 	const currentQuestion = $derived(quizQuestions[currentIndex]);
@@ -65,7 +80,7 @@
 	const answered = $derived(selectedOption !== null);
 	const accuracy = $derived(total ? Math.round((score / total) * 100) : 0);
 
-	function resetQuiz(newFilter: FilterTopic = topicFilter) {
+	function resetQuiz(newFilter: FilterTopic = topicFilter, syncUrl = true) {
 		topicFilter = newFilter;
 		dropdownOpen = false;
 		currentIndex = 0;
@@ -73,7 +88,32 @@
 		score = 0;
 		finished = false;
 		quizQuestions = prepareQuestions(newFilter);
+
+		if (syncUrl && typeof window !== 'undefined') {
+			const url = new URL(page.url.href);
+			if (newFilter === 'all') {
+				url.searchParams.delete('topic');
+				url.searchParams.delete('lesson');
+				url.searchParams.delete('materi');
+			} else {
+				url.searchParams.set('topic', newFilter);
+			}
+			if (url.search !== page.url.search) {
+				lastUrlTopic = newFilter;
+				goto(url, { replace: true, reset: false });
+			}
+		}
 	}
+
+	$effect(() => {
+		const currentUrlTopic = getTopicFromUrl();
+		if (lastUrlTopic !== null && lastUrlTopic !== currentUrlTopic) {
+			lastUrlTopic = currentUrlTopic;
+			resetQuiz(currentUrlTopic, false);
+		} else {
+			lastUrlTopic = currentUrlTopic;
+		}
+	});
 
 	function chooseOption(idx: number) {
 		if (selectedOption !== null || !currentQuestion) return;
@@ -106,9 +146,9 @@
 	<header class="flex items-center gap-3">
 		<a
 			id="back-to-home"
-			href={resolve('/')}
+			href={topicFilter !== 'all' ? resolve('/lesson/[id]', { id: topicFilter }) : resolve('/')}
 			class="-ml-2 grid size-10 shrink-0 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"
-			aria-label="Kembali ke beranda"
+			aria-label={topicFilter !== 'all' ? `Kembali ke ${activeFilter.label}` : 'Kembali ke beranda'}
 		>
 			<ArrowLeft size={22} />
 		</a>
@@ -238,6 +278,14 @@
 				>
 					<RotateCcw size={18} /> Coba Lagi
 				</button>
+				{#if topicFilter !== 'all'}
+					<a
+						href={resolve('/lesson/[id]', { id: topicFilter })}
+						class="flex h-12 items-center justify-center rounded-xl border border-line bg-paper-raised font-semibold text-ink transition-colors hover:bg-paper-sunk"
+					>
+						Kembali ke {activeFilter.label}
+					</a>
+				{/if}
 				<a
 					href={resolve('/')}
 					class="flex h-12 items-center justify-center rounded-xl font-semibold text-ink-soft transition-colors hover:bg-paper-sunk hover:text-ink"

@@ -92,7 +92,10 @@
 	<section class="mt-8 sm:mt-10" aria-labelledby="grammar-heading">
 		<div class="mb-3.5 flex items-center gap-2">
 			<BookOpen size={18} class="text-accent-ink" />
-			<h2 id="grammar-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
+			<h2
+				id="grammar-heading"
+				class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base"
+			>
 				Kaidah & Catatan Tata Bahasa
 			</h2>
 		</div>
@@ -139,7 +142,10 @@
 		<div class="mb-3.5 flex flex-wrap items-center justify-between gap-2">
 			<div class="flex items-center gap-2">
 				<MessageSquareText size={18} class="text-accent-ink" />
-				<h2 id="examples-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
+				<h2
+					id="examples-heading"
+					class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base"
+				>
 					Contoh Kalimat & Percakapan
 				</h2>
 			</div>
@@ -219,7 +225,10 @@
 	<section class="mt-8 sm:mt-10" aria-labelledby="vocab-heading">
 		<div class="mb-3 flex flex-wrap items-end justify-between gap-3">
 			<div>
-				<h2 id="vocab-heading" class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base">
+				<h2
+					id="vocab-heading"
+					class="text-sm font-semibold tracking-wide text-ink-soft uppercase sm:text-base"
+				>
 					Daftar Kosakata ({lesson.vocabulary.length})
 				</h2>
 				{#if lesson.vocabNote}
@@ -290,7 +299,7 @@
 			</a>
 
 			<a
-				href={resolve('/latihan')}
+				href="{resolve('/latihan')}?topic={lesson.id}"
 				class="flex items-center gap-2.5 rounded-2xl bg-paper-raised p-3.5 shadow-card transition-colors hover:bg-paper-sunk/60 active:scale-[0.98]"
 			>
 				<div class="grid size-9 shrink-0 place-items-center rounded-xl bg-good-wash text-good">

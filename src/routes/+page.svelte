@@ -146,7 +146,7 @@
 
 				<a
 					id="study-desk-quiz"
-					href={resolve('/latihan')}
+					href="{resolve('/latihan')}?topic={nextLesson.id}"
 					class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-line bg-paper px-4 text-sm font-medium text-ink transition-all hover:bg-paper-sunk active:scale-[0.98]"
 				>
 					<ClipboardCheck size={16} class="text-good" />
@@ -215,10 +215,7 @@
 			</div>
 		{:else}
 			<div class="mb-2.5 flex items-center justify-between gap-4">
-				<h2
-					id="guide-heading"
-					class="text-xs font-semibold tracking-wide text-ink-soft uppercase"
-				>
+				<h2 id="guide-heading" class="text-xs font-semibold tracking-wide text-ink-soft uppercase">
 					Ringkasan Progres Belajar
 				</h2>
 			</div>
@@ -226,7 +223,8 @@
 			<div class="grid grid-cols-3 gap-2.5">
 				<div class="rounded-2xl bg-paper-raised p-3.5 shadow-card">
 					<p class="text-2xl font-bold text-ink tabular-nums">
-						{completedCount}<span class="text-sm font-medium text-ink-faint">/{lessons.length}</span>
+						{completedCount}<span class="text-sm font-medium text-ink-faint">/{lessons.length}</span
+						>
 					</p>
 					<p class="mt-1 text-xs font-medium text-ink-soft">Topik Selesai</p>
 				</div>
